@@ -6260,7 +6260,7 @@ blockquote {
 
 .background-video-center {
   height: 800px;
-  background-image: linear-gradient(130deg, var(--royal-blue-3) 18%, rgb(204, 153, 255)), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f598b468dca_circle3.png"), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fca49468db4_circle-2.png");
+  background-image: linear-gradient(130deg, var(--royal-blue-3) 18%, rgb(204, 153, 255,.76)), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f598b468dca_circle3.png"), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fca49468db4_circle-2.png");
   background-position: 0 0, -170px -210px, 100%;
   background-repeat: repeat, no-repeat, no-repeat;
   background-size: auto, 800px, 400px;
