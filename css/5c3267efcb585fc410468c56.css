@@ -234,28 +234,28 @@ th {
 }
 
 .w-icon-slider-right:before {
-  content: "î˜€";
+  content: "Ã®Ëœâ‚¬";
 }
 
 .w-icon-slider-left:before {
-  content: "î˜";
+  content: "Ã®ËœÂ";
 }
 
 .w-icon-nav-menu:before {
-  content: "=";
+  content: "Ã®Ëœâ€š";
 }
 
 .w-icon-arrow-down:before,
 .w-icon-dropdown-toggle:before {
-  content: "î˜ƒ";
+  content: "Ã®ËœÆ’";
 }
 
 .w-icon-file-upload-remove:before {
-  content: "î¤€";
+  content: "Ã®Â¤â‚¬";
 }
 
 .w-icon-file-upload-icon:before {
-  content: "î¤ƒ";
+  content: "Ã®Â¤Æ’";
 }
 
 * {
@@ -851,7 +851,7 @@ textarea.w-select {
 }
 
 .w-col-4 {
-  /* width: 100px; */
+  width: 33.3333%;
 }
 
 .w-col-5 {
@@ -2228,7 +2228,7 @@ textarea.w-select {
      */
   --royal-blue-3: rgba(0, 10, 240, 0.92);
   --white: white;
-  --spring-green: rgba(204, 153, 255);
+  --spring-green: #00e95e;
   --black: #1a1a1a;
   --royal-blue: #006df0;
   --grey: #858585;
@@ -2504,7 +2504,7 @@ blockquote {
 
 .hero-section.page-header {
   height: 400px;
-  background-image: linear-gradient(135deg, rgba(0, 77, 240, .92) 24%, rgba(204, 153, 255, .74)), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f5be6468da2_blur.png"), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f2666468dd3_gradient-dot.png"), linear-gradient(135deg, var(--royal-blue-3), var(--spring-green));
+  background-image: linear-gradient(135deg, rgba(0, 77, 240, .92) 24%, rgba(0, 233, 94, .74)), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f5be6468da2_blur.png"), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f2666468dd3_gradient-dot.png"), linear-gradient(135deg, var(--royal-blue-3), var(--spring-green));
   background-position: 0 0, 100% 0, -659px, 0 0;
   background-repeat: repeat, no-repeat, no-repeat, repeat;
   background-size: auto, 250px, 1000px, auto;
@@ -6260,7 +6260,7 @@ blockquote {
 
 .background-video-center {
   height: 800px;
-  background-image: linear-gradient(130deg, var(--royal-blue-3) 18%, rgb(204, 153, 255,.76)), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f598b468dca_circle3.png"), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fca49468db4_circle-2.png");
+  background-image: linear-gradient(130deg, var(--royal-blue-3) 18%, rgb(204, 153, 255,0.76)), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f598b468dca_circle3.png"), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fca49468db4_circle-2.png");
   background-position: 0 0, -170px -210px, 100%;
   background-repeat: repeat, no-repeat, no-repeat;
   background-size: auto, 800px, 400px;
@@ -6504,7 +6504,6 @@ blockquote {
   font-weight: 600;
   line-height: 42px;
   display: inline-block;
-  padding-top: 6px;
 }
 
 .logo-text.dark {
@@ -11655,4 +11654,62 @@ blockquote {
   #w-node-_21814893-8628-2e0b-843a-abba52001564-770059c8 {
     grid-area: span 1 / span 2 / span 1 / span 2;
   }
+}
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 260px;
+  height: 150px;
+  /* background-image: linear-gradient(100deg, rgba(213, 154, 255) 18%, rgb(106, 90, 205,0.76)), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f598b468dca_circle3.png"), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fca49468db4_circle-2.png"); */
+  /* color: #fff; */
+  background-color: rgb(75, 28, 151);
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0px 5px;
+  position: absolute;
+  /* z-index: 1; */
+  bottom: -825%;
+  left: 50%;
+  margin-left: -125px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  text-size-adjust: 100%;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
 }
