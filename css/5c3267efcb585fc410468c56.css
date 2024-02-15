@@ -11668,8 +11668,8 @@ blockquote {
 /* The actual popup */
 .popup .popuptext {
   visibility: hidden;
-  width: 160px;
-  height: 100px;
+  width: 70px;
+  height: 50px;
   /* background-image: linear-gradient(100deg, rgba(213, 154, 255) 18%, rgb(106, 90, 205,0.76)), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f598b468dca_circle3.png"), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fca49468db4_circle-2.png"); */
   /* color: #fff; */
   background-color: rgb(75, 28, 151);
@@ -11678,15 +11678,15 @@ blockquote {
   padding: 8px 0px 5px;
   position: absolute;
   /* z-index: 1; */
-  bottom: -590%;
-  left: 50%;
+  bottom: -320%;
+  left: 125%;
   margin-left: -80px;
 }
 
 /* Popup arrow */
 .popup .popuptext::after {
-  text-size-adjust: 100%;
-  content: "";
+  text-size-adjust: 50%;
+  /* content: "0"; */
   position: relative;
   /* top: 100%; */
   left: 30%;
