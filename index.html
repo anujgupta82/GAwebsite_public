@@ -73,7 +73,11 @@
                 <nav role="navigation" class="nav-menu black w-nav-menu">
                     <div data-delay="0" data-hover="false" class="w-dropdown">
                         <div class="nav-link dropdown white w-dropdown-toggle">
-                            <a href="index.html" class="tittle-nav-link">OUR SERVICES</a>
+                            <!-- <a href="index.html" class="tittle-nav-link">OUR SERVICES</a> -->
+                            <div class="tittle-nav-link popup " onclick="myFunction('myPopup') ">OUR SERVICES
+                                <span class="popour" id="myPopup" onclick="openPopup('myPopup')">AI L&D <br> AI Consulting <br> AI Dev </span>
+                            </div>
+
                             <!-- <a href="/service/our-services.html" class="tittle-nav-link">OUR SERVICES</a> -->
                         </div>
                         <nav class="nav-dropdown w-dropdown-list"></nav>
@@ -101,8 +105,8 @@
                     <div data-delay="0" data-hover="false" class="w-dropdown">
                         <div class="nav-link dropdown white w-dropdown-toggle">
                             <!-- <a href="/blog/posts.html" class="tittle-nav-link">INSIGHTS</a> -->
-                            <div class="tittle-nav-link popup " onclick="myFunction() ">INSIGHTS
-                                <span class="popuptext" id="myPopup" onclick="openPopup()"
+                            <div class="tittle-nav-link popup " onclick="myFunction('myPopup1') ">INSIGHTS
+                                <span class="popuptext" id="myPopup1" onclick="openPopup()"
                                     href="/resources/GA - ROI in AI.pdf">ROI
                                     in AI</span>
                             </div>
