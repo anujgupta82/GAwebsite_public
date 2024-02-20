@@ -43,7 +43,7 @@ template {
 }
 
 a {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 a:active,
@@ -2228,7 +2228,7 @@ textarea.w-select {
      */
   --royal-blue-3: rgba(0, 10, 240, 0.92);
   --white: white;
-  --spring-green: #00e95e;
+  --spring-green: rgba(204, 153, 255);
   --black: #1a1a1a;
   --royal-blue: #006df0;
   --grey: #858585;
@@ -2504,7 +2504,10 @@ blockquote {
 
 .hero-section.page-header {
   height: 400px;
-  background-image: linear-gradient(135deg, rgba(0, 77, 240, .92) 24%, rgba(0, 233, 94, .74)), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f5be6468da2_blur.png"), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f2666468dd3_gradient-dot.png"), linear-gradient(135deg, var(--royal-blue-3), var(--spring-green));
+  background-image: linear-gradient(130deg, var(--royal-blue-3) 18%, rgb(204, 153, 255, 0.76)), url("/images/newbg2.jpg"), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fca49468db4_circle-2.png");
+
+  /* background-image: linear-gradient(135deg, rgba(0, 77, 240, .92) 24%, rgba(204, 153, 255, .74)), url("/images/newbg2.jpg"), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f2666468dd3_gradient-dot.png"), linear-gradient(135deg, var(--royal-blue-3), var(--spring-green)); */
+  /* background-image: linear-gradient(135deg, rgba(0, 77, 240, .92) 24%, rgba(0, 233, 94, .74)), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f5be6468da2_blur.png"), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f2666468dd3_gradient-dot.png"), linear-gradient(135deg, var(--royal-blue-3), var(--spring-green)); */
   background-position: 0 0, 100% 0, -659px, 0 0;
   background-repeat: repeat, no-repeat, no-repeat, repeat;
   background-size: auto, 250px, 1000px, auto;
@@ -2521,7 +2524,9 @@ blockquote {
 .hero-section.page-header.white.sec {
   height: 400px;
   background-color: #000;
-  background-image: linear-gradient(135deg, var(--royal-blue-3) 24%, var(--spring-green) 100%, white), linear-gradient(135deg, var(--royal-blue-3), var(--spring-green) 100%, white), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f2666468dd3_gradient-dot.png"), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f5be6468da2_blur.png");
+  background-image: linear-gradient(130deg, var(--royal-blue-3) 18%, rgb(204, 153, 255, 0.76)), url("/images/newbg2.jpg"), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fca49468db4_circle-2.png");
+  /* background-color: #000000; */
+  /* background-image: linear-gradient(135deg, var(--royal-blue-3) 24%, var(--spring-green) 100%, white), linear-gradient(135deg, var(--royal-blue-3), var(--spring-green) 100%, white), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f2666468dd3_gradient-dot.png"), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f5be6468da2_blur.png"); */
   background-position: 0 0, 0 0, 0 0, 0 0;
   background-repeat: repeat, repeat, repeat, repeat;
   background-size: auto, auto, auto, auto;
@@ -2769,7 +2774,7 @@ blockquote {
 }
 
 .section.ads {
-  background-image: linear-gradient(135deg, var(--royal-blue-3) 34%, var(--spring-green)), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f9195468da1_5a50fdd5b462b20001445f7b_seo-manager.jpg");
+  background-image: linear-gradient(135deg, var(--royal-blue-3) 34%, var(--spring-green)), url("/images/Designer\ \(2\).png");
   background-position: 0 0, 50%;
   background-size: auto, cover;
   padding-top: 140px;
@@ -5072,7 +5077,7 @@ blockquote {
 }
 
 .contact-icon.features-icon._2 {
-  background-color: #006df0;
+  background-color: rgba(204, 153, 255);
   background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fd2c8468cdf_icons8-code-80.png"), linear-gradient(135deg, var(--royal-blue-3), var(--spring-green));
   background-position: 50%, 0 0;
   background-repeat: no-repeat, repeat;
@@ -5080,50 +5085,50 @@ blockquote {
 }
 
 .contact-icon.features-icon._3 {
-  background-color: #006df0;
-  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f5208468ce6_icons8-support-128.png"), linear-gradient(135deg, var(--royal-blue-3), #00e95e);
+  background-color: rgba(204, 153, 255);
+  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f5208468ce6_icons8-support-128.png"), linear-gradient(135deg, var(--royal-blue-3), rgba(204, 153, 255));
   background-position: 50%, 0 0;
   background-repeat: no-repeat, repeat;
   background-size: 50px, auto;
 }
 
 .contact-icon.features-icon._1 {
-  background-color: #006df0;
-  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f4bac468d68_icons8-idea-240.png"), linear-gradient(135deg, var(--royal-blue-3), #00e95e);
+  background-color: rgba(204, 153, 255);
+  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f4bac468d68_icons8-idea-240.png"), linear-gradient(135deg, var(--royal-blue-3), rgba(204, 153, 255));
   background-position: 50%, 0 0;
   background-repeat: no-repeat, repeat;
   background-size: 60px, auto;
 }
 
 .contact-icon.features-icon._1.responsive {
-  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fa47b468df9_icons8-mobile-80.png"), linear-gradient(135deg, var(--royal-blue-3), #00e95e);
+  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fa47b468df9_icons8-mobile-80.png"), linear-gradient(135deg, var(--royal-blue-3), rgba(204, 153, 255));
   background-size: 60px, auto;
 }
 
 .contact-icon.features-icon._1.re-usable {
-  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fc610468d64_icons8-design-80%20(1).png"), linear-gradient(135deg, var(--royal-blue-3), #00e95e);
+  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fc610468d64_icons8-design-80%20(1).png"), linear-gradient(135deg, var(--royal-blue-3), rgba(204, 153, 255));
   background-size: 60px, auto;
 }
 
 .contact-icon.features-icon._2 {
-  background-color: #006df0;
-  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fd2c8468cdf_icons8-code-80.png"), linear-gradient(135deg, rgba(0, 77, 240, .92), #00e95e);
+  background-color: rgba(204, 153, 255);
+  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fd2c8468cdf_icons8-code-80.png"), linear-gradient(135deg, rgba(0, 77, 240, .92), rgba(204, 153, 255));
   background-position: 50%, 0 0;
   background-repeat: no-repeat, repeat;
   background-size: 60px, auto;
 }
 
 .contact-icon.features-icon._1 {
-  background-color: #006df0;
-  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f4bac468d68_icons8-idea-240.png"), linear-gradient(135deg, rgba(0, 77, 240, .92), #00e95e);
+  background-color: rgba(204, 153, 255);
+  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f4bac468d68_icons8-idea-240.png"), linear-gradient(135deg, rgba(0, 77, 240, .92), rgba(204, 153, 255));
   background-position: 50%, 0 0;
   background-repeat: no-repeat, repeat;
   background-size: 60px, auto;
 }
 
 .contact-icon.features-icon._3 {
-  background-color: #006df0;
-  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f5208468ce6_icons8-support-128.png"), linear-gradient(135deg, rgba(0, 77, 240, .92), #00e95e);
+  background-color: rgba(204, 153, 255);
+  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f5208468ce6_icons8-support-128.png"), linear-gradient(135deg, rgba(0, 77, 240, .92), rgba(204, 153, 255));
   background-position: 50%, 0 0;
   background-repeat: no-repeat, repeat;
   background-size: 50px, auto;
@@ -11721,6 +11726,10 @@ blockquote {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
+}
+
+.popa {
+  color: #fff;
 }
 
 /* Add animation (fade in the popup) */

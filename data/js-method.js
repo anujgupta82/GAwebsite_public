@@ -5715,7 +5715,7 @@ __stdos__.logger = {
 function myFunction(popup) {
   var popup = document.getElementById(popup);
   
-  popup.classList.toggle("show");s
+  popup.classList.toggle("show");
 }
 // function openPopup() {
 //   var popup = document.getElementById("myPopup");
@@ -5724,7 +5724,7 @@ function myFunction(popup) {
 // }
 function openPopup(popupId) {
   var popup = document.getElementById(popupId);
-  var link = popup.getAttribute("href");
+  // var link = popup.getAttribute("href");
   window.open(link, "_blank");
   popup.classList.toggle("show");
 }
