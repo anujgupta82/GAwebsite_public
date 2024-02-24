@@ -5112,7 +5112,7 @@ blockquote {
 
 .contact-icon.features-icon._2 {
   background-color: rgba(204, 153, 255);
-  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fd2c8468cdf_icons8-code-80.png"), linear-gradient(135deg, rgba(0, 77, 240, .92), rgba(204, 153, 255));
+  background-image: url("/images/Vector\ \(1\).png"), linear-gradient(135deg, rgba(0, 77, 240, .92), rgba(204, 153, 255));
   background-position: 50%, 0 0;
   background-repeat: no-repeat, repeat;
   background-size: 60px, auto;
@@ -5120,7 +5120,7 @@ blockquote {
 
 .contact-icon.features-icon._1 {
   background-color: rgba(204, 153, 255);
-  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f4bac468d68_icons8-idea-240.png"), linear-gradient(135deg, rgba(0, 77, 240, .92), rgba(204, 153, 255));
+  background-image: url("/images/Vector\ \(1\).png"), linear-gradient(135deg, rgba(0, 77, 240, .92), rgba(204, 153, 255));
   background-position: 50%, 0 0;
   background-repeat: no-repeat, repeat;
   background-size: 60px, auto;
@@ -5128,7 +5128,7 @@ blockquote {
 
 .contact-icon.features-icon._3 {
   background-color: rgba(204, 153, 255);
-  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f5208468ce6_icons8-support-128.png"), linear-gradient(135deg, rgba(0, 77, 240, .92), rgba(204, 153, 255));
+  background-image: url("/images/Vector\ \(1\).png"), linear-gradient(135deg, rgba(0, 77, 240, .92), rgba(204, 153, 255));
   background-position: 50%, 0 0;
   background-repeat: no-repeat, repeat;
   background-size: 50px, auto;
@@ -10889,6 +10889,7 @@ blockquote {
     border-bottom-left-radius: 8px;
     margin-top: 0;
   }
+
 
   .heading-section-copy {
     font-size: 32px;
