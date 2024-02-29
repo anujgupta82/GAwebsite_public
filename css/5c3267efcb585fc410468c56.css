@@ -3104,7 +3104,7 @@ blockquote {
 
 .paragraph.contact {
   color: #9ba4af;
-  text-align: left;
+  text-align: justify;
   margin-top: 20px;
   margin-bottom: 0;
   font-size: 16px;
@@ -3234,8 +3234,8 @@ blockquote {
 }
 
 .paragraph.left-side {
-  color: #858585;
-  text-align: left;
+  color: #000000;
+  text-align: justify;
   text-transform: none;
   font-size: 14px;
 }
@@ -4176,10 +4176,10 @@ blockquote {
 }
 
 .sub-text.smaller.more {
-  color: #9ba4af;
+  color: #000000;
   font-family: Merriweather, serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 200;
   line-height: 27px;
 }
 
@@ -5080,7 +5080,7 @@ blockquote {
 
 .contact-icon.features-icon._4 {
   background-color: rgba(204, 153, 255);
-  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fd2c8468cdf_icons8-code-80.png"), linear-gradient(135deg, var(--royal-blue-3), var(--spring-green));
+  background-image: url("/images/dev2.png"), linear-gradient(135deg, var(--royal-blue-3), var(--spring-green));
   background-position: 50%, 0 0;
   background-repeat: no-repeat, repeat;
   background-size: 60px, auto;
@@ -5096,7 +5096,7 @@ blockquote {
 
 .contact-icon.features-icon._6 {
   background-color: rgba(204, 153, 255);
-  background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f4bac468d68_icons8-idea-240.png"), linear-gradient(135deg, var(--royal-blue-3), rgba(204, 153, 255));
+  background-image: url("/images/l&d.png"), linear-gradient(135deg, var(--royal-blue-3), rgba(204, 153, 255));
   background-position: 50%, 0 0;
   background-repeat: no-repeat, repeat;
   background-size: 60px, auto;
@@ -5136,6 +5136,29 @@ blockquote {
   background-size: 50px, auto;
 }
 
+.contact-icon.features-icon._11 {
+  background-color: rgba(204, 153, 255);
+  background-image: url("/images/sales_icon.png"), linear-gradient(135deg, rgba(0, 77, 240, .92), rgba(204, 153, 255));
+  background-position: 50%, 0 0;
+  background-repeat: no-repeat, repeat;
+  background-size: 50px, auto;
+}
+
+.contact-icon.features-icon._12 {
+  background-color: rgba(204, 153, 255);
+  background-image: url("/images/sales_icon.png"), linear-gradient(135deg, rgba(0, 77, 240, .92), rgba(204, 153, 255));
+  background-position: 50%, 0 0;
+  background-repeat: no-repeat, repeat;
+  background-size: 50px, auto;
+}
+
+.contact-icon.features-icon._13 {
+  background-color: rgba(204, 153, 255);
+  background-image: url("/images/sales_icon.png"), linear-gradient(135deg, rgba(0, 77, 240, .92), rgba(204, 153, 255));
+  background-position: 50%, 0 0;
+  background-repeat: no-repeat, repeat;
+  background-size: 50px, auto;
+}
 .service {
   text-align: center;
   margin-top: 0;
