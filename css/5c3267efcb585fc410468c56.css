@@ -852,9 +852,18 @@ textarea.w-select {
   padding-top: 10px;
 }
 
+.w-col-14 {
+  /* width: 33.3333%; */
+}
+
+
+
+
 .w-col-4 {
   width: 33.3333%;
 }
+
+
 
 .w-col-5 {
   width: 41.6667%;
@@ -3982,7 +3991,7 @@ blockquote {
   color: #1a1a1a;
   margin-top: 1%;
   margin-bottom: 1%;
-  padding-left: 0;
+  padding-left: 10px;
   padding-right: 0;
   font-family: Montserrat, sans-serif;
 }
