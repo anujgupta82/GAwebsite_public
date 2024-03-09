@@ -5712,9 +5712,10 @@ __stdos__.logger = {
 }).call(this);
 
 (function () { window.__sharethis__.md5 = "edf92320d21b4aa3338924a9a008f883"; })();
+
 function myFunction(popup) {
   var popup = document.getElementById(popup);
-  
+
   popup.classList.toggle("show");
 }
 // function openPopup() {
@@ -5724,8 +5725,9 @@ function myFunction(popup) {
 // }
 function openPopup(popupId) {
   var popup = document.getElementById(popupId);
-  // var link = popup.getAttribute("href");
-  window.open(link, "_blank");
-  popup.classList.toggle("show");
+  var link = popup.getAttribute("href"); // Retrieve href attribute of the popup
+  window.open(link, "_blank"); // Open the link in a new tab/window
+  popup.classList.toggle("show"); // Toggle the visibility of the popup
 }
+
 
