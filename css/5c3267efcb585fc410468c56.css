@@ -785,8 +785,8 @@ textarea.w-select {
   max-width: 950px;
   margin-left: auto;
   margin-right: auto;
-  
-  
+
+
 }
 
 .w-container:before,
@@ -2416,6 +2416,9 @@ blockquote {
   font-family: Montserrat, sans-serif;
   font-weight: 600;
   display: block;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* padding: 10px 20px; */
 }
 
 .navbar.transparent {
@@ -3267,6 +3270,8 @@ blockquote {
   font-family: Montserrat, sans-serif;
 }
 
+
+
 .button-block-center.left {
   text-align: left;
   margin-top: 30px;
@@ -3283,7 +3288,16 @@ blockquote {
   margin: 0 auto;
   margin-top: 100;
 }
-
+@media screen and (max-width: 600px) {
+  .button-block-center.play {
+    margin-top: 50px; /* Adjust margin top for smaller screens */
+  }
+}
+@media screen and (max-width: 490px) {
+  .button-block-center.play {
+    margin-top: 50px; /* Adjust margin top for smaller screens */
+  }
+}
 .button {
   text-transform: uppercase;
   background-color: #29a1ff;
@@ -5168,6 +5182,7 @@ blockquote {
   background-repeat: no-repeat, repeat;
   background-size: 50px, auto;
 }
+
 .service {
   text-align: center;
   margin-top: 0;
@@ -5565,7 +5580,7 @@ blockquote {
   background-size: auto, 567px;
   border-style: none;
   border-radius: 8px;
-  padding: 16% 35px ;
+  padding: 16% 35px;
 }
 
 .content-features-service._3 {
@@ -6327,7 +6342,7 @@ blockquote {
   flex: 0 auto;
   justify-content: center;
   align-items: center;
-  margin: 0% auto 13%;
+  margin: 0% auto 9%;
   padding: 0%;
   display: block;
   position: absolute;
@@ -6348,7 +6363,7 @@ blockquote {
     /* Optional: Change border radius */
     background-size: 14px;
     /* Smaller background image */
-    bottom: 10px;
+    bottom: 60px;
     align-items: center;
     /* Adjust position as needed */
     /* Add any additional styling adjustments for mobile here */
@@ -8459,7 +8474,8 @@ blockquote {
   background-size: auto, auto, auto, auto;
   background-attachment: scroll, scroll, scroll, scroll;
 }
-.section-8.light{
+
+.section-8.light {
   height: 400px;
   background-image: url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f5be6468da2_blur.png"), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585fd999468dbc_dots-line-.png"), linear-gradient(rgba(255, 255, 255, .83), rgba(255, 255, 255, .83)), url("https://assets-global.website-files.com/5c3267efcb585fc410468c56/5c3267efcb585f3cc6468de1_241243.jpg");
   background-position: 100% 103px, -91px 121px, 0 0, 50% 66%;
@@ -8467,6 +8483,7 @@ blockquote {
   background-size: 250px, 200px, auto, cover;
   background-attachment: fixed, fixed, scroll, scroll;
 }
+
 .section-8.greeter-header {
   height: 400px;
 
@@ -11084,26 +11101,89 @@ blockquote {
     padding-right: 10px;
   }
 
-  .section-tittle {
+  /* .section-tittle {
     font-size: 32px;
     line-height: 42px;
-  }
+  } */
 
-  .paragraph.white.big {
+  /* .paragraph.white.big {
     margin-top: -13%;
+  } */
+
+  /* .paragraph.white.big.special {
+    margin-top: 40%;
+
+  } */
+
+  /* .paragraph.white.big-copy-new {
+    margin-top: 50%;
+  } */
+
+  /* .paragraph.left-side.percentual {
+    width: auto;
+  } */
+  .paragraph.white.big {
+    margin-top: -10%;
   }
 
   .paragraph.white.big.special {
-    margin-top: 40%;
-
+    margin-top: 30%;
   }
 
   .paragraph.white.big-copy-new {
-    margin-top: 50%;
+    margin-top: 40%;
   }
 
   .paragraph.left-side.percentual {
     width: auto;
+  }
+
+  /* Media query for small screens */
+  @media screen and (max-width: 768px) {
+
+    .paragraph.white.big,
+    .paragraph.white.big.special,
+    .paragraph.white.big-copy-new {
+      margin-top: 5%;
+    }
+  }
+
+  /* Media query for medium screens */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .paragraph.white.big {
+      margin-top: -8%;
+    }
+
+    .paragraph.white.big.special {
+      margin-top: 25%;
+    }
+
+    .paragraph.white.big-copy-new {
+      margin-top: 35%;
+    }
+
+    .paragraph.left-side.percentual {
+      width: 50%;
+    }
+  }
+
+  /* Media query for large screens */
+  @media screen and (min-width: 1025px) {
+    .paragraph.white.big {
+      margin-top: -5%;
+    }
+
+    .paragraph.white.big.special {
+      margin-top: 20%;
+    }
+
+    .paragraph.white.big-copy-new {
+      margin-top: 30%;
+    }
+
+    .paragraph.left-side.percentual {
+      width: 30%;
+    }
   }
 
   .button-block-center.play {
