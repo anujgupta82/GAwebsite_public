@@ -11805,14 +11805,25 @@ blockquote {
   top: 100%;
   left: 0;
   background-color: #a0b5eb;
-  min-width: 160px;
+  min-width: 290px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 8px;
   z-index: 1;
 }
 
+.row{
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+}
+
 .main-link:hover .popup {
-  display: block;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .popup a {
