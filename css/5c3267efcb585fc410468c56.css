@@ -11804,7 +11804,7 @@ blockquote {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #a0b5eb;
+  background-color: #ffffff;
   min-width: 290px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 8px;
@@ -11828,36 +11828,15 @@ blockquote {
 
 .popup a {
   display: block;
-  color: #333;
+  color: #000000;
   text-decoration: none;
-  padding: 6px 12px;
+  padding: 4px 4px;
 }
 
 .popup a:hover {
-  background-color: #5a5353;
+  background-color: #ddd;
 }
 
 .popa {
   color: #fff;
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
