@@ -11805,7 +11805,7 @@ blockquote {
   top: 100%;
   left: 0;
   background-color: #ffffff;
-  min-width: 290px;
+  min-width: 100px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 8px;
   z-index: 1;
