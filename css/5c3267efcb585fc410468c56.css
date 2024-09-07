@@ -11840,3 +11840,55 @@ blockquote {
 .popa {
   color: #fff;
 }
+
+
+.w-dropdown {
+  position: relative;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link:hover .popup {
+  display: block;
+}
+
+/* Styles for the nested dropdown */
+.dropdown-container {
+  position: relative;
+}
+
+.nested-popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Show the nested popup on hover */
+.dropdown-container:hover .nested-popup {
+  display: block;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  background-color: #f0f0f0;
+}
