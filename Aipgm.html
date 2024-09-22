@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI PRODUCT MANAGEMENT</title>
+    <title>AI PROGRAM MANAGEMENT</title>
     <link rel="stylesheet" href="css/aipgm.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
@@ -159,6 +159,7 @@
   </head>
 
   <body>
+  
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -182,10 +183,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <!-- OUR PRODUCTS Dropdown -->
             <li class="nav-item dropdown">
@@ -220,16 +218,10 @@
                 <li><a class="dropdown-item" href="#">AI Consulting</a></li>
                 <!-- AI UPSKILLING Sub-Menu -->
                 <li class="dropdown-submenu">
-                  <a class="dropdown-item dropdown-toggle" href="#"
-                    >AI Upskilling</a
-                  >
+                  <a class="dropdown-item dropdown-toggle" href="#">AI Upskilling</a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">AI Readiness</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        >AI Product Management</a
-                      >
-                    </li>
+                    <li><a class="dropdown-item" href="#">AI Product Management</a></li>
                   </ul>
                 </li>
               </ul>
@@ -243,12 +235,29 @@
             <li class="nav-item">
               <a class="nav-link" href="#">COMPANY</a>
             </li>
+            <!-- Region Toggle Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="regionDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Region: <span id="selected-region">Select Region</span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="regionDropdown">
+                <li><a class="dropdown-item" href="#" onclick="loadRegion('APAC')">APAC</a></li>
+                <li><a class="dropdown-item" href="#" onclick="loadRegion('Europe')">Europe</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="hero">
+    <div id="region-content" class="hero">
       <div class="hero-image">
         <img
           src="images/mainimage.png"
@@ -257,11 +266,32 @@
         />
       </div>
     </div>
+    
+    <!-- Region Selection Modal -->
+<div class="modal fade" id="regionModal" tabindex="-1" aria-labelledby="regionModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="regionModalLabel">Select Your Region</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Please select your region to view the appropriate content.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="loadRegion('APAC')">APAC</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="loadRegion('Europe')">Europe</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <!-- New Button -->
     <div class="text-center mt-4">
-      <a href="#" class="btn btn-purple">Enroll Now</a>
+      <a href="" class="btn btn-purple"> ENROLL NOW </a>
     </div>
+    
 
     <!-- New Heading -->
     <div class="text-center mt-4">
@@ -1278,6 +1308,73 @@
   
 </style>
 
+<!-- Call to Action (CTA) Form -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Stay Updated!</h2>
+  <p class="text-center">Subscribe to receive updates about our latest news and courses.</p>
+
+  <form method="POST" id="cta-form">
+      <input type="hidden" name="access_key" value="1fa2aa70-c108-4232-b9a3-2a7db4237b85">
+      <input type="hidden" name="subject" value="New Subscription Request">
+      <input type="checkbox" name="botcheck" id="" style="display: none;">
+
+      <!-- Name Input -->
+      <label for="name">Your Name</label>
+      <input type="text" name="name" id="name" placeholder="Enter your name" required>
+
+      <!-- Email Input -->
+      <label for="email">Your Email</label>
+      <input type="email" name="email" id="email" placeholder="Enter your email" required>
+
+      <!-- Message (Optional) -->
+      <label for="message">Message (Optional)</label>
+      <textarea name="message" id="message" placeholder="Tell us what you are interested in" rows="4"></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit">Subscribe</button>
+
+      <div id="result"></div>
+  </form>
+</div>
+
+
+<style>
+  form {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+  
+</style>
+
+
 
 <div class="container faq-section">
   <h2 class="text-center mb-4">Frequently Asked Questions</h2>
@@ -1464,7 +1561,7 @@
 
 
     
-
+<script src="region.js"></script>
 
     <!-- Bootstrap 5 JavaScript (No jQuery required) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
