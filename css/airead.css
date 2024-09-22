@@ -1,0 +1,177 @@
+ /* Custom style for multi-level dropdowns */
+ .dropdown-submenu {
+    position: relative;
+  }
+
+  .btn-purple {
+    background-color: #6f42c1;
+    /* Purple color */
+    color: white;
+    border: 2px solid #6f42c1;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+
+  .btn-purple:hover {
+    background-color: #5a2a91;
+    /* Darker purple on hover */
+    border-color: #5a2a91;
+  }
+
+  .dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+  }
+
+  /* Enable dropdowns to open on hover */
+  .navbar-nav .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+
+  /* Ensure nested dropdowns open on hover */
+  .dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+  }
+
+  /* Keep dropdown menu visible on hover */
+  .dropdown:hover > .dropdown-toggle::after {
+    display: inline-block;
+    transform: rotate(180deg);
+  }
+
+
+  /* Hero Section */
+@media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-section p {
+      font-size: 1rem;
+    }
+  
+    .hero-section .workshop-details {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-section p {
+      font-size: 0.9rem;
+    }
+  
+    .hero-section .workshop-details {
+      padding: 10px;
+    }
+  }
+  
+  /* Workshop Video Section */
+  @media (max-width: 768px) {
+    .ratio {
+      padding-top: 56.25%; /* 16:9 ratio */
+    }
+  }
+  
+  /* Responsive Cards */
+  @media (max-width: 768px) {
+    .card {
+      margin-bottom: 20px;
+    }
+  
+    .card-title {
+      font-size: 1.25rem;
+    }
+  
+    .card-body p {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .card-title {
+      font-size: 1.1rem;
+    }
+  
+    .card-body p {
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* Images */
+  @media (max-width: 768px) {
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .img-fluid {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* Pinned Update Section */
+  @media (max-width: 768px) {
+    .pinned-update p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .pinned-update p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* General Container Adjustments */
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  
+
+/* Card Styles */
+.card {
+    border-radius: 15px; /* Adds rounded corners to all cards */
+    overflow: hidden; /* Ensures content inside the card doesn't overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
+  }
+  
+  /* Optionally, you can also round the images inside the cards */
+  .card img {
+    border-radius: 15px;
+  }
+  
+  /* Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .card {
+      border-radius: 10px; /* Slightly less rounded for smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .card {
+      border-radius: 8px; /* Less rounded for very small screens */
+    }
+  }
+  

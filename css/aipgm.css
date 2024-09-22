@@ -1,0 +1,12 @@
+
+/* Optional: Additional styling for centered text */
+.text-center {
+    text-align: center;
+}
+
+.lead {
+    font-size: 20px;
+    font-weight: 300;
+    color: #000000;
+    font-weight: bold;
+}
