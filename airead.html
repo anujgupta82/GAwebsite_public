@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Advisers | AI Readiness</title>
+    <link rel="stylesheet" href="css/airead.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <style>
+      /* Custom styles for hero section */
+      .hero-section {
+        background-color: #0f2fbe;
+        color: #e1d9d9;
+        padding: 100px 0;
+        position: relative;
+      }
+
+      .hero-section h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .hero-section p {
+        font-size: 1.25rem;
+        margin-bottom: 40px;
+      }
+
+      .workshop-details {
+        background-color: #f0f0f0;
+        color: #333;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .workshop-details h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .workshop-details p {
+        margin: 5px 0;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .hero-section h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero-section p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="images/gaBlack.png"
+            alt="Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-text-top"
+          />
+          GRADIENT ADVISORS
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <!-- OUR PRODUCTS Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="productsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                OUR PRODUCTS
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                <li><a class="dropdown-item" href="#">Dialogue Genie</a></li>
+                <li><a class="dropdown-item" href="#">Structify</a></li>
+              </ul>
+            </li>
+            <!-- OUR SERVICES Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="servicesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                OUR SERVICES
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="#">AI Consulting</a></li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#"
+                    >AI Upskilling</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="airead.html"
+                        >AI Readiness</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="Aipgm.html"
+                        >AI Product Management</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">INSIGHTS</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">CAREERS</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">COMPANY</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Video Column -->
+          <div class="col-md-6">
+            <div class="ratio ratio-16x9">
+              <video
+                src="images/course_promo.mp4"
+                title="Workshop Promo Video"
+                allowfullscreen
+                controls
+              ></video>
+            </div>
+          </div>
+
+          <!-- Workshop Details Column -->
+          <div class="col-md-6">
+            <h1>How to do AI Right?</h1>
+            <p>Join the 2-day workshop on “How to do AI right”</p>
+            <div class="workshop-details">
+              <h3>How To Do AI Right & Get the Intended Business Outcomes</h3>
+              <p>
+                <strong>Target Audience:</strong> CXOs, Founders, VCs, Product
+                Teams, Engineering, Sales, and HR
+              </p>
+              <p><strong>Dates:</strong> 4 Dec 2024 - 6 Dec 2024</p>
+              <p>
+                <strong>Venue:</strong> Bangalore International Centre (BIC),
+                Bengaluru
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section after Hero -->
+    <!-- Section after Hero -->
+    <section class="container my-5">
+      <div class="row">
+        <!-- Left Column: Pinned update and content -->
+        <div class="col-lg-8 mb-4">
+          <!-- Pinned Update Card -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="bi bi-pin-angle-fill"></i> Pinned update
+              </h5>
+              <p>
+                <strong>Will there be maths or code in this workshop?</strong>
+                No, there will no maths or code whatsoever in this workshop.
+                This workshop will have lots of principles on thought leadership
+                in AI and how to implement the same in your organizations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Main Content Section -->
+          <div class="card">
+            <div class="card-body">
+              <p>
+                AI is making waves in the highest echelons of power and
+                influence, as evidenced by recent developments:
+              </p>
+              <ul>
+                <li>
+                  Chegg suffered a drastic 50% loss in market capitalization
+                  overnight due to the emergence of ChatGPT.
+                </li>
+                <li>
+                  Microsoft poses a formidable threat to Google’s 25-year
+                  monopoly.
+                </li>
+                <li>
+                  In a strategic move, Google has merged its DeepMind and Google
+                  Brain teams to capitalize on the AI revolution.
+                </li>
+                <li>
+                  OpenAI, on the other hand, has garnered significant attention
+                  and is now among the most sought-after teams globally.
+                </li>
+                <li>
+                  Eric Schmidt is actively involved with DOD in shaping the
+                  future of war and the role of AI in it.
+                </li>
+              </ul>
+              <p>
+                AI has become a prominent topic in influential circles and
+                boardrooms worldwide. Your competitors have already recognized
+                this reality. The question remains: What steps are you taking to
+                address and leverage this transformative force?
+              </p>
+
+              <p>
+                To leverage AI effectively for market dominance and increased
+                revenue streams, your organization needs to understand the
+                crucial concept of “Doing AI Right.” Simply obtaining a good AI
+                model accounts for only 10% of the equation. Relying solely on
+                engineers to develop and deploy deep learning models is not a
+                comprehensive AI strategy.
+              </p>
+
+              <p>
+                ~87% of AI/ML projects fail to make it into production, let
+                alone deliver successful business outcomes. This is because a
+                successful AI project that generates tangible ROI requires much
+                more than just a good model. While technical modeling has
+                received significant attention in recent years, other critical
+                factors have been overlooked. This workshop fills that gap by
+                addressing the remaining 90% — revealing the secret ingredients
+                and strategies to “do AI right” and fully leverage AI’s
+                potential.
+              </p>
+
+              <p>
+                <strong
+                  >To truly harness AI's potential for significant ROI and
+                  transform your company into a key player in your industry, a
+                  holistic approach to AI is essential for your entire
+                  organization, particularly senior leaders. This workshop aims
+                  to facilitate the same.</strong
+                >
+              </p>
+
+              <p>
+                There will be no maths and no code in this workshop. This
+                workshop will enable you to create a comprehensive AI strategy
+                and roadmap for your organization. You will develop a deep
+                understanding of what all secret ingredients are key to success
+                in the AI war.
+              </p>
+
+              <h5><strong>About the workshop</strong></h5>
+              <p>
+                This two-day workshop uncovers the essential aspects of AI to
+                drive successful business outcomes in your organization.
+                <strong
+                  >While a good AI model is vital (representing 10% of the
+                  equation), the workshop focuses on the overlooked but crucial
+                  remaining 90%.</strong
+                >
+              </p>
+
+              <p>
+                Achieving <strong>“AI magic” </strong>and unlocking AI’s full
+                potential requires organizational
+                <strong>“AI maturity”.</strong> Successful AI systems are very
+                different from traditional software engineering, necessitating a
+                deep understanding of the four pillars: Technology, People,
+                Processes & Economics. The workshop provides a comprehensive
+                exploration of these pillars and their synergistic interplay for
+                optimal results.
+              </p>
+
+              <div class="my-4 text-center">
+                <img
+                  src="images/aireadimg.png"
+                  alt="Workshop illustration"
+                  class="img-fluid"
+                  style="max-width: 100%; height: auto"
+                />
+              </div>
+
+              <!-- Additional Content After Image -->
+              <p>
+                Join us for this workshop, delving into the often-neglected 90%
+                and gaining insights into the three pillars of AI—technology,
+                people, and processes—that are integral to achieving “AI magic.”
+                This workshop will not touch any code or mathematical
+                underpinnings of AI.
+              </p>
+
+              <h5>Target audience</h5>
+              <p>
+                This workshop caters to a wide range of professionals, including
+                Product Managers (from entry level to Head of Product), UX
+                designers, User Researchers, Engineering Leaders (from team
+                manager to Head of Engineering), Business Leaders (from line
+                manager to Chief Business Officer), Leaders from Sales teams,
+                senior HR/TA/HRBP leaders, CXOs, Founders, CEOs, and individuals
+                working at VC firms.
+              </p>
+
+              <p>
+                If you’re an AI engineer/IC facing challenges where your AI
+                solutions don’t make it into production or fail to impact the
+                company’s revenue, this workshop is designed specifically for
+                you.
+              </p>
+
+              <h5>Why attend this workshop</h5>
+              <p>
+                In today’s world, integrating AI into your product offering is
+                no longer a choice. The global trend towards automation and
+                intelligence necessitates proactive exploration of AI
+                opportunities to create intelligent touchpoints. These include
+                AI-powered features and workflows that enhance user experience
+                and transform them into super users. Similar to how Robert
+                Downey Jr. dons the Iron Man suit, providing this armor suit for
+                your users is no longer optional but necessary for every product
+                manager.
+              </p>
+
+              <p>
+                Consequently, every product team and organization must adopt an
+                “AI-first” mindset. Merely having engineers developing models is
+                insufficient to achieve favorable business outcomes. The entire
+                organization, particularly product teams, senior stakeholders,
+                business leaders, CXOs, and founders, must embrace an AI-first
+                approach. This workshop precisely addresses these requirements.
+              </p>
+
+              <h5>Learning Outcomes</h5>
+              <p>
+                You will learn in-depth what it takes to build AI products that
+                create new revenue streams and an edge for your organization in
+                the market. Specifically you will learn:
+              </p>
+              <strong>Technology</strong>
+              <ul>
+                <li>
+                  Explore the nuanced aspects of AI that differentiate it from
+                  traditional software.
+                </li>
+                <li>
+                  Understand why AI solutions involve experimentation and
+                  discovery throughout the process.
+                </li>
+                <li>
+                  Recognize the importance of integrating AI from the early
+                  stages and why retrofitting is not ideal.
+                </li>
+                <li>
+                  Gain insights into why AI differs significantly from the human
+                  brain and manage stakeholder expectations accordingly.
+                </li>
+                <li>
+                  Learn why data quality and quantity are paramount for the
+                  effectiveness of AI solutions.
+                </li>
+                <li>
+                  Discover the benefits of starting the AI journey by building
+                  basic data products.
+                </li>
+                <li>
+                  Recognize the critical role of Product Managers in shaping the
+                  data strategy for successful AI implementation.
+                </li>
+                <li>
+                  Understand that AI is not a universal solution and requires
+                  careful consideration of the problem statement.
+                </li>
+                <li>
+                  Familiarize yourself with the specialized requirements of AI
+                  software.
+                </li>
+              </ul>
+
+              <strong>Processes</strong>
+
+              <ul>
+                <li>
+                  The importance of defining the right metrics for measuring
+                  success in AI projects from day one.
+                </li>
+                <li>
+                  Understanding the behavior and dynamics of Return on
+                  Investment (ROI) in AI.
+                </li>
+                <li>
+                  Exploring the economics of AI and strategies for building AI
+                  solutions that are marketable.
+                </li>
+                <li>
+                  Recognizing the fundamental differences between AI development
+                  and traditional software development.
+                </li>
+                <li>
+                  Managing expectations when working with a business team that
+                  expects perfection and understanding that AI solutions will
+                  make mistakes.
+                </li>
+                <li>
+                  Why business must understand any and every AI solution will
+                  always make mistakes - it will never be perfect (unlike
+                  software engineering).
+                </li>
+                <li>
+                  Assessing why the Agile methodology may not be suitable for
+                  managing AI projects effectively.
+                </li>
+                <li>
+                  How to test AI software? (you are never sure of what is the
+                  right output).
+                </li>
+                <li>
+                  Why OKRs (outcome-driven development) is not suitable for AI
+                  projects.
+                </li>
+                <li>
+                  Designing UX for AI - Feedback + Errors + Control + Graceful
+                  Failure.
+                </li>
+              </ul>
+              <strong>People</strong>
+              <ul>
+                <li>Right way to structure AI teams?</li>
+                <li>
+                  Hiring considerations for AI teams: PhDs vs MS vs fresh
+                  undergraduates.
+                </li>
+                <li>
+                  The importance of hiring Data Product Managers or a Head of
+                  Data.
+                </li>
+                <li>
+                  Role of the AI leader? background of AI leader - specialist in
+                  Business (MBA) or closer to Technology (PhD)?
+                </li>
+                <li>
+                  Role of the Product Manager in AI war - Why having the right
+                  PM is a make or break in your AI strategy.
+                </li>
+                <li>
+                  Common mistakes made by AI engineers and their impact on
+                  project success.
+                </li>
+                <li>
+                  The significance of stakeholder management in the success of
+                  AI projects.
+                </li>
+                <li>
+                  Assessing the relevance and implications of publishing for AI
+                  teams.
+                </li>
+              </ul>
+
+              <h5>About the Instructor</h5>
+              <p>
+                This workshop will be led by
+                <a href="https://www.linkedin.com/in/anujgupta-82/"
+                  >Anuj Gupta</a
+                >, a highly regarded figure in the AI community.
+              </p>
+              <p>
+                With over 19 years of experience, Anuj has worked in various
+                capacities, from startups (early stage, late stage, unicorns,
+                IPO) to Fortune 50 companies, driving AI initiatives from
+                inception to successful implementation. Right from Vision,
+                Strategy, Roadmap, incubating and grooming high-performance AI
+                teams, Technical execution, GTM & Sales; delivering KPIs at CXO
+                level. He has a track record of building high-performance AI
+                teams and delivering results at the CXO level. Anuj’s pragmatic
+                approach to AI has earned him a reputation in the industry.
+              </p>
+              <p>
+                Anuj also
+                <a href="https://www.practicalnlp.ai/"
+                  >co-authored a renowned book on AI</a
+                >, offering practical insights for product teams. It was #1 new
+                release on Amazon.com. The book has received
+                <a
+                  href="https://www.practicalnlp.ai/testimonial.html#testimonials"
+                  >accolades</a
+                >
+                from esteemed AI leaders from UCSD, CMU, DeepMind, Google AI,
+                Microsoft Research, Amazon research, Meta, Spotify, Airbnb to
+                name a few. The book has gained popularity worldwide, translated
+                into 4 languages & adopted by over 40 universities for their AI
+                curriculum.
+              </p>
+              <div>
+                <img
+                  src="images/otherinstruct.png"
+                  alt="Image 1 description"
+                  width="800"
+                  height="auto"
+                  margin="20px"
+                />
+              </div>
+              <br />
+              <div>
+                <img
+                  src="images/otherinstruct1.png"
+                  alt="Image 2 description"
+                  width="800"
+                  height="auto"
+                />
+              </div>
+              <br />
+              <p>
+                Anuj has been very active in the AI community, both India and
+                abroad, for many years. He started India’s first
+                <a
+                  href="https://hasgeek.com/anuj_gupta/how-to-do-ai-right-workshop/"
+                  >Deep Learning weekend meetup group</a
+                >
+                back in 2015. This was generously supported by Nvidia. He has
+                played a key role in shpaing
+                <a href="https://hasgeek.com/anthillinside">Anthill Inside</a>,
+                India’s first peer reviewed conference which bridges the gap
+                between the theory of AI and real world practice. Over the
+                years, he has given various
+                <a href="https://anujgupta82.github.io/talks/">talks</a> and
+                conducted multiple
+                <a href="https://anujgupta82.github.io/workshops/"
+                  >workshops and bootcamps on various topics within AI</a
+                >.
+              </p>
+              <strong>In-person workshop</strong>
+              <p>
+                This workshop will be held <strong>in person</strong> on a
+                <strong>Friday & Saturday</strong> at the
+                <a href="https://g.co/kgs/fyQ8rL"
+                  >Bengaluru International Centre (BIC)</a
+                >
+                in Bangalore.
+              </p>
+
+              <strong>What is so very different about this workshop</strong>
+              <p>
+                In the last decade, most of the educational material (university
+                courses, upskilling courses, books, lectures) on AI focuses on
+                engineers or have an engineer first approach. This workshop
+                addresses the often overlooked 90% of AI that goes beyond
+                building models. Just as Coca-Cola’s secret formula sets it
+                apart from others, this workshop delves into the “secret
+                ingredients” of AI implementation. By discussing and
+                democratizing this vital 90%, the workshop aims to empower
+                individuals across various roles in organizations to thrive in
+                the AI landscape.
+              </p>
+              <strong
+                >Unlike everyone, why does this workshop focus on non-AI
+                teams</strong
+              >
+              <p>
+                AI serves as a powerful tool to achieve market dominance and
+                generate new revenue streams for businesses. In an AI-first
+                world, the entire organization, including product, business,
+                sales, and HR teams, must adopt an AI-first mindset to be able
+                to do AI right. To enable this shift, it is essential to provide
+                educational material tailored to the specific roles and needs of
+                product, HR, and sales/business teams. This workshop aims to
+                fulfill that purpose by equipping participants with the
+                knowledge and insights necessary to thrive in the AI landscape
+                and contribute effectively to their respective roles in the AI
+                war.
+              </p>
+              <strong>Contact details</strong>
+              <p>
+                For tickets and inquiries about this workshop, contact Hasgeek
+                at <a href="mailto:info@hasgeek.com">info@hasgeek.com</a> or
+                call (91)7676332020.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Venue and Host -->
+        <div class="col-lg-4">
+          <!-- Venue Card -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Venue</h5>
+              <p>
+                Bangalore International Centre (BIC)<br />
+                7, 4th Main Road, Stage 2<br />
+                Domlur, Bengaluru - 560071<br />
+                Karnataka, IN
+              </p>
+            </div>
+          </div>
+
+          <!-- Hosted By Card -->
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Hosted by</h5>
+              <div class="d-flex align-items-center">
+                <img
+                  src="images/Anuj-gupta.png"
+                  alt="Host Image"
+                  class="rounded-circle"
+                  width="50"
+                  height="50"
+                />
+                <div class="ms-3">
+                  <strong>Anuj Gupta</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
