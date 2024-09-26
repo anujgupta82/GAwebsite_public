@@ -1,22 +1,37 @@
 function loadRegion(region) {
-    const regionContent = document.getElementById("region-content");
-  
-    if (region === "APAC") {
-      regionContent.innerHTML = `
-        <div class="hero">
-          <div class="hero-image">
-            <img src="images/mainimage.png" class="img-fluid" alt="APAC Image" />
-          </div>
-        </div>`;
-    } else if (region === "Europe") {
-      regionContent.innerHTML = `
-        <div class="hero">
-          <div class="hero-image">
-            <img src="images/DATA & AI PRODUCT MANAGEMENT.png" class="img-fluid" alt="Europe Image" />
-          </div>
-        </div>`;
-    }
+  const regionContent = document.getElementById("region-content");
+
+  if (region === "APAC") {
+    regionContent.innerHTML = `
+      <div class="hero">
+        <div class="hero-image">
+          <img src="images/mainimage.png" class="img-fluid" alt="APAC Image" />
+        </div>
+      </div>`;
+  } else if (region === "Europe") {
+    regionContent.innerHTML = `
+      <div class="hero">
+        <div class="hero-image">
+          <img src="images/DATA & AI PRODUCT MANAGEMENT.png" class="img-fluid" alt="Europe Image" />
+        </div>
+      </div>`;
+  } else if (region === "USA") {
+    regionContent.innerHTML = `
+      <div class="hero">
+        <div class="hero-image">
+          <img src="images/mainimage.png" class="img-fluid" alt="USA Image" />
+        </div>
+      </div>`;
+  } else if (region === "MiddleEast") {
+    regionContent.innerHTML = `
+      <div class="hero">
+        <div class="hero-image">
+          <img src="images/mainimage.png" class="img-fluid" alt="Middle East Image" />
+        </div>
+      </div>`;
   }
+}
+
 
 
   document.addEventListener('DOMContentLoaded', function() {
