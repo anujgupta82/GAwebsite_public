@@ -1,5 +1,6 @@
 function loadRegion(region) {
   const regionContent = document.getElementById("region-content");
+  const pricingCard = document.getElementById("pricing-card");
 
   if (region === "APAC") {
     regionContent.innerHTML = `
@@ -8,6 +9,13 @@ function loadRegion(region) {
           <img src="images/mainimage.png" class="img-fluid" alt="APAC Image" />
         </div>
       </div>`;
+
+    pricingCard.innerHTML = `
+      <h3 class="mb-3">Course Price</h3>
+      <h2 class="mb-3">Rs 19,999 <small class="text-muted">(Including taxes)</small></h2>
+      <p class="mb-4">Unlock the full potential of AI with our comprehensive course.</p>
+      <a href="contact-apac.html" class="btn btn-primary">Enroll Now</a>`;
+  
   } else if (region === "Europe") {
     regionContent.innerHTML = `
       <div class="hero">
@@ -15,6 +23,13 @@ function loadRegion(region) {
           <img src="images/DATA & AI PRODUCT MANAGEMENT.png" class="img-fluid" alt="Europe Image" />
         </div>
       </div>`;
+
+    pricingCard.innerHTML = `
+      <h3 class="mb-3">Course Price</h3>
+      <h2 class="mb-3">$ 599 <small class="text-muted">(Including taxes)</small></h2>
+      <p class="mb-4">Master the power of AI with our expertly designed course for Europe.</p>
+      <a href="contact-europe.html" class="btn btn-primary">Enroll Now</a>`;
+  
   } else if (region === "USA") {
     regionContent.innerHTML = `
       <div class="hero">
@@ -22,6 +37,13 @@ function loadRegion(region) {
           <img src="images/mainimage.png" class="img-fluid" alt="USA Image" />
         </div>
       </div>`;
+
+    pricingCard.innerHTML = `
+      <h3 class="mb-3">Course Price</h3>
+      <h2 class="mb-3">$ 599 <small class="text-muted">(Including taxes)</small></h2>
+      <p class="mb-4">Join the AI revolution with our specialized USA-focused course.</p>
+      <a href="contact-usa.html" class="btn btn-primary">Enroll Now</a>`;
+  
   } else if (region === "MiddleEast") {
     regionContent.innerHTML = `
       <div class="hero">
@@ -29,8 +51,15 @@ function loadRegion(region) {
           <img src="images/mainimage.png" class="img-fluid" alt="Middle East Image" />
         </div>
       </div>`;
+
+    pricingCard.innerHTML = `
+      <h3 class="mb-3">Course Price</h3>
+      <h2 class="mb-3">$ 599 <small class="text-muted">(Including taxes)</small></h2>
+      <p class="mb-4">Learn AI with tailored content for Middle East professionals.</p>
+      <a href="contact-middleeast.html" class="btn btn-primary">Enroll Now</a>`;
   }
 }
+
 
 
 
