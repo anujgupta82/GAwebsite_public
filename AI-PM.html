@@ -346,63 +346,99 @@
     </div>
     
     <!-- Region Selection Modal -->
-<div class="modal fade" id="regionModal" tabindex="-1" aria-labelledby="regionModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="regionModalLabel">Select Your Region</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal fade" id="regionModal" tabindex="-1" aria-labelledby="regionModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content theme-modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="regionModalLabel">Select Your Region</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Please select your region to view the appropriate content.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn region-btn" data-bs-dismiss="modal" onclick="loadRegion('APAC')">
+              <img src="https://flagcdn.com/w40/in.png" alt="APAC Flag" class="flag-icon"> INDIA/APAC
+            </button>
+            <button type="button" class="btn region-btn" data-bs-dismiss="modal" onclick="loadRegion('Europe')">
+              <img src="https://flagcdn.com/w40/eu.png" alt="Europe Flag" class="flag-icon"> Europe
+            </button>
+            <button type="button" class="btn region-btn" data-bs-dismiss="modal" onclick="loadRegion('USA')">
+              <img src="https://flagcdn.com/w40/us.png" alt="USA Flag" class="flag-icon"> USA
+            </button>
+            <button type="button" class="btn region-btn" data-bs-dismiss="modal" onclick="loadRegion('MiddleEast')">
+              <img src="https://flagcdn.com/w40/ae.png" alt="Middle East Flag" class="flag-icon"> Middle East
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-        Please select your region to view the appropriate content.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary region-btn" data-bs-dismiss="modal" onclick="loadRegion('APAC')">
-          <i class="fas fa-flag"></i> APAC
-        </button>
-        <button type="button" class="btn btn-primary region-btn" data-bs-dismiss="modal" onclick="loadRegion('Europe')">
-          <i class="fas fa-flag"></i> Europe
-        </button>
-        <button type="button" class="btn btn-primary region-btn" data-bs-dismiss="modal" onclick="loadRegion('USA')">
-          <i class="fas fa-flag"></i> USA
-        </button>
-        <button type="button" class="btn btn-primary region-btn" data-bs-dismiss="modal" onclick="loadRegion('MiddleEast')">
-          <i class="fas fa-flag"></i> Middle East
-        </button>
-      </div>
-      
     </div>
-  </div>
-</div>
-
-<style>
-  .region-btn {
-    border-radius: 12px; /* Rounded edges */
-    padding: 10px 20px;  /* Increase padding for a clickable feel */
-    font-size: 16px;     /* Font size for better readability */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between the icon and text */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .region-btn:hover {
-      transform: scale(1.05); /* Slight scale-up effect on hover */
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-  }
-
-  .region-btn i {
-      margin-right: 8px; /* Margin for the flag icon */
-  }
-
-  /* Optional: Different color for each region */
-  .region-btn:nth-child(1) { background-color: #000000; } /* APAC */
-  .region-btn:nth-child(2) { background-color: #000000; } /* Europe */
-  .region-btn:nth-child(3) { background-color: #000000; } /* USA */
-  .region-btn:nth-child(4) { background-color: #000000; } /* Middle East */
-
-</style>
+    
+    <style>
+      /* Modal Background and Border */
+      .theme-modal-content {
+        background: linear-gradient(135deg, #f0f8ff, #e6f7ff); /* Subtle blue gradient */
+        border-radius: 15px;
+        border: 1px solid #b0d5ff; /* Light blue border */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        color: #003366;
+      }
+    
+      /* Modal Header */
+      .theme-modal-content .modal-header {
+        border-bottom: 1px solid #cce7ff;
+      }
+    
+      .theme-modal-content .modal-title {
+        font-weight: bold;
+        color: #003366;
+        text-align: center;
+      }
+    
+      /* Region Button Styles */
+      .region-btn {
+        border-radius: 10px;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #ffffff;
+        background: linear-gradient(135deg, #0066cc, #0f0169); /* Enhanced blue gradient */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      }
+    
+      .region-btn:hover {
+        transform: scale(1.07);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        background: linear-gradient(135deg, #005bb5, #003d7a); /* Darker gradient on hover */
+      }
+    
+      /* Flag Icon Styling */
+      .flag-icon {
+        border-radius: 4px;
+        width: 24px; /* Make flags a bit more prominent */
+      }
+    
+      /* Footer Layout */
+      .modal-footer {
+        justify-content: space-around; /* Space buttons evenly */
+      }
+    
+      /* Button Close Icon Styling */
+      .btn-close {
+        color: #003366;
+        opacity: 0.6;
+        transition: opacity 0.3s ease;
+      }
+    
+      .btn-close:hover {
+        opacity: 1;
+      }
+    </style>
+    
 
 
     <!-- New Button -->
@@ -586,152 +622,159 @@
 
     <div class="container my-5">
       <div class="text-center">
-        <h2>Course Overview</h2>
-        <p class="lead">
-          In-depth & exclusive content to help seasoned product managers
-          transition into an AI-first world with tons of case studies and
-          examples.
+        <h2 class="section-title">Course Overview</h2>
+        <p class="section-description">
+          In-depth & exclusive content to help seasoned product managers transition into an AI-first world with tons of case studies and examples.
         </p>
       </div>
     </div>
+    
     <!-- Card Section using Bootstrap Grid -->
     <div class="container">
       <div class="row">
         <!-- Card 1 -->
-        <div class="col-md-3 mb-4">
-          <div class="card h-100">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm gradient-card">
             <div class="card-body">
-              <h5 class="card-title">
-                What is AI? Impact of AI in the Digital Products
-              </h5>
+              <h5 class="card-title">What is AI? Impact of AI in Digital Products</h5>
               <ul class="card-text">
-                <li>
-                  Learn the evolution of AI and understand difference between
-                  NLP, ML, DL, GenAI
-                </li>
+                <li>Learn the evolution of AI and understand the difference between NLP, ML, DL, GenAI</li>
                 <li>Unpack various layers of an AI stack</li>
-                <li>
-                  Use Cases across industries of how AI has influenced the
-                  digital landscape
-                </li>
+                <li>Use cases across industries of how AI has influenced the digital landscape</li>
               </ul>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
             </div>
           </div>
         </div>
-
+    
         <!-- Card 2 -->
-        <div class="col-md-3 mb-4">
-          <div class="card h-100">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm gradient-card">
             <div class="card-body">
-              <h5 class="card-title">
-                Traditional PM (Software 1.0) vs AI PM (Software 2.0)
-              </h5>
+              <h5 class="card-title">Traditional PM (Software 1.0) vs AI PM (Software 2.0)</h5>
               <ul class="card-text">
-                <li>
-                  Explains why Product management in AI first world requires
-                  serious upgrade
-                </li>
+                <li>Why product management in the AI-first world requires a serious upgrade</li>
                 <li>Roles and Responsibilities of PM for AI-First Products</li>
               </ul>
             </div>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
           </div>
         </div>
-
+    
         <!-- Card 3 -->
-        <div class="col-md-3 mb-4">
-          <div class="card h-100">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm gradient-card">
             <div class="card-body">
-              <h5 class="card-title">Developing the capability curve in AI</h5>
+              <h5 class="card-title">Developing the Capability Curve in AI</h5>
               <ul class="card-text">
-                <li>
-                  Crucial to understand right way to develop AI systems across
-                  layers
-                </li>
+                <li>Understand the right way to develop AI systems across layers</li>
                 <li>Deep dive with a case study</li>
               </ul>
             </div>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
           </div>
         </div>
-
+    
         <!-- Card 4 -->
-        <div class="col-md-3 mb-4">
-          <div class="card h-100">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm gradient-card">
             <div class="card-body">
-              <h5 class="card-title">Identifying the right use cases for AI</h5>
+              <h5 class="card-title">Identifying the Right Use Cases for AI</h5>
               <ul class="card-text">
                 <li>Framework for identifying the right use case</li>
-                <li>Case Study</li>
+                <li>Case study</li>
               </ul>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
+    
         <!-- Card 5 -->
-        <div class="col-md-3 mb-4">
-          <div class="card h-100">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm gradient-card">
             <div class="card-body">
-              <h5 class="card-title">
-                Understanding the AI First Product Metrics
-              </h5>
+              <h5 class="card-title">Understanding AI-First Product Metrics</h5>
               <ul class="card-text">
-                <li>Business, Model performance, Data and Ethical metrics</li>
-                <li>Hands on exercise</li>
-              </ul>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="col-md-3 mb-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Building Ux for AI first products</h5>
-              <ul class="card-text">
-                <li>Framework for building AI Products that factors in</li>
-                <li>Feedback Loops</li>
-                <li>Explainability, Transparency, Bias</li>
-                <li>Case Study & Hands-on exercise</li>
-              </ul>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 7 -->
-        <div class="col-md-3 mb-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Data Management of AI Products</h5>
-              <ul class="card-text">
+                <li>Business, Model Performance, Data, and Ethical metrics</li>
                 <li>Hands-on exercise</li>
               </ul>
             </div>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+    
+        <!-- Card 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm gradient-card">
+            <div class="card-body">
+              <h5 class="card-title">Building UX for AI-First Products</h5>
+              <ul class="card-text">
+                <li>Framework for building AI products that factors in feedback loops</li>
+                <li>Explainability, Transparency, and Bias</li>
+                <li>Case study & hands-on exercise</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+    
+    <style>
+      /* General Styling */
+      .section-title {
+        font-weight: 700;
+        color: #003366; /* Dark blue */
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+    
+      .section-description {
+        font-size: 1.1rem;
+        color: #666;
+        max-width: 700px;
+        margin: 0 auto 2rem auto;
+      }
+    
+      /* Card Styling */
+      .card {
+        background-color: #f7fbff; /* Light blue */
+        border: none;
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+    
+      .gradient-card {
+        background: linear-gradient(135deg, #f0f8ff, #e6f7ff); /* Subtle blue gradient */
+        padding: 1.25rem;
+      }
+    
+      .card:hover {
+        transform: translateY(-5px); /* Lift effect */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+      }
+    
+      .card-title {
+        color: #003366; /* Dark blue for title */
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-size: 1.25rem;
+      }
+    
+      .card-text {
+        color: #555;
+        font-size: 1rem;
+        text-align: left;
+        padding-left: 1.2rem;
+      }
+    
+      /* List Styling */
+      .card-text li {
+        margin-bottom: 8px;
+      }
+    
+      .card-text li::before {
+        color: #007bff; /* Accent blue */
+        font-weight: bold;
+        margin-right: 8px;
+      }
+    </style>
+    
+    
     <!-- New Content Section -->
     <div class="container additional-resources my-5">
       <h2 class="text-center mb-4">Additional Resources</h2>
@@ -821,68 +864,134 @@
       </div>
     </div>
 
-    <div class="container additional-resources my-5"></div>
-<h2 class="text-center mb-4">Who Should Attend this Course</h2>
-<div class="row">
-
-  <div class="col-md-4 mb-4">
-    <div class="card h-100">
-      <div class="card-body text-center">
-        <div class="card-icon mb-3">
-          <i class="bi bi-person-badge"></i> <!-- Icon for Product Leaders -->
+    <div class="container additional-resources my-5">
+      <h2 class="text-center section-title mb-4">Who Should Attend this Course</h2>
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 attendee-card shadow-sm">
+            <div class="card-body text-center">
+              <div class="card-icon mb-3">
+                <i class="bi bi-person-badge"></i> <!-- Icon for Product Leaders -->
+              </div>
+              <h5 class="card-title">Product Leaders</h5>
+              <p class="card-text">Ideal for those overseeing product strategy and growth.</p>
+            </div>
+          </div>
         </div>
-        <h5 class="card-title">Product Leaders</h5>
+    
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 attendee-card shadow-sm">
+            <div class="card-body text-center">
+              <div class="card-icon mb-3">
+                <i class="bi bi-gear-fill"></i> <!-- Icon for Product Managers -->
+              </div>
+              <h5 class="card-title">Product Managers</h5>
+              <p class="card-text">Perfect for PMs looking to adapt to an AI-first world.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 attendee-card shadow-sm">
+            <div class="card-body text-center">
+              <div class="card-icon mb-3">
+                <i class="bi bi-bar-chart-line"></i> <!-- Icon for Data Scientists -->
+              </div>
+              <h5 class="card-title">Data Scientists</h5>
+              <p class="card-text">For those applying data-driven techniques to AI product development.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 attendee-card shadow-sm">
+            <div class="card-body text-center">
+              <div class="card-icon mb-3">
+                <i class="bi bi-cpu-fill"></i> <!-- Icon for Data Engineers -->
+              </div>
+              <h5 class="card-title">Data Engineers</h5>
+              <p class="card-text">Best for engineers working on data infrastructure for AI.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 5 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 attendee-card shadow-sm">
+            <div class="card-body text-center">
+              <div class="card-icon mb-3">
+                <i class="bi bi-lightbulb"></i> <!-- Icon for Tech Product Managers -->
+              </div>
+              <h5 class="card-title">Tech Product Managers</h5>
+              <p class="card-text">For PMs focused on technical aspects of AI products.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 attendee-card shadow-sm">
+            <div class="card-body text-center">
+              <div class="card-icon mb-3">
+                <i class="bi bi-people-fill"></i> <!-- Icon for Business Analysts -->
+              </div>
+              <h5 class="card-title">Business Analysts</h5>
+              <p class="card-text">Designed for analysts working with AI and data insights.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="card h-100">
-      <div class="card-body text-center">
-        <div class="card-icon mb-3">
-          <i class="bi bi-gear-fill"></i> <!-- Icon for Product Managers -->
-        </div>
-        <h5 class="card-title">Product Managers</h5>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="card h-100">
-      <div class="card-body text-center">
-        <div class="card-icon mb-3">
-          <i class="bi bi-bar-chart-line"></i> <!-- Icon for Data Scientists -->
-        </div>
-        <h5 class="card-title">Data Scientist</h5>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-4 mb-4">
-    <div class="card h-100">
-      <div class="card-body text-center">
-        <div class="card-icon mb-3">
-          <i class="bi bi-cpu-fill"></i> <!-- Icon for Data Engineers -->
-        </div>
-        <h5 class="card-title">Data Engineers</h5>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="card h-100">
-      <div class="card-body text-center">
-        <div class="card-icon mb-3">
-          <i class="bi bi-lightbulb"></i> <!-- Icon for Tech Product Managers -->
-        </div>
-        <h5 class="card-title">Tech Product Managers</h5>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+    
+    <style>
+      /* Section Title */
+      .section-title {
+        font-weight: 700;
+        color: #003366; /* Dark blue */
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+    
+      /* Card Styling */
+      .attendee-card {
+        background: #f7fbff; /* Light blue */
+        border: none;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+    
+      .attendee-card:hover {
+        transform: translateY(-5px); /* Lift effect */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+      }
+    
+      .card-body {
+        padding: 1.5rem;
+      }
+    
+      .card-icon {
+        font-size: 2.5rem;
+        color: #007bff; /* Accent blue */
+      }
+    
+      .card-title {
+        color: #003366; /* Dark blue */
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 1.25rem;
+      }
+    
+      .card-text {
+        color: #555;
+        font-size: 1rem;
+      }
+    </style>
+    
 
 <div class="container my-5">
   <h2 class="text-center mb-5">What This Course Offers</h2>
