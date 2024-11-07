@@ -6,7 +6,7 @@ function loadRegion(region) {
     regionContent.innerHTML = `
       <div class="hero">
         <div class="hero-image">
-          <img src="images/mainimage.png" class="img-fluid" alt="APAC Image" />
+          <img src="images/AI_PM.png" class="img-fluid" alt="APAC Image" />
         </div>
       </div>`;
 
@@ -20,7 +20,7 @@ function loadRegion(region) {
     regionContent.innerHTML = `
       <div class="hero">
         <div class="hero-image">
-          <img src="images/DATA & AI PRODUCT MANAGEMENT.png" class="img-fluid" alt="Europe Image" />
+          <img src="images/AI_PM.png" class="img-fluid" alt="Europe Image" />
         </div>
       </div>`;
 
@@ -34,7 +34,7 @@ function loadRegion(region) {
     regionContent.innerHTML = `
       <div class="hero">
         <div class="hero-image">
-          <img src="images/mainimage.png" class="img-fluid" alt="USA Image" />
+          <img src="images/AI_PM.png" class="img-fluid" alt="USA Image" />
         </div>
       </div>`;
 
@@ -48,7 +48,7 @@ function loadRegion(region) {
     regionContent.innerHTML = `
       <div class="hero">
         <div class="hero-image">
-          <img src="images/mainimage.png" class="img-fluid" alt="Middle East Image" />
+          <img src="images/AI_PM.png" class="img-fluid" alt="Middle East Image" />
         </div>
       </div>`;
 
