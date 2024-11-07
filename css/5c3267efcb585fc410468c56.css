@@ -232,6 +232,30 @@ th {
   line-height: 1;
   font-family: webflow-icons !important;
 }
+.w-nav-brand.w--current,
+.w-nav-brand.w--current:hover {
+    background-color: transparent !important; /* Keeps background clear */
+    color: #333 !important; /* Adjust to your preferred color */
+    box-shadow: none !important; /* Ensures no shadow appears */
+    border: none !important; /* Removes any border */
+}
+/* Initial white color */
+.navbar .nav-link.our-services {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* Black color on scroll up */
+.navbar .nav-link.our-services.scrolled-up {
+  color: black;
+}
+.w-nav-brand.w--current,
+.w-nav-brand.w--current:hover {
+    background-color: transparent !important; /* Keeps background clear */
+    color: #333 !important; /* Adjust to your preferred color */
+    box-shadow: none !important; /* Ensures no shadow appears */
+    border: none !important; /* Removes any border */
+}
 
 .w-icon-slider-right:before {
   content: "=";
@@ -240,6 +264,7 @@ th {
 .w-icon-slider-left:before {
   content: "=";
 }
+
 
 .w-icon-nav-menu:before {
   content: "=";
@@ -2177,7 +2202,7 @@ textarea.w-select {
 }
 
 .w-tab-link.w--current {
-  background-color: #c8c8c8;
+  background-color: #ffffff;
 }
 
 .w-tab-link:focus {
