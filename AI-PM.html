@@ -1604,18 +1604,27 @@
 
   <div class="row justify-content-center">
     <div class="col-md-8 mb-4">
-      <div class="card bg-white border border-primary rounded d-flex flex-row p-3 align-items-center">
-        <img src="images/Anuj-gupta.png" class="rounded-circle instructor-image me-4" alt="Instructor - Anuj Gupta">
-        <div class="card-body">
-          <h5 class="card-title">Anuj Gupta</h5>
-          <h6 class="card-subtitle mb-2 text-muted">AI Leader & Advisor</h6>
-          <p class="card-text">20+ years as AI Leader<br>
-            AI Advisor to Start-Ups/MNCs<br>
-            Work endorsed by CMU, DeepMind, Google AI, YC Start-Up</p>
-          <div class="social-icons mt-3">
-            <a href="https://www.linkedin.com/in/anujgupta-82/" target="_blank" class="text-primary mx-2"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://x.com/anujgupta82" target="_blank" class="text-primary mx-2"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.youtube.com/@gradient_advisors" target="_blank" class="text-primary mx-2"><i class="fab fa-youtube"></i></a>
+      <div class="card bg-light border-0 shadow-lg rounded-3 p-4">
+        <div class="row align-items-center">
+          <div class="col-md-4 text-center">
+            <img src="images/Anuj_Photo_high_res.png" class="rounded-circle instructor-image border border-primary" alt="Instructor - Anuj Gupta">
+          </div>
+          <div class="col-md-8">
+            <h5 class="card-title text-primary">Anuj Gupta</h5>
+            <h6 class="card-subtitle mb-3 text-muted">AI Leader & Advisor</h6>
+            <ul class="card-text mb-4 list-unstyled">
+              <li>🚀 Fractional Head of Gen AI</li>
+              <li>🚀 AI Advisor</li>
+              <li>🚀 Coaching Boards & Execs on Gen AI</li>
+              <li>🚀 Built AI systems leading to funding, acquisition & IPO</li>
+              <li>🚀 Author of landmark AI book (O’Reilly, US)</li>
+              <li>🚀 Board Member</li>
+            </ul>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/anujgupta-82/" target="_blank" class="btn btn-outline-primary btn-sm rounded-circle me-2"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://x.com/anujgupta82" target="_blank" class="btn btn-outline-primary btn-sm rounded-circle me-2"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.youtube.com/@gradient_advisors" target="_blank" class="btn btn-outline-primary btn-sm rounded-circle"><i class="fab fa-youtube"></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -1625,47 +1634,50 @@
 
 <style>
   .instructor-image {
-    width: 120px; /* Set width for the image */
-    height: 120px; /* Set height for the image */
+    width: 150px; /* Increased size for prominence */
+    height: 150px;
     object-fit: cover;
     border-radius: 50%; /* Circle shape */
+    border: 3px solid #007bff; /* Add a colored border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
   }
-  
+
   .card {
-    display: flex;
-    flex-direction: row; /* Align content in a row */
-    align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 15px;
-    max-width: 700px; /* Max width for landscape card */
-    margin: auto;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
   }
-  
+
   .card-title {
     font-weight: 700;
-    font-size: 1.5rem; /* Larger font for title */
+    font-size: 1.8rem; /* Larger font for emphasis */
+    color: #003366;
   }
-  
+
   .card-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #6c757d;
   }
-  
+
   .card-text {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #555;
   }
-  
+
   .social-icons a {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     text-decoration: none;
+    padding: 10px;
+    transition: transform 0.2s;
   }
-  
+
   .social-icons a:hover {
+    transform: scale(1.2);
     color: #0056b3;
   }
-  
 </style>
+
 <div class="container my-5">
   <h2 class="text-center mb-5">Our Attendees Work At</h2>
   <div class="row text-center">
@@ -1730,231 +1742,187 @@
 
 <div class="container my-5">
   <h2 class="text-center mb-5">Hear What Others Have to Say</h2>
-  <div class="row">
-
-    <!-- Card 1 -->
-    <div class="col-md-4 mb-4">
-      <div class="review-card">
-        <div class="review-content-wrapper">
-          <div class="reviewer-image">
-            <img src="images/sucheta.jpeg" alt="Sucheta Sinha" />
+  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="review-card text-center p-4">
+          <div class="reviewer-image mb-4">
+            <img src="images/sucheta.jpeg" alt="Sucheta Sinha" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
           </div>
-          <div class="review-text">
-            <p class="review-author">
-              Sucheta Sinha<br>
-              Product Mgmt. Leader, ex-Oracle, ex-HP
-              <a href="https://www.linkedin.com/in/sucheta-sinha-a76a59/" target="_blank">
-                <i class="fab fa-linkedin linkedin-icon"></i>
-              </a>
-            </p>
-            <p class="review-content">"AI for Product Managers is a boutique course and a great starting point for PMs interested in venturing into AI products. The course is interactive and includes hands-on exercises to help participants gain practical experience."</p>
-            <div class="rating">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="col-md-4 mb-4">
-      <div class="review-card">
-        <div class="review-content-wrapper">
-          <div class="reviewer-image">
-            <img src="images/pawank.jpeg" alt="Pavan Kumar Bayana" />
-          </div>
-          <div class="review-text">
-            <p class="review-author">
-              Pavan Kumar Bayana<br>
-              Product Coach
-              <a href="https://www.linkedin.com/in/pavanbayana/" target="_blank">
-                <i class="fab fa-linkedin linkedin-icon"></i>
-              </a>
-            </p>
-            <p class="review-content">"I had really enjoyed the learnings from the AI Product Management sessions. Would highly recommend it to all aspiring classic as well as AI Product Managers. Thank you!"</p>
-            <div class="rating">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
+          <p class="review-author fw-bold text-primary mb-2">
+            Sucheta Sinha<br>
+            <span class="text-muted">Product Mgmt. Leader, ex-Oracle, ex-HP</span>
+            <a href="https://www.linkedin.com/in/sucheta-sinha-a76a59/" target="_blank" class="text-primary ms-2">
+              <i class="fab fa-linkedin linkedin-icon"></i>
+            </a>
+          </p>
+          <p class="review-content text-secondary fst-italic">"AI for Product Managers is a boutique course and a great starting point for PMs interested in venturing into AI products. The course is interactive and includes hands-on exercises to help participants gain practical experience."</p>
+          <div class="rating">
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="col-md-4 mb-4">
-      <div class="review-card">
-        <div class="review-content-wrapper">
-          <div class="reviewer-image">
-            <img src="images/anuradha.jpeg" alt="Anuradha Mohan" />
+  
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="review-card text-center p-4">
+          <div class="reviewer-image mb-4">
+            <img src="images/pawank.jpeg" alt="Pavan Kumar Bayana" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
           </div>
-          <div class="review-text">
-            <p class="review-author">
-              Anuradha Mohan<br>
-              Product Manager
-              <a href="https://www.linkedin.com/in/anuradha-mohan/" target="_blank">
-                <i class="fab fa-linkedin linkedin-icon"></i>
-              </a>
-            </p>
-            <p class="review-content">"Excellent session. Would highly recommend this for all product teams."</p>
-            <div class="rating">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="col-md-4 mb-4">
-      <div class="review-card">
-        <div class="review-content-wrapper">
-          <div class="reviewer-image">
-            <img src="images/vinayr.jpeg" alt="Vinay R Nagavara" />
-          </div>
-          <div class="review-text">
-            <p class="review-author">
-              Vinay R Nagavara<br>
-              Senior Product Manager
-              <a href="https://www.linkedin.com/in/vinayrn/" target="_blank">
-                <i class="fab fa-linkedin linkedin-icon"></i>
-              </a>
-            </p>
-            <p class="review-content">"The course is packed with a plethora of information. The insights from real-life project experiences added great value. Overall, the session was fantastic."</p>
-            <div class="rating">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
+          <p class="review-author fw-bold text-primary mb-2">
+            Pavan Kumar Bayana<br>
+            <span class="text-muted">Product Coach</span>
+            <a href="https://www.linkedin.com/in/pavanbayana/" target="_blank" class="text-primary ms-2">
+              <i class="fab fa-linkedin linkedin-icon"></i>
+            </a>
+          </p>
+          <p class="review-content text-secondary fst-italic">"I had really enjoyed the learnings from the AI Product Management sessions. Would highly recommend it to all aspiring classic as well as AI Product Managers. Thank you!"</p>
+          <div class="rating">
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Card 5 -->
-    <div class="col-md-4 mb-4">
-      <div class="review-card">
-        <div class="review-content-wrapper">
-          <div class="reviewer-image">
-            <img src="images/mukula.jpeg" alt="Mukula Joglekar" />
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="review-card text-center p-4">
+          <div class="reviewer-image mb-4">
+            <img src="images/anuradha.jpeg" alt="Anuradha Mohan" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
           </div>
-          <div class="review-text">
-            <p class="review-author">
-              Mukula Joglekar<br>
-              Independent Product Consultant
-              <a href="https://www.linkedin.com/in/mukula-joglekar-b21a871/" target="_blank">
-                <i class="fab fa-linkedin linkedin-icon"></i>
-              </a>
-            </p>
-            <p class="review-content">"AI-first product training by Anuj is exceptional. The course content includes real-world examples, and complex concepts are simplified for easy understanding. This training has enhanced my job search and interview preparation."</p>
-            <div class="rating">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
+          <p class="review-author fw-bold text-primary mb-2">
+            Anuradha Mohan<br>
+            <span class="text-muted">Product Manager</span>
+            <a href="https://www.linkedin.com/in/anuradha-mohan/" target="_blank" class="text-primary ms-2">
+              <i class="fab fa-linkedin linkedin-icon"></i>
+            </a>
+          </p>
+          <p class="review-content text-secondary fst-italic">"Excellent session. Would highly recommend this for all product team"</p>
+          <div class="rating">
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Card 6 -->
-    <div class="col-md-4 mb-4">
-      <div class="review-card">
-        <div class="review-content-wrapper">
-          <div class="reviewer-image">
-            <img src="images/rakesh.jpeg" alt="Rakesh Kapoor" />
+      <!-- Slide 4 -->
+      <div class="carousel-item">
+        <div class="review-card text-center p-4">
+          <div class="reviewer-image mb-4">
+            <img src="images/vinayr.jpeg" alt="Vinay R Nagavara" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
           </div>
-          <div class="review-text">
-            <p class="review-author">
-              Rakesh Kapoor<br>
-              Co-Founder, CTO
-              <a href="https://www.linkedin.com/in/rakesh-kapoor-73279a16/" target="_blank">
-                <i class="fab fa-linkedin linkedin-icon"></i>
-              </a>
-            </p>
-            
-            <p class="review-content">"The initiative on AI Product Management serves an important need, providing timely insights and comprehensive learning in the field."</p>
-            <div class="rating">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
+          <p class="review-author fw-bold text-primary mb-2">
+            Vinay R Nagavara<br>
+            <span class="text-muted">Senior Product Manager</span>
+            <a href="https://www.linkedin.com/in/vinayrn/" target="_blank" class="text-primary ms-2">
+              <i class="fab fa-linkedin linkedin-icon"></i>
+            </a>
+          </p>
+          <p class="review-content text-secondary fst-italic">"The course is packed with plethora of information. The insights from the real life project experiences was great value addition. Overall, the session was great"</p>
+          <div class="rating">
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
           </div>
         </div>
       </div>
-    </div>
 
+      <!-- Slide 5 -->
+      <div class="carousel-item">
+        <div class="review-card text-center p-4">
+          <div class="reviewer-image mb-4">
+            <img src="images/mukula.jpeg" alt="Mukula Joglekar" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
+          </div>
+          <p class="review-author fw-bold text-primary mb-2">
+            Mukula Joglekar<br>
+            <span class="text-muted">Independent Product Consultant</span>
+            <a href="https://www.linkedin.com/in/mukula-joglekar-b21a871/" target="_blank" class="text-primary ms-2">
+              <i class="fab fa-linkedin linkedin-icon"></i>
+            </a>
+          </p>
+          <p class="review-content text-secondary fst-italic">"Al first product training by Anuj is exceptional. Content offered consists of examples with real world examples. Complex concepts were covered in a simple way, easy  to consume. The course has truly enhanced my job search and interview preparation and preparedness. I'm all set to dive deeper into the subject by reading all the material provided"</p>
+          <div class="rating">
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="carousel-item">
+        <div class="review-card text-center p-4">
+          <div class="reviewer-image mb-4">
+            <img src="images/rakesh.jpeg" alt="Rakesh Kapoor" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
+          </div>
+          <p class="review-author fw-bold text-primary mb-2">
+            Rakesh Kapoor<br>
+            <span class="text-muted">Co-Founder, CTO</span>
+            <a href="https://www.linkedin.com/in/rakesh-kapoor-73279a16/" target="_blank" class="text-primary ms-2">
+              <i class="fab fa-linkedin linkedin-icon"></i>
+            </a>
+          </p>
+          <p class="review-content text-secondary fst-italic">"Initiative on Al Product Management timely serves an important need."</p>
+          <div class="rating">
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+            <i class="fas fa-star text-warning"></i>
+          </div>
+        </div>
+      </div>
+  
+    
+    </div>
+  
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-</div>
+  
+  <style>
+    .review-card {
+      background: linear-gradient(135deg, #e3f2fd, #ffffff);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+    .reviewer-image img {
+      object-fit: cover;
+    }
+    .review-author {
+      font-size: 1.2rem;
+    }
+    .review-content {
+      font-size: 1rem;
+    }
+    .rating i {
+      font-size: 1.2rem;
+    }
+  </style>
 
-<!-- Include Font Awesome for LinkedIn and star icons -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-<style>
-  .review-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-  min-height: 280px; /* Adjust based on desired uniform card height */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Ensures equal spacing for content within the card */
-}
-
-.review-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.review-content-wrapper {
-  display: flex;
-  align-items: flex-start;
-}
-
-.reviewer-image {
-  width: 60px;
-  height: 60px;
-  margin-right: 15px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.reviewer-image img {
-  width: 100%;
-  height: auto;
-}
-
-.review-text {
-  flex: 1;
-}
-
-.review-content {
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 10px;
-}
-
-.review-author {
-  font-weight: bold;
-  font-size: 0.95rem;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.rating {
-  color: #f39c12;
-  margin-bottom: 10px;
-}
-
-.rating i {
-  margin-right: 2px;
-}
-
-.linkedin-icon {
-  color: #0077b5;
-  margin-left: 8px;
-  font-size: 1.1em;
-}
-
-.linkedin-icon:hover {
-  color: #005582;
-}
-
-</style>
 
 
 
@@ -2166,7 +2134,7 @@ button:hover {
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          The course lasts for 12 weeks, with weekly sessions and hands-on projects to help you apply your learnings.
+          Classes run for 3 consecutive weekends (saturdays).
         </div>
       </div>
     </div>
@@ -2202,7 +2170,7 @@ button:hover {
       </h2>
       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          Basic knowledge of programming and an interest in AI are recommended. No prior experience in AI is required.
+          Basic knowledge of Product Management and a keen interest in AI are recommended. No prior experience in AI is required
         </div>
       </div>
     </div>
@@ -2214,7 +2182,7 @@ button:hover {
       </h2>
       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          You can reach out to our support team via email at support@example.com or through our contact form on the website.
+          You can reach out to our support team via email at <a href="mailto:support@gradient-advisors.ai">support@gradient-advisors.ai</a> or through our contact form on the website.
         </div>
       </div>
     </div>
