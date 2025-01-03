@@ -520,106 +520,117 @@
   
   <!-- Course Dates Section -->
   <div class="container my-5">
-      <h2 class="text-center mb-4">Course Dates</h2>
+    <div class="course-schedule-section text-center">
+      <h2 class="headc">Course Schedule</h2>
+      <p class="lead mb-5">15+ Hours of LIVE learning (across 3 weekends)</p>
       <div class="row">
-          <!-- Card 1 -->
-          <div class="col-md-4 mb-4">
-              <div class="card course-card">
-                  <div class="card-body text-center">
-                      <h5 class="card-title">25 JANUARY 2025</h5>
-                      <p class="card-text">11am - 1pm and 2pm - 4pm</p>
-                      
-                  </div>
-              </div>
+        <!-- Schedule Item 1 -->
+        <div class="col-md-4">
+          <div class="schedule-item">
+            <div class="date-box">
+              <h3>25 JANUARY 2025</h3>
+            </div>
+            <div class="details">
+              <p class="time">Time: 11am to 4pm</p>
+            </div>
           </div>
-          <!-- Card 2 -->
-          <div class="col-md-4 mb-4">
-              <div class="card course-card">
-                  <div class="card-body text-center">
-                      <h5 class="card-title">1 FEBRUARY 2025</h5>
-                      <p class="card-text">11am - 1pm and 2pm - 4pm</p>
-                      
-                  </div>
-              </div>
+        </div>
+        <!-- Schedule Item 2 -->
+        <div class="col-md-4">
+          <div class="schedule-item">
+            <div class="date-box">
+              <h3>1 FEBRUARY 2025</h3>
+            </div>
+            <div class="details">
+              <p class="time">Time: 11am to 4pm</p>
+            </div>
           </div>
-          <!-- Card 3 -->
-          <div class="col-md-4 mb-4">
-              <div class="card course-card">
-                  <div class="card-body text-center">
-                      <h5 class="card-title">8 FEBRUARY 2025</h5>
-                      <p class="card-text">11am - 1pm and 2pm - 4pm</p>
-                     
-                  </div>
-              </div>
+        </div>
+        <!-- Schedule Item 3 -->
+        <div class="col-md-4">
+          <div class="schedule-item">
+            <div class="date-box">
+              <h3>8 FEBRUARY 2025</h3>
+            </div>
+            <div class="details">
+              <p class="time">Time: 11am to 4pm</p>
+            </div>
           </div>
-      </div>
-  </div>
-  
-  
-<style>
-  .course-card {
-    border: none; /* Remove default card border */
-    border-radius: 15px; /* Rounded corners */
-    background-color: #f8f9fa; /* Light background color */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
-    max-width: 250px; /* Set a maximum width for smaller cards */
-    margin: 0 auto; /* Center cards */
-}
-
-.course-card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
-
-.card-body {
-    padding: 15px; /* Reduce padding for smaller cards */
-}
-
-.card-title {
-    font-size: 1.3rem; /* Slightly smaller font size for titles */
-    color: #007bff; /* Bootstrap primary color */
-}
-
-.card-text {
-    font-size: 1rem; /* Standard size for card text */
-    color: #6c757d; /* Subtle text color */
-}
-
-.display-4 {
-    font-weight: 700; /* Bold font for main heading */
-    text-transform: uppercase; /* Uppercase text for emphasis */
-    color: #007bff; /* Matching color with cards */
-}
-
-.text-center {
-    margin-bottom: 30px; /* Additional spacing below the header */
-}
-
-/* Media Query for Extra Small Devices */
-@media (max-width: 576px) {
-    .course-card {
-        max-width: 90%; /* Allow cards to take more width on small screens */
-    }
-
-    .card-title {
-        font-size: 1.2rem; /* Slightly smaller title font size on small screens */
-    }
-
-    .card-text {
-        font-size: 0.9rem; /* Slightly smaller text size on small screens */
-    }
-}
-
-
-</style>  
-
-    <!-- Centered Text Section -->
-    <div class="container my-4">
-      <div class="text-center">
-        <h2 class="lead">12+ Hrs. LIVE course (across 3 weekends)</h2>
+        </div>
       </div>
     </div>
+  </div>
+  
+  <style>
+    .course-schedule-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+  
+    .display-4 {
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #007bff;
+    }
+    .headc {
+      font-size: 24px;
+      color: #003d7a;
+      text-transform: uppercase;
+
+    }
+  
+    .lead {
+      font-size: 1.2rem;
+      color: #6c757d;
+    }
+  
+    .schedule-item {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+  
+    .schedule-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+  
+    .date-box {
+      background-color: #007bff;
+      color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+  
+    .date-box h3 {
+      font-size: 1.2rem;
+      margin: 0;
+      font-weight: bold;
+    }
+  
+    .details .time {
+      font-size: 1.1rem;
+      color: #6c757d;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+  
+    @media (max-width: 768px) {
+      .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+  
 <!-- Course Overview Section -->
 <div class="container my-5">
   <div class="text-center">
@@ -1613,17 +1624,21 @@
             <h5 class="card-title text-primary">Anuj Gupta</h5>
             <h6 class="card-subtitle mb-3 text-muted">AI Leader & Advisor</h6>
             <ul class="card-text mb-4 list-unstyled">
-              <li>🚀 Fractional Head of Gen AI</li>
-              <li>🚀 AI Advisor</li>
+              <li>🚀 Fractional Head/AI Advisor of Gen AI</li>
               <li>🚀 Coaching Boards & Execs on Gen AI</li>
               <li>🚀 Built AI systems leading to funding, acquisition & IPO</li>
-              <li>🚀 Author of landmark AI book (O’Reilly, US)</li>
+              <li>🚀 Author of landmark AI book (O'Reilly, US)</li>
               <li>🚀 Board Member</li>
+              <li>🚀 Speaker at global AI events</li>
+              <li>🚀 15+ years in AI innovation and leadership</li>
             </ul>
-            <div class="social-icons">
-              <a href="https://www.linkedin.com/in/anujgupta-82/" target="_blank" class="btn btn-outline-primary btn-sm rounded-circle me-2"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://x.com/anujgupta82" target="_blank" class="btn btn-outline-primary btn-sm rounded-circle me-2"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.youtube.com/@gradient_advisors" target="_blank" class="btn btn-outline-primary btn-sm rounded-circle"><i class="fab fa-youtube"></i></a>
+            <div class="d-flex align-items-center">
+              <div class="social-icons">
+                <a href="https://www.linkedin.com/in/anujgupta-82/" target="_blank" class="btn btn-outline-primary btn-sm rounded-circle me-2"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/anujgupta82" target="_blank" class="btn btn-outline-primary btn-sm rounded-circle me-2"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/@gradient_advisors" target="_blank" class="btn btn-outline-primary btn-sm rounded-circle"><i class="fab fa-youtube"></i></a>
+              </div>
+              <a href="anujgupta.html" class="btn btn-primary btn-sm ms-3">Learn More</a>
             </div>
           </div>
         </div>
@@ -1634,12 +1649,12 @@
 
 <style>
   .instructor-image {
-    width: 150px; /* Increased size for prominence */
+    width: 150px;
     height: 150px;
     object-fit: cover;
-    border-radius: 50%; /* Circle shape */
-    border: 3px solid #007bff; /* Add a colored border */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 
   .card {
@@ -1651,7 +1666,7 @@
 
   .card-title {
     font-weight: 700;
-    font-size: 1.8rem; /* Larger font for emphasis */
+    font-size: 1.8rem;
     color: #003366;
   }
 
@@ -1669,17 +1684,58 @@
     font-size: 1.5rem;
     text-decoration: none;
     padding: 10px;
-    transition: transform 0.2s;
+    border: none;
+    border-radius: 50%;
+    transition: transform 0.2s, background-color 0.2s;
   }
 
   .social-icons a:hover {
     transform: scale(1.2);
-    color: #0056b3;
+    background-color: #e9ecef;
+  }
+
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+  }
+
+  .ms-3 {
+    margin-left: 1rem; /* Margin for "Learn More" button */
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 1.6rem;
+    }
+
+    .card-subtitle {
+      font-size: 1rem;
+    }
+
+    .social-icons a {
+      font-size: 1.3rem;
+    }
+
+    .d-flex {
+      flex-direction: column; /* Stack icons and button on smaller screens */
+      align-items: center;
+    }
+
+    .ms-3 {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
   }
 </style>
 
-<div class="container my-5">
-  <h2 class="text-center mb-5">Our Attendees Work At</h2>
+
+<div class="container py-4">
+  <h2 class="text-center mb-4">Our Attendees Work At</h2>
   <div class="text-center">
     <img src="images/comp_logo.jpg" alt="Our Attendees Work At" class="company-logos">
   </div>
@@ -1690,162 +1746,216 @@
     max-width: 100%; /* Ensure the image scales responsively */
     height: auto;    /* Maintain aspect ratio */
   }
+
+  .container {
+    padding-top: 1rem;  /* Reduced top padding */
+    padding-bottom: 1rem; /* Reduced bottom padding */
+  }
+
+  .mb-4 {
+    margin-bottom: 1.5rem; /* Slightly reduced bottom margin for the heading */
+  }
 </style>
 
 
 
 
+
 <div class="container my-5">
-  <h2 class="text-center mb-5">Hear What Others Have to Say</h2>
+  <h2 class="text-center mb-5">Testimonials From Previous Cohort Participants</h2>
   <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <!-- Slide 1 -->
       <div class="carousel-item active">
-        <div class="review-card text-center p-4">
-          <div class="reviewer-image mb-4">
-            <img src="images/sucheta.jpeg" alt="Sucheta Sinha" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
+        <div class="row">
+          <!-- Review 1 -->
+          <div class="col-md-4">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="reviewer-image mb-4">
+                    <img src="images/sucheta.jpeg" alt="Sucheta Sinha" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
+                  </div>
+                  <p class="review-author fw-bold text-primary mb-2">
+                    Sucheta Sinha
+                    <br>
+                    <span class="text-muted">Product Mgmt.Leader, <br>ex-Oracle, ex-HP</span>
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <div class="testimonial-content">
+                    <p class="review-content text-secondary fst-italic">"AI for Product Managers is a boutique course and a great starting point for PMs interested in venturing into AI products."</p>
+                    <div class="rating">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <p class="review-author fw-bold text-primary mb-2">
-            Sucheta Sinha<br>
-            <span class="text-muted">Product Mgmt. Leader, ex-Oracle, ex-HP</span>
-            <a href="https://www.linkedin.com/in/sucheta-sinha-a76a59/" target="_blank" class="text-primary ms-2">
-              <i class="fab fa-linkedin linkedin-icon"></i>
-            </a>
-          </p>
-          <p class="review-content text-secondary fst-italic">"AI for Product Managers is a boutique course and a great starting point for PMs interested in venturing into AI products. The course is interactive and includes hands-on exercises to help participants gain practical experience."</p>
-          <div class="rating">
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
+
+          <!-- Review 2 -->
+          <div class="col-md-4">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="reviewer-image mb-4">
+                    <img src="images/pawank.jpeg" alt="Pavan Kumar Bayana" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
+                  </div>
+                  <p class="review-author fw-bold text-primary mb-2">
+                    Pavan Kumar Bayana
+                    <br>
+                    <span class="text-muted">Product Coach</span>
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <div class="testimonial-content">
+                    <p class="review-content text-secondary fst-italic">"I had really enjoyed the learnings from the AI Product Management sessions. Would highly recommend it to all aspiring classic as well as AI Product Managers."</p>
+                    <div class="rating">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="col-md-4">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="reviewer-image mb-4">
+                    <img src="images/anuradha.jpeg" alt="Anuradha Mohan" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
+                  </div>
+                  <p class="review-author fw-bold text-primary mb-2">
+                    Anuradha Mohan
+                    <br>
+                    <span class="text-muted">Product Manager</span>
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <div class="testimonial-content">
+                    <p class="review-content text-secondary fst-italic">"Excellent session. Would highly recommend this for all product team."</p>
+                    <div class="rating">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-  
+
       <!-- Slide 2 -->
       <div class="carousel-item">
-        <div class="review-card text-center p-4">
-          <div class="reviewer-image mb-4">
-            <img src="images/pawank.jpeg" alt="Pavan Kumar Bayana" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
+        <div class="row">
+          <!-- Review 4 -->
+          <div class="col-md-4">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="reviewer-image mb-4">
+                    <img src="images/vinayr.jpeg" alt="Vinay R Nagavara" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
+                  </div>
+                  <p class="review-author fw-bold text-primary mb-2">
+                    Vinay R Nagavara
+                    <br>
+                    <span class="text-muted">Senior Product Manager</span>
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <div class="testimonial-content">
+                    <p class="review-content text-secondary fst-italic">"The course is packed with a plethora of information. The insights from real-life project experiences were a great value addition."</p>
+                    <div class="rating">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <p class="review-author fw-bold text-primary mb-2">
-            Pavan Kumar Bayana<br>
-            <span class="text-muted">Product Coach</span>
-            <a href="https://www.linkedin.com/in/pavanbayana/" target="_blank" class="text-primary ms-2">
-              <i class="fab fa-linkedin linkedin-icon"></i>
-            </a>
-          </p>
-          <p class="review-content text-secondary fst-italic">"I had really enjoyed the learnings from the AI Product Management sessions. Would highly recommend it to all aspiring classic as well as AI Product Managers. Thank you!"</p>
-          <div class="rating">
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-          </div>
-        </div>
-      </div>
 
-      <!-- Slide 3 -->
-      <div class="carousel-item">
-        <div class="review-card text-center p-4">
-          <div class="reviewer-image mb-4">
-            <img src="images/anuradha.jpeg" alt="Anuradha Mohan" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
+          <!-- Review 5 -->
+          <div class="col-md-4">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="reviewer-image mb-4">
+                    <img src="images/mukula.jpeg" alt="Mukula Joglekar" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
+                  </div>
+                  <p class="review-author fw-bold text-primary mb-2">
+                    Mukula Joglekar
+                    <br>
+                    <span class="text-muted">Independent Product Consultant</span>
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <div class="testimonial-content">
+                    <p class="review-content text-secondary fst-italic">"AI first product training by Anuj is exceptional. Content offered consists of examples with real-world cases."</p>
+                    <div class="rating">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <p class="review-author fw-bold text-primary mb-2">
-            Anuradha Mohan<br>
-            <span class="text-muted">Product Manager</span>
-            <a href="https://www.linkedin.com/in/anuradha-mohan/" target="_blank" class="text-primary ms-2">
-              <i class="fab fa-linkedin linkedin-icon"></i>
-            </a>
-          </p>
-          <p class="review-content text-secondary fst-italic">"Excellent session. Would highly recommend this for all product team"</p>
-          <div class="rating">
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-          </div>
-        </div>
-      </div>
 
-      <!-- Slide 4 -->
-      <div class="carousel-item">
-        <div class="review-card text-center p-4">
-          <div class="reviewer-image mb-4">
-            <img src="images/vinayr.jpeg" alt="Vinay R Nagavara" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
-          </div>
-          <p class="review-author fw-bold text-primary mb-2">
-            Vinay R Nagavara<br>
-            <span class="text-muted">Senior Product Manager</span>
-            <a href="https://www.linkedin.com/in/vinayrn/" target="_blank" class="text-primary ms-2">
-              <i class="fab fa-linkedin linkedin-icon"></i>
-            </a>
-          </p>
-          <p class="review-content text-secondary fst-italic">"The course is packed with plethora of information. The insights from the real life project experiences was great value addition. Overall, the session was great"</p>
-          <div class="rating">
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 5 -->
-      <div class="carousel-item">
-        <div class="review-card text-center p-4">
-          <div class="reviewer-image mb-4">
-            <img src="images/mukula.jpeg" alt="Mukula Joglekar" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
-          </div>
-          <p class="review-author fw-bold text-primary mb-2">
-            Mukula Joglekar<br>
-            <span class="text-muted">Independent Product Consultant</span>
-            <a href="https://www.linkedin.com/in/mukula-joglekar-b21a871/" target="_blank" class="text-primary ms-2">
-              <i class="fab fa-linkedin linkedin-icon"></i>
-            </a>
-          </p>
-          <p class="review-content text-secondary fst-italic">"Al first product training by Anuj is exceptional. Content offered consists of examples with real world examples. Complex concepts were covered in a simple way, easy  to consume. The course has truly enhanced my job search and interview preparation and preparedness. I'm all set to dive deeper into the subject by reading all the material provided"</p>
-          <div class="rating">
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
+          <!-- Review 6 -->
+          <div class="col-md-4">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="reviewer-image mb-4">
+                    <img src="images/rakesh.jpeg" alt="Rakesh Kapoor" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
+                  </div>
+                  <p class="review-author fw-bold text-primary mb-2">
+                    Rakesh Kapoor
+                    <br>
+                    <span class="text-muted">Co-Founder, CTO</span>
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <div class="testimonial-content">
+                    <p class="review-content text-secondary fst-italic">"Initiative on AI Product Management timely serves an important need."</p>
+                    <div class="rating">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Slide 6 -->
-      <div class="carousel-item">
-        <div class="review-card text-center p-4">
-          <div class="reviewer-image mb-4">
-            <img src="images/rakesh.jpeg" alt="Rakesh Kapoor" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
-          </div>
-          <p class="review-author fw-bold text-primary mb-2">
-            Rakesh Kapoor<br>
-            <span class="text-muted">Co-Founder, CTO</span>
-            <a href="https://www.linkedin.com/in/rakesh-kapoor-73279a16/" target="_blank" class="text-primary ms-2">
-              <i class="fab fa-linkedin linkedin-icon"></i>
-            </a>
-          </p>
-          <p class="review-content text-secondary fst-italic">"Initiative on Al Product Management timely serves an important need."</p>
-          <div class="rating">
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-          </div>
-        </div>
-      </div>
-  
-    
     </div>
-  
+
     <!-- Carousel Controls -->
     <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -1856,27 +1966,77 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  
-  <style>
-    .review-card {
-      background: linear-gradient(135deg, #e3f2fd, #ffffff);
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    }
-    .reviewer-image img {
-      object-fit: cover;
-    }
-    .review-author {
-      font-size: 1.2rem;
-    }
-    .review-content {
-      font-size: 1rem;
-    }
-    .rating i {
-      font-size: 1.2rem;
-    }
-  </style>
+</div>
+
+<style>
+  .flip-card {
+    width: 100%;
+    height: 380px; /* Set a fixed height for the card */
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+  }
+
+  .flip-card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 15px;
+  }
+
+  .flip-card-back {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .testimonial-content {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .reviewer-image img {
+    object-fit: cover;
+  }
+
+  .review-author {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .review-content {
+    font-size: 1rem;
+  }
+
+  .rating i {
+    font-size: 1.2rem;
+  }
+</style>
+
 
 
 
