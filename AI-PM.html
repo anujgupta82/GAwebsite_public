@@ -4,20 +4,244 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Product Management</title>
-    <link rel="stylesheet" href="css/aipgm.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="https://www.gradient-advisors.ai/">
+          <img
+            src="images/gaBlack.png"
+            alt="Logo"
+            width="40"
+            height="40"
+            class="d-inline-block align-text-top"
+          />
+          <span class="brand-text">GRADIENT ADVISORS</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <!-- OUR PRODUCTS Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="productsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                OUR PRODUCTS
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                <li><a class="dropdown-item" href="#">Dialogue Genie</a></li>
+                <li><a class="dropdown-item" href="#">Structify</a></li>
+              </ul>
+            </li>
+            <!-- OUR SERVICES Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="servicesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                OUR SERVICES
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="#">AI Consulting</a></li>
+                <!-- AI UPSKILLING Sub-Menu -->
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#"
+                    >AI Upskilling</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="airead.html"
+                        >AI Readiness</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="AI-PM.html"
+                        >AI Product Management</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">INSIGHTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CAREERS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">COMPANY</a>
+            </li>
+            <!-- Region Toggle Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="regionDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Region: <span id="selected-region">Select Region</span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="regionDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    onclick="loadRegion('APAC')"
+                  >
+                    <img
+                      src="https://flagcdn.com/w40/in.png"
+                      alt="APAC Flag"
+                      class="flag-icon"
+                    />
+                    INDIA/APAC
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    onclick="loadRegion('Europe')"
+                  >
+                    <img
+                      src="https://flagcdn.com/w40/eu.png"
+                      alt="Europe Flag"
+                      class="flag-icon"
+                    />
+                    Europe
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" onclick="loadRegion('USA')">
+                    <img
+                      src="https://flagcdn.com/w40/us.png"
+                      alt="USA Flag"
+                      class="flag-icon"
+                    />
+                    USA
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    onclick="loadRegion('MiddleEast')"
+                  >
+                    <img
+                      src="https://flagcdn.com/w40/ae.png"
+                      alt="Middle East Flag"
+                      class="flag-icon"
+                    />
+                    Middle East
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <style>
-      /* Custom style for multi-level dropdowns */
+      /* Navbar Styling */
+      .navbar {
+        font-family: "Poppins", sans-serif; /* Modern, sleek font */
+        background-color: #ffffff; /* Clean white background */
+        padding: 1rem; /* Add some padding */
+        transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      }
+
+      .navbar-brand {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #333;
+        display: flex;
+        align-items: center;
+      }
+
+      .brand-text {
+        margin-left: 10px; /* Spacing between logo and text */
+      }
+
+      .nav-link {
+        color: #333;
+        font-size: 1rem;
+        margin-left: 1.2rem;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: #007bff; /* Blue highlight on hover */
+        text-decoration: underline;
+      }
+
+      /* Dropdown Menu Styling */
+      .dropdown-menu {
+        border-radius: 0.5rem; /* Smooth rounded edges */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for dropdown */
+      }
+
+      /* Flags for Region Dropdown */
+      .flag-icon {
+        width: 20px;
+        height: 15px;
+        margin-right: 8px; /* Space between flag and text */
+        border-radius: 2px; /* Optional for a smoother look */
+      }
+
+      /* Mobile Styling */
+      @media (max-width: 991px) {
+        .navbar-brand {
+          font-size: 1.1rem;
+        }
+        .nav-link {
+          margin-left: 0;
+          text-align: center;
+        }
+      }
+
       .dropdown-submenu {
         position: relative;
       }
@@ -74,7 +298,12 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        background: linear-gradient(135deg, #294ec0, #4B0082, #D8BFD8); /* Blue background color */
+        background: linear-gradient(
+          135deg,
+          #294ec0,
+          #4b0082,
+          #d8bfd8
+        ); /* Blue background color */
       }
 
       .hero .hero-image {
@@ -97,1257 +326,878 @@
           height: 75vh; /* Adjust height specifically for larger screens if needed */
         }
       }
-
-      .custom-btn {
-        background-color: #007bff;
-        color: white;
-        border: 2px solid #007bff;
-        border-radius: 0.5rem;
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-      }
-
-      .custom-btn:hover {
-        background-color: #0056b3;
-        border-color: #0056b3;
-      }
-
-      .card {
-        border: 1px solid #dee2e6;
-        border-radius: 0.5rem;
-        transition: transform 0.3s;
-      }
-
-      .card:hover {
-        transform: scale(1.05);
-      }
-
-      .card-title {
-        font-size: 1.25rem;
-        font-weight: bold;
-      }
-
-      .card-text {
-        font-size: 1rem;
-      }
-
-      .card-icon {
-        font-size: 2rem;
-        color: #007bff;
-      }
-
-      /* Add padding to the top of the body to prevent content from being hidden behind the fixed navbar */
       body {
         padding-top: 56px;
         /* Adjust this value if your navbar height is different */
       }
-
-      .additional-resources {
-        background-color: #ffffff;
-        padding: 1rem 0;
-      }
-
-      .additional-resources .card {
-        background-color: #ffffff;
-        border: none;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      .additional-resources .card-title {
-        color: #007bff;
-      }
     </style>
-  </head>
-
-  <body>
-  
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="https://www.gradient-advisors.ai/">
-          <img
-            src="images/gaBlack.png"
-            alt="Logo"
-            width="40"
-            height="40"
-            class="d-inline-block align-text-top"
-          />
-          <span class="brand-text">GRADIENT ADVISORS</span>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <!-- OUR PRODUCTS Dropdown -->
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="productsDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                OUR PRODUCTS
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="productsDropdown">
-                <li><a class="dropdown-item" href="#">Dialogue Genie</a></li>
-                <li><a class="dropdown-item" href="#">Structify</a></li>
-              </ul>
-            </li>
-            <!-- OUR SERVICES Dropdown -->
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="servicesDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                OUR SERVICES
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                <li><a class="dropdown-item" href="#">AI Consulting</a></li>
-                <!-- AI UPSKILLING Sub-Menu -->
-                <li class="dropdown-submenu">
-                  <a class="dropdown-item dropdown-toggle" href="#">AI Upskilling</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="airead.html">AI Readiness</a></li>
-                    <li><a class="dropdown-item" href="AI-PM.html">AI Product Management</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">INSIGHTS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">CAREERS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">COMPANY</a>
-            </li>
-            <!-- Region Toggle Dropdown -->
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="regionDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Region: <span id="selected-region">Select Region</span>
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="regionDropdown">
-                <li>
-                  <a class="dropdown-item" href="#" onclick="loadRegion('APAC')">
-                    <img src="https://flagcdn.com/w40/in.png" alt="APAC Flag" class="flag-icon"> INDIA/APAC
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" onclick="loadRegion('Europe')">
-                    <img src="https://flagcdn.com/w40/eu.png" alt="Europe Flag" class="flag-icon"> Europe
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" onclick="loadRegion('USA')">
-                    <img src="https://flagcdn.com/w40/us.png" alt="USA Flag" class="flag-icon"> USA
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" onclick="loadRegion('MiddleEast')">
-                    <img src="https://flagcdn.com/w40/ae.png" alt="Middle East Flag" class="flag-icon"> Middle East
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  <style>
-    /* Navbar Styling */
-  .navbar {
-    font-family: 'Poppins', sans-serif; /* Modern, sleek font */
-    background-color: #ffffff; /* Clean white background */
-    padding: 1rem; /* Add some padding */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  }
-
-  .navbar-brand {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #333;
-    display: flex;
-    align-items: center;
-  }
-
-  .brand-text {
-    margin-left: 10px; /* Spacing between logo and text */
-  }
-
-  .nav-link {
-    color: #333;
-    font-size: 1rem;
-    margin-left: 1.2rem;
-    transition: color 0.3s ease;
-  }
-
-  .nav-link:hover {
-    color: #007bff; /* Blue highlight on hover */
-    text-decoration: underline;
-  }
-
-  /* Dropdown Menu Styling */
-  .dropdown-menu {
-    border-radius: 0.5rem; /* Smooth rounded edges */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for dropdown */
-  }
-
-  /* Flags for Region Dropdown */
-  .flag-icon {
-    width: 20px;
-    height: 15px;
-    margin-right: 8px; /* Space between flag and text */
-    border-radius: 2px; /* Optional for a smoother look */
-  }
-
-  /* Mobile Styling */
-  @media (max-width: 991px) {
-    .navbar-brand {
-        font-size: 1.1rem;
-    }
-    .nav-link {
-        margin-left: 0;
-        text-align: center;
-    }
-  }
-
-  </style>    
 
     <div id="region-content" class="hero">
       <div class="hero-image">
-        <img
-          src="images/AI_PM.png"
-          class="img-fluid"
-          alt="Responsive image"
-        />
+        <img src="images/AI_PM.png" class="img-fluid" alt="Responsive image" />
       </div>
     </div>
-    
+
     <!-- Region Selection Modal -->
-    <div class="modal fade" id="regionModal" tabindex="-1" aria-labelledby="regionModalLabel" aria-hidden="true">
+    <!-- Region Selection Modal -->
+    <div
+      class="modal fade"
+      id="regionModal"
+      tabindex="-1"
+      aria-labelledby="regionModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog">
         <div class="modal-content theme-modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="regionModalLabel">Select Your Region</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title" id="regionModalLabel">
+              Select Your Region
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body text-center">
             Please select your region to view the appropriate content.
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn region-btn" data-bs-dismiss="modal" onclick="loadRegion('APAC')">
-              <img src="https://flagcdn.com/w40/in.png" alt="APAC Flag" class="flag-icon"> INDIA/APAC
-            </button>
-            <button type="button" class="btn region-btn" data-bs-dismiss="modal" onclick="loadRegion('Europe')">
-              <img src="https://flagcdn.com/w40/eu.png" alt="Europe Flag" class="flag-icon"> Europe
-            </button>
-            <button type="button" class="btn region-btn" data-bs-dismiss="modal" onclick="loadRegion('USA')">
-              <img src="https://flagcdn.com/w40/us.png" alt="USA Flag" class="flag-icon"> USA
-            </button>
-            <button type="button" class="btn region-btn" data-bs-dismiss="modal" onclick="loadRegion('MiddleEast')">
-              <img src="https://flagcdn.com/w40/ae.png" alt="Middle East Flag" class="flag-icon"> Middle East
-            </button>
+          <div class="modal-footer d-flex justify-content-center">
+            <div class="d-flex flex-row justify-content-around w-100">
+              <button
+                type="button"
+                class="btn region-btn mx-2"
+                data-bs-dismiss="modal"
+                onclick="loadRegion('APAC')"
+              >
+                <img
+                  src="https://flagcdn.com/w40/in.png"
+                  alt="APAC Flag"
+                  class="flag-icon"
+                />
+                INDIA/APAC
+              </button>
+              <button
+                type="button"
+                class="btn region-btn mx-2"
+                data-bs-dismiss="modal"
+                onclick="loadRegion('Europe')"
+              >
+                <img
+                  src="https://flagcdn.com/w40/eu.png"
+                  alt="Europe Flag"
+                  class="flag-icon"
+                />
+                Europe
+              </button>
+              <button
+                type="button"
+                class="btn region-btn mx-2"
+                data-bs-dismiss="modal"
+                onclick="loadRegion('USA')"
+              >
+                <img
+                  src="https://flagcdn.com/w40/us.png"
+                  alt="USA Flag"
+                  class="flag-icon"
+                />
+                USA
+              </button>
+              <button
+                type="button"
+                class="btn region-btn mx-2"
+                data-bs-dismiss="modal"
+                onclick="loadRegion('MiddleEast')"
+              >
+                <img
+                  src="https://flagcdn.com/w40/ae.png"
+                  alt="Middle East Flag"
+                  class="flag-icon"
+                />
+                Middle East
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    
+
     <style>
-      /* Modal Background and Border */
-      .theme-modal-content {
-        background: linear-gradient(135deg, #f0f8ff, #e6f7ff); /* Subtle blue gradient */
+      /* Modal Styling */
+      .modal-content {
         border-radius: 15px;
-        border: 1px solid #b0d5ff; /* Light blue border */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
-        color: #003366;
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
       }
-    
-      /* Modal Header */
-      .theme-modal-content .modal-header {
-        border-bottom: 1px solid #cce7ff;
+      .modal-header {
+        border-bottom: 1px solid #dee2e6;
       }
-    
-      .theme-modal-content .modal-title {
+      .modal-title {
         font-weight: bold;
         color: #003366;
-        text-align: center;
       }
-    
-      /* Region Button Styles */
+      .modal-body p {
+        font-size: 1rem;
+        color: #495057;
+      }
+
+      /* Region Button Styling */
       .region-btn {
+        background: #ffffff;
+        border: 1px solid #dcdfe3;
         border-radius: 10px;
-        padding: 12px 24px;
-        font-size: 16px;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+        font-size: 0.9rem;
         font-weight: 500;
-        color: #ffffff;
-        background: linear-gradient(135deg, #0066cc, #0f0169); /* Enhanced blue gradient */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        color: #333;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
-    
       .region-btn:hover {
-        transform: scale(1.07);
+        transform: scale(1.05);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        background: linear-gradient(135deg, #005bb5, #003d7a); /* Darker gradient on hover */
+        background: linear-gradient(135deg, #ffffff, #f1f1f1);
       }
-    
-      /* Flag Icon Styling */
+
+      /* Flag Icon */
       .flag-icon {
+        width: 30px;
+        height: 20px;
+        margin-bottom: 5px;
         border-radius: 4px;
-        width: 24px; /* Make flags a bit more prominent */
       }
-    
-      /* Footer Layout */
-      .modal-footer {
-        justify-content: space-around; /* Space buttons evenly */
-      }
-    
-      /* Button Close Icon Styling */
-      .btn-close {
-        color: #003366;
-        opacity: 0.6;
-        transition: opacity 0.3s ease;
-      }
-    
-      .btn-close:hover {
-        opacity: 1;
+
+      /* Responsive Layout */
+      @media (min-width: 768px) {
+        .region-btn {
+          font-size: 1rem;
+        }
+        .flag-icon {
+          width: 35px;
+          height: 25px;
+        }
       }
     </style>
-    
-
 
     <!-- New Button -->
     <div class="text-center mt-4">
-      <a href="https://rzp.io/rzp/xWUPsIe1" class="btn btn-purple" >ENROLL NOW</a> 
+      <a href="https://rzp.io/rzp/xWUPsIe1" class="btn btn-purple"
+        >ENROLL NOW</a
+      >
       <!-- <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_P3JoQkRJWerSP4" async> </script> </form> -->
-  </div>
-  
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-  <script>
-      document.getElementById('rzp-button1').onclick = function (e) {
-          e.preventDefault();
-  
-          // Make an API call to your backend to create an order
-          fetch('http://127.0.0.1:3000/create-order', {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json'
+    </div>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+      document.getElementById("rzp-button1").onclick = function (e) {
+        e.preventDefault();
+
+        // Make an API call to your backend to create an order
+        fetch("http://127.0.0.1:3000/create-order", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            amount: 50000, // Amount in paise (50000 paise = 500 INR)
+          }),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`Server error: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then((data) => {
+            var options = {
+              key: "rzp_live_P2vSvhaubWCCL7", // Replace with your test key
+              amount: "50000", // Amount in paise
+              currency: "INR",
+              name: "GRADIENT ADVISORS",
+              description: "Test Transaction",
+              image: "https://example.com/your_logo", // Optional
+              order_id: data.order_id, // Use the dynamic order ID from the server
+              handler: function (response) {
+                alert("Payment ID: " + response.razorpay_payment_id);
+                alert("Order ID: " + response.razorpay_order_id);
+                alert("Signature: " + response.razorpay_signature);
               },
-              body: JSON.stringify({
-                  amount: 50000 // Amount in paise (50000 paise = 500 INR)
-              })
+              prefill: {
+                name: "", // Leave empty so the user is prompted
+                email: "", // Leave empty so the user is prompted
+                contact: "", // Leave empty so the user is prompted
+              },
+              theme: {
+                color: "#3399cc",
+              },
+              // Removed prefill so that the user can enter their own details
+              notes: {
+                address: "Razorpay Corporate Office",
+              },
+            };
+
+            var rzp1 = new Razorpay(options);
+            rzp1.on("payment.failed", function (response) {
+              alert("Payment Failed: " + response.error.description);
+            });
+            rzp1.open();
           })
-          .then(response => {
-              if (!response.ok) {
-                  throw new Error(`Server error: ${response.status}`);
-              }
-              return response.json();
-          })
-          .then(data => {
-              var options = {
-                  "key": "rzp_live_P2vSvhaubWCCL7", // Replace with your test key
-                  "amount": "50000", // Amount in paise
-                  "currency": "INR",
-                  "name": "GRADIENT ADVISORS",
-                  "description": "Test Transaction",
-                  "image": "https://example.com/your_logo", // Optional
-                  "order_id": data.order_id, // Use the dynamic order ID from the server
-                  "handler": function (response) {
-                      alert("Payment ID: " + response.razorpay_payment_id);
-                      alert("Order ID: " + response.razorpay_order_id);
-                      alert("Signature: " + response.razorpay_signature);
-                  },
-                  "prefill": {
-                    "name": "", // Leave empty so the user is prompted
-                    "email": "", // Leave empty so the user is prompted
-                    "contact": "" // Leave empty so the user is prompted
-                  },
-                  "theme": {
-                      "color": "#3399cc"
-                  },
-                  // Removed prefill so that the user can enter their own details
-                  "notes": {
-                      "address": "Razorpay Corporate Office"
-                  }
-              };
-              
-              var rzp1 = new Razorpay(options);
-              rzp1.on('payment.failed', function (response) {
-                  alert("Payment Failed: " + response.error.description);
-              });
-              rzp1.open();
-          })
-          .catch(error => {
-              console.error("Error creating order:", error);
-              alert("Failed to create order. Please try again.");
+          .catch((error) => {
+            console.error("Error creating order:", error);
+            alert("Failed to create order. Please try again.");
           });
       };
-  </script>
-  
-  
-    
+    </script>
 
-    <!-- New Heading -->
     <div class="text-center mt-4">
-      <h2 class="display-4">AI Product Management Certification</h2>
-  </div>
-  
-  <!-- Course Dates Section -->
-  <div class="container my-5">
-    <div class="course-schedule-section text-center">
-      <h2 class="headc">Course Schedule</h2>
-      <p class="lead mb-5">15+ Hours of LIVE learning (across 3 weekends - 11 am to 4 pm IST)</p>
-      <div class="row">
-        <!-- Schedule Item 1 -->
-        <div class="col-md-4">
-          <div class="schedule-item">
-            <div class="date-box">
-              <h3>25 JANUARY 2025</h3>
+      <h2 class="display-6 text-secondary">
+        AI Product Management Certification
+      </h2>
+    </div>
+
+    <!-- Redesigned Course Dates Section -->
+    <div class="container my-4">
+      <div class="course-schedule-section text-center">
+        <h2 class="headc text-dark">Course Schedule</h2>
+        <p class="lead mb-4">
+          15+ Hours of LIVE learning (across 3 weekends - 11 am to 4 pm IST)
+        </p>
+        <div class="row gx-3 gy-3">
+          <!-- Schedule Item 1 -->
+          <div class="col-md-4">
+            <div class="schedule-item">
+              <div class="date-box bg-primary text-light">
+                <h4>25 JAN 2025</h4>
+              </div>
             </div>
-            
           </div>
-        </div>
-        <!-- Schedule Item 2 -->
-        <div class="col-md-4">
-          <div class="schedule-item">
-            <div class="date-box">
-              <h3>1 FEBRUARY 2025</h3>
+          <!-- Schedule Item 2 -->
+          <div class="col-md-4">
+            <div class="schedule-item">
+              <div class="date-box bg-primary text-light">
+                <h4>1 FEB 2025</h4>
+              </div>
             </div>
-            
           </div>
-        </div>
-        <!-- Schedule Item 3 -->
-        <div class="col-md-4">
-          <div class="schedule-item">
-            <div class="date-box">
-              <h3>8 FEBRUARY 2025</h3>
+          <!-- Schedule Item 3 -->
+          <div class="col-md-4">
+            <div class="schedule-item">
+              <div class="date-box bg-primary text-light">
+                <h4>8 FEB 2025</h4>
+              </div>
             </div>
-            
           </div>
         </div>
       </div>
     </div>
-  </div>
-  
-  <style>
-    .course-schedule-section {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #f8f9fa;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-  
-    .display-4 {
-      font-weight: 600;
-      text-transform: uppercase;
-      color: #007bff;
-    }
-    .headc {
-      font-size: 24px;
-      color: #003d7a;
-      text-transform: uppercase;
 
-    }
-  
-    .lead {
-      font-size: 1.2rem;
-      color: #6c757d;
-    }
-  
-    .schedule-item {
-      background-color: #ffffff;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-  
-    .schedule-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    }
-  
-    .date-box {
-      background-color: #007bff;
-      color: #ffffff;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 15px;
-    }
-  
-    .date-box h3 {
-      font-size: 1.2rem;
-      margin: 0;
-      font-weight: bold;
-    }
-  
-    .details .time {
-      font-size: 1.1rem;
-      color: #6c757d;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-  
-    @media (max-width: 768px) {
-      .col-md-4 {
-        flex: 0 0 100%;
-        max-width: 100%;
+    <style>
+      .course-schedule-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 25px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
-    }
-  </style>
-  
-<!-- Course Overview Section -->
-<div class="card-container">
-  <!-- Course Overview Section -->
-  <div class="p-4 border rounded shadow-lg box-background">
-    <div class="text-center mb-4">
-      <h2 class="section-title">Course Overview</h2>
-      <p class="section-description">
-        In-depth & exclusive content to help seasoned product managers transition into an AI-first world with tons of case studies and examples.
-      </p>
-    </div>
 
-  <!-- Cards Section -->
-    <div class="row gx-4 gy-4">
-      <!-- Card 1 -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm gradient-card">
-          <div class="card-body">
-            <h5 class="card-title">What is AI? Impact of AI in Digital Products</h5>
-            <ul class="card-text">
-              <li>Learn the evolution of AI and understand the difference between NLP, ML, DL, GenAI</li>
-              <li>Unpack various layers of an AI stack</li>
-              <li>Use cases across industries of how AI has influenced the digital landscape</li>
-            </ul>
-          </div>
-        </div>
+      .display-6 {
+        font-weight: bold;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 10px;
+        color: #5a2a91;
+      }
+
+      .headc {
+        font-size: 1.9rem;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .lead {
+        font-size: 0.95rem;
+        color: #666666;
+        margin-bottom: 20px;
+      }
+
+      .schedule-item {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .schedule-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .date-box {
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      @media (max-width: 768px) {
+        .col-md-4 {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        .date-box {
+          padding: 10px;
+        }
+      }
+    </style>
+
+    <div class="container section-box">
+      <!-- Course Overview Section -->
+      <div class="course-overview text-center mb-5">
+        <h2 class="section-title">Course Overview</h2>
+        <p class="section-description">
+          Master the skills to thrive as a product manager in an AI-first world.
+          Dive into actionable frameworks, case studies, and industry insights.
+        </p>
       </div>
 
-      <!-- Card 2 -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm gradient-card">
-          <div class="card-body">
-            <h5 class="card-title">Traditional PM (Software 1.0) vs AI PM (Software 2.0)</h5>
-            <ul class="card-text">
-              <li>Why product management in the AI-first world requires a serious upgrade</li>
-              <li>Roles and Responsibilities of PM for AI-First Products</li>
-            </ul>
+      <!-- Cards Section -->
+      <div class="row gx-4 gy-4">
+        <!-- Card 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="course-card">
+            <div class="card-icon"><i class="fas fa-brain"></i></div>
+            <h5 class="card-title">
+              What is AI? Impact of AI in Digital Products
+            </h5>
+            <p class="card-description">
+              Explore AI's evolution, layers of the AI stack, and its
+              transformative role across industries.
+            </p>
           </div>
         </div>
-      </div>
 
-      <!-- Card 3 -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm gradient-card">
-          <div class="card-body">
+        <!-- Card 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="course-card">
+            <div class="card-icon"><i class="fas fa-exchange-alt"></i></div>
+            <h5 class="card-title">Traditional PM vs AI PM</h5>
+            <p class="card-description">
+              Understand the paradigm shift in product management and the roles
+              required for AI-first products.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="course-card">
+            <div class="card-icon"><i class="fas fa-chart-line"></i></div>
             <h5 class="card-title">Developing the Capability Curve in AI</h5>
-            <ul class="card-text">
-              <li>Understand the right way to develop AI systems across layers</li>
-              <li>Deep dive with a case study</li>
-            </ul>
+            <p class="card-description">
+              Learn to design and develop AI systems with a focus on practical
+              implementation.
+            </p>
           </div>
         </div>
-      </div>
 
-      <!-- Additional Cards (4-6) -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm gradient-card">
-          <div class="card-body">
+        <!-- Card 4 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="course-card">
+            <div class="card-icon"><i class="fas fa-search"></i></div>
             <h5 class="card-title">Identifying the Right Use Cases for AI</h5>
-            <ul class="card-text">
-              <li>Framework for identifying the right use case</li>
-              <li>Case study</li>
-            </ul>
+            <p class="card-description">
+              Discover frameworks to identify high-value use cases for AI
+              through case studies and exercises.
+            </p>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm gradient-card">
-          <div class="card-body">
+        <!-- Card 5 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="course-card">
+            <div class="card-icon"><i class="fas fa-tasks"></i></div>
             <h5 class="card-title">Understanding AI-First Product Metrics</h5>
-            <ul class="card-text">
-              <li>Business, Model Performance, Data, and Ethical metrics</li>
-              <li>Hands-on exercise</li>
-            </ul>
+            <p class="card-description">
+              Grasp the metrics for business performance, AI model success, and
+              ethical considerations.
+            </p>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm gradient-card">
-          <div class="card-body">
+        <!-- Card 6 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="course-card">
+            <div class="card-icon"><i class="fas fa-user-check"></i></div>
             <h5 class="card-title">Building UX for AI-First Products</h5>
-            <ul class="card-text">
-              <li>Framework for building AI products that factors in feedback loops</li>
-              <li>Explainability, Transparency, and Bias</li>
-              <li>Case study & hands-on exercise</li>
-            </ul>
+            <p class="card-description">
+              Create user-centric AI products with feedback loops, transparency,
+              and explainability.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-<style>
-/* General Styling */
-.card-container {
-  background-color: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 15px;
-  padding: 3rem 2rem;
-  margin: 2rem auto;
-  max-width: 1200px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0,);
-}
+    <style>
+      /* General Styling */
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px;
+      }
 
-/* Section Title and Description */
-.section-title {
-  font-weight: 800;
-  color: #003366;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-}
+      /* Section Title and Description */
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+      }
 
-.section-description {
-  font-size: 1.2rem;
-  color: #555;
-  max-width: 750px;
-  margin: 0 auto 2.5rem auto;
-  line-height: 1.8;
-}
+      .section-description {
+        font-size: 1rem;
+        color: #7f8c8d;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
 
-/* Card Styling */
-.card {
-  background-color: #ffffff;
-  border: none;
-  border-radius: 12px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  display: flex;
-  flex-direction: column;
-}
+      /* Card Styling */
+      .course-card {
+        background: linear-gradient(145deg, #ffffff, #f8f9fa);
+        border: 1px solid #e1e1e1;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        position: relative;
+      }
 
-.gradient-card {
-  background: linear-gradient(135deg, #edf5ff, #e6f7ff);
-  padding: 1.5rem;
-}
+      .course-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
-}
+      /* Card Icon */
+      .card-icon {
+        font-size: 2.5rem;
+        color: #3498db;
+        margin-bottom: 15px;
+      }
 
-/* Card Title */
-.card-title {
-  color: #003366;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
-  text-align: center;
-}
+      /* Card Title */
+      .card-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #34495e;
+        margin-bottom: 10px;
+      }
 
-/* Card Text */
-.card-text {
-  color: #555;
-  font-size: 1rem;
-  padding-left: 0;
-  line-height: 1.6;
-}
+      /* Card Description */
+      .card-description {
+        font-size: 0.85rem;
+        color: #7f8c8d;
+        line-height: 1.5;
+      }
 
-.card-text li {
-  margin-bottom: 10px;
-}
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .section-title {
+          font-size: 1.5rem;
+        }
 
-.card-text li::marker {
-  color: #007bff;
-}
+        .section-description {
+          font-size: 0.9rem;
+        }
 
-/* Responsive Adjustments */
-@media (max-width: 767px) {
-  .section-title {
-    font-size: 2rem;
-  }
+        .card-icon {
+          font-size: 2rem;
+        }
 
-  .section-description {
-    font-size: 1rem;
-  }
+        .card-title {
+          font-size: 0.9rem;
+        }
 
-  .card-container {
-    padding: 1.5rem;
-  }
+        .card-description {
+          font-size: 0.8rem;
+        }
+      }
+    </style>
 
-  .gradient-card {
-    padding: 1rem;
-  }
-}
-</style>
-
-<!-- Bootstrap JS and Popper.js for Carousel functionality -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-    
-    
-    <!-- New Content Section -->
     <div class="container my-5">
-      <!-- Box Wrapper -->
-      <div class="p-4 border rounded shadow-lg box-background">
-        <h2 class="text-center mb-4 section-title">Additional Resources</h2>
-    
-        <!-- Carousel for small screens -->
-        <div id="resourcesCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <!-- Frameworks Card -->
-            <div class="carousel-item active">
-              <div class="card h-100 shadow-sm gradient-card">
-                <div class="card-body text-center">
-                  <div class="card-icon mb-3">
-                    <i class="bi bi-diagram-3"></i>
-                  </div>
-                  <h5 class="card-title">Frameworks</h5>
-                  <p class="card-text">
-                    Frameworks to help you make decisions on how to leverage AI for
-                    your products and transform your organization to an AI-first approach.
-                  </p>
-                </div>
-              </div>
-            </div>
-    
-            <!-- Templates and Toolkits Card -->
-            <div class="carousel-item">
-              <div class="card h-100 shadow-sm gradient-card">
-                <div class="card-body text-center">
-                  <div class="card-icon mb-3">
-                    <i class="bi bi-tools"></i>
-                  </div>
-                  <h5 class="card-title">Templates and Toolkits</h5>
-                  <p class="card-text">Templates and Toolkits to optimize your deliverables.</p>
-                </div>
-              </div>
-            </div>
-    
-            <!-- Case Studies Card -->
-            <div class="carousel-item">
-              <div class="card h-100 shadow-sm gradient-card">
-                <div class="card-body text-center">
-                  <div class="card-icon mb-3">
-                    <i class="bi bi-journal-text"></i>
-                  </div>
-                  <h5 class="card-title">Case Studies</h5>
-                  <p class="card-text">Case Studies for references.</p>
-                </div>
-              </div>
-            </div>
-    
-            <!-- Office Hours Card -->
-            <div class="carousel-item">
-              <div class="card h-100 shadow-sm gradient-card">
-                <div class="card-body text-center">
-                  <div class="card-icon mb-3">
-                    <i class="bi bi-clock-history"></i>
-                  </div>
-                  <h5 class="card-title">Office Hours</h5>
-                  <p class="card-text">Office hours post the sessions.</p>
-                </div>
-              </div>
-            </div>
-    
-            <!-- AI Tools Card -->
-            <div class="carousel-item">
-              <div class="card h-100 shadow-sm gradient-card">
-                <div class="card-body text-center">
-                  <div class="card-icon mb-3">
-                    <i class="bi bi-laptop"></i>
-                  </div>
-                  <h5 class="card-title">AI Tools</h5>
-                  <p class="card-text">AI Tools that can help with PM productivity hacks.</p>
-                </div>
-              </div>
-            </div>
-    
-            <!-- Responsible AI Card -->
-            <div class="carousel-item">
-              <div class="card h-100 shadow-sm gradient-card">
-                <div class="card-body text-center">
-                  <div class="card-icon mb-3">
-                    <i class="bi bi-shield-check"></i>
-                  </div>
-                  <h5 class="card-title">Responsible AI</h5>
-                  <p class="card-text">Responsible AI.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Carousel Controls -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#resourcesCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#resourcesCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-    
-        <!-- Grid layout for medium to large screens -->
-        <div class="row d-none d-md-flex">
+      <div class="p-3 section-box">
+        <h2 class="text-center mb-3 section-title">Additional Resources</h2>
+
+        <!-- Small Cards Grid Layout -->
+        <div class="row row-cols-1 row-cols-md-3">
           <!-- Frameworks Card -->
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm gradient-card">
-              <div class="card-body text-center">
+          <div class="col mb-4">
+            <div class="card border-solid shadow-sm rounded d-flex">
+              <div class="card-body text-center p-4 flex-grow-1">
                 <div class="card-icon mb-3">
                   <i class="bi bi-diagram-3"></i>
                 </div>
                 <h5 class="card-title">Frameworks</h5>
                 <p class="card-text">
-                  Frameworks to help you make decisions on how to leverage AI for
-                  your products and transform your organization to an AI-first approach.
+                  Leverage AI frameworks to transform your organization.
                 </p>
               </div>
             </div>
           </div>
-    
+
           <!-- Templates and Toolkits Card -->
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm gradient-card">
-              <div class="card-body text-center">
+          <div class="col mb-4">
+            <div class="card border-solid shadow-sm rounded d-flex">
+              <div class="card-body text-center p-4 flex-grow-1">
                 <div class="card-icon mb-3">
                   <i class="bi bi-tools"></i>
                 </div>
-                <h5 class="card-title">Templates and Toolkits</h5>
-                <p class="card-text">Templates and Toolkits to optimize your deliverables.</p>
+                <h5 class="card-title">Templates & Toolkits</h5>
+                <p class="card-text">
+                  Optimize your deliverables with ready-made resources.
+                </p>
               </div>
             </div>
           </div>
-    
+
           <!-- Case Studies Card -->
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm gradient-card">
-              <div class="card-body text-center">
+          <div class="col mb-4">
+            <div class="card border-solid shadow-sm rounded d-flex">
+              <div class="card-body text-center p-4 flex-grow-1">
                 <div class="card-icon mb-3">
                   <i class="bi bi-journal-text"></i>
                 </div>
                 <h5 class="card-title">Case Studies</h5>
-                <p class="card-text">Case Studies for references.</p>
+                <p class="card-text">
+                  Learn from successful AI applications through case studies.
+                </p>
               </div>
             </div>
           </div>
-    
+
           <!-- Office Hours Card -->
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm gradient-card">
-              <div class="card-body text-center">
+          <div class="col mb-4">
+            <div class="card border-solid shadow-sm rounded d-flex">
+              <div class="card-body text-center p-4 flex-grow-1">
                 <div class="card-icon mb-3">
                   <i class="bi bi-clock-history"></i>
                 </div>
                 <h5 class="card-title">Office Hours</h5>
-                <p class="card-text">Office hours post the sessions.</p>
+                <p class="card-text">
+                  Get guidance during office hours post sessions.
+                </p>
               </div>
             </div>
           </div>
-    
+
           <!-- AI Tools Card -->
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm gradient-card">
-              <div class="card-body text-center">
+          <div class="col mb-4">
+            <div class="card border-solid shadow-sm rounded d-flex">
+              <div class="card-body text-center p-4 flex-grow-1">
                 <div class="card-icon mb-3">
                   <i class="bi bi-laptop"></i>
                 </div>
                 <h5 class="card-title">AI Tools</h5>
-                <p class="card-text">AI Tools that can help with PM productivity hacks.</p>
+                <p class="card-text">Boost your productivity with AI tools.</p>
               </div>
             </div>
           </div>
-    
+
           <!-- Responsible AI Card -->
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm gradient-card">
-              <div class="card-body text-center">
+          <div class="col mb-4">
+            <div class="card border-solid shadow-sm rounded d-flex">
+              <div class="card-body text-center p-4 flex-grow-1">
                 <div class="card-icon mb-3">
                   <i class="bi bi-shield-check"></i>
                 </div>
                 <h5 class="card-title">Responsible AI</h5>
-                <p class="card-text">Responsible AI.</p>
+                <p class="card-text">
+                  Learn to implement responsible AI practices.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
 
     <div class="container my-5">
-      <div class="box-wrapper p-4 shadow rounded">
-        <h2 class="text-center section-title mb-4">Who Should Attend this Course</h2>
-    
-        <!-- Grid layout for larger screens -->
-        <div class="row d-none d-md-flex">
-          <!-- Cards -->
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 attendee-card shadow-sm">
-              <div class="card-body text-center">
+      <div class="p-3 section-box">
+        <h2 class="text-center mb-3 section-title">Who Should Attend</h2>
+
+        <!-- Small Cards Grid Layout -->
+        <div class="row row-cols-1 row-cols-md-3">
+          <!-- Product Managers Card -->
+          <div class="col mb-4">
+            <div
+              class="card attendee-card border-solid shadow-sm rounded d-flex"
+            >
+              <div class="card-body text-center p-4 flex-grow-1">
                 <div class="card-icon mb-3">
                   <i class="bi bi-gear-fill"></i>
                 </div>
                 <h5 class="card-title">Product Managers</h5>
-                <p class="card-text">Perfect for PMs looking to adapt to an AI-first world.</p>
+                <p class="card-text">For PMs adapting to an AI-first world.</p>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 attendee-card shadow-sm">
-              <div class="card-body text-center">
+
+          <!-- Tech Product Managers Card -->
+          <div class="col mb-4">
+            <div
+              class="card attendee-card border-solid shadow-sm rounded d-flex"
+            >
+              <div class="card-body text-center p-4 flex-grow-1">
                 <div class="card-icon mb-3">
                   <i class="bi bi-lightbulb"></i>
                 </div>
-                <h5 class="card-title">Tech Product Managers</h5>
-                <p class="card-text">For PMs focused on technical aspects of AI products.</p>
+                <h5 class="card-title">Tech PMs</h5>
+                <p class="card-text">For PMs focusing on AI tech products.</p>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 attendee-card shadow-sm">
-              <div class="card-body text-center">
+
+          <!-- Product Leaders Card -->
+          <div class="col mb-4">
+            <div
+              class="card attendee-card border-solid shadow-sm rounded d-flex"
+            >
+              <div class="card-body text-center p-4 flex-grow-1">
                 <div class="card-icon mb-3">
                   <i class="bi bi-person-badge"></i>
                 </div>
                 <h5 class="card-title">Product Leaders</h5>
-                <p class="card-text">Ideal for those overseeing product strategy and growth.</p>
+                <p class="card-text">
+                  For leaders overseeing product strategy.
+                </p>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 attendee-card shadow-sm">
-              <div class="card-body text-center">
+
+          <!-- Business Analysts Card -->
+          <div class="col mb-4">
+            <div
+              class="card attendee-card border-solid shadow-sm rounded d-flex"
+            >
+              <div class="card-body text-center p-4 flex-grow-1">
                 <div class="card-icon mb-3">
                   <i class="bi bi-people-fill"></i>
                 </div>
                 <h5 class="card-title">Business Analysts</h5>
-                <p class="card-text">Designed for analysts working with AI and data insights.</p>
+                <p class="card-text">
+                  For analysts working with AI data insights.
+                </p>
               </div>
             </div>
           </div>
-          
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 attendee-card shadow-sm">
-              <div class="card-body text-center">
+
+          <!-- Data Scientists Card -->
+          <div class="col mb-4">
+            <div
+              class="card attendee-card border-solid shadow-sm rounded d-flex"
+            >
+              <div class="card-body text-center p-4 flex-grow-1">
                 <div class="card-icon mb-3">
                   <i class="bi bi-bar-chart-line"></i>
                 </div>
                 <h5 class="card-title">Data Scientists</h5>
-                <p class="card-text">For those applying data-driven techniques to AI product development.</p>
+                <p class="card-text">
+                  For those using data-driven AI techniques.
+                </p>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 attendee-card shadow-sm">
-              <div class="card-body text-center">
+
+          <!-- Product Designers Card -->
+          <div class="col mb-4">
+            <div
+              class="card attendee-card border-solid shadow-sm rounded d-flex"
+            >
+              <div class="card-body text-center p-4 flex-grow-1">
                 <div class="card-icon mb-3">
                   <i class="bi bi-lightbulb"></i>
                 </div>
                 <h5 class="card-title">Product Designers</h5>
-                <p class="card-text">Best for Product Designers working on AI focused products.</p>
+                <p class="card-text">For designers focused on AI products.</p>
               </div>
             </div>
           </div>
-          
-          
-        </div>
-    
-        <!-- Carousel for smaller screens -->
-        <div id="attendeeCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <!-- Cards in carousel -->
-            <div class="carousel-item active">
-              <div class="card h-100 attendee-card shadow-sm text-center">
-                <div class="card-body">
-                  <div class="card-icon mb-3">
-                    <i class="bi bi-person-badge"></i>
-                  </div>
-                  <h5 class="card-title">Product Leaders</h5>
-                  <p class="card-text">Ideal for those overseeing product strategy and growth.</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card h-100 attendee-card shadow-sm text-center">
-                <div class="card-body">
-                  <div class="card-icon mb-3">
-                    <i class="bi bi-gear-fill"></i>
-                  </div>
-                  <h5 class="card-title">Product Managers</h5>
-                  <p class="card-text">Perfect for PMs looking to adapt to an AI-first world.</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card h-100 attendee-card shadow-sm text-center">
-                <div class="card-body">
-                  <div class="card-icon mb-3">
-                    <i class="bi bi-bar-chart-line"></i>
-                  </div>
-                  <h5 class="card-title">Data Scientists</h5>
-                  <p class="card-text">For those applying data-driven techniques to AI product development.</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card h-100 attendee-card shadow-sm text-center">
-                <div class="card-body">
-                  <div class="card-icon mb-3">
-                    <i class="bi bi-cpu-fill"></i>
-                  </div>
-                  <h5 class="card-title">Data Engineers</h5>
-                  <p class="card-text">Best for engineers working on data infrastructure for AI.</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card h-100 attendee-card shadow-sm text-center">
-                <div class="card-body">
-                  <div class="card-icon mb-3">
-                    <i class="bi bi-lightbulb"></i>
-                  </div>
-                  <h5 class="card-title">Tech Product Managers</h5>
-                  <p class="card-text">For PMs focused on technical aspects of AI products.</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card h-100 attendee-card shadow-sm text-center">
-                <div class="card-body">
-                  <div class="card-icon mb-3">
-                    <i class="bi bi-people-fill"></i>
-                  </div>
-                  <h5 class="card-title">Business Analysts</h5>
-                  <p class="card-text">Designed for analysts working with AI and data insights.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Carousel controls -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#attendeeCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#attendeeCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
     </div>
-    
     <style>
-      .box-wrapper {
-        background-color: #f8f9fa;
-        border: 1px solid #dee2e6;
+      .attendee-card,
+      .card {
+        background: transparent;
+        border: 2px solid #dee2e6;
         border-radius: 10px;
-      }
-    
-      .section-title {
-        font-weight: 700;
-        color: #003366;
-        font-size: 2rem;
-      }
-    
-      .attendee-card {
-        background: #f7fbff;
-        border: none;
-        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
-    
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+      }
+
+      .card:hover,
       .attendee-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       }
-    
-      .card-icon {
-        font-size: 2.5rem;
-        color: #007bff;
-      }
-    
-      .card-title {
-        color: #003366;
-        font-weight: bold;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 1.25rem;
-      }
-    
-      .card-text {
-        color: #555;
-        font-size: 1rem;
-      }
     </style>
-    
-    
 
     <div class="container my-5">
       <div class="section-box p-4">
-        <h2 class="text-center mb-5">What This Course Offers</h2>
-        
+        <h2 class="text-center mb-5 section-title">What This Course Offers</h2>
+
         <div class="row">
           <!-- Card 1 -->
           <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
+            <div class="card h-100 shadow-sm rounded">
               <div class="card-body text-center">
                 <div class="card-icon mb-3">
                   <i class="bi bi-clock"></i>
                 </div>
                 <h5 class="card-title">Live Interaction with Instructors</h5>
-                <p class="card-text">12 hours of live sessions with industry experts.</p>
+                <p class="card-text">
+                  12 hours of live sessions with industry experts.
+                </p>
               </div>
             </div>
           </div>
-          
+
           <!-- Card 2 -->
           <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
+            <div class="card h-100 shadow-sm rounded">
               <div class="card-body text-center">
                 <div class="card-icon mb-3">
                   <i class="bi bi-folder"></i>
                 </div>
                 <h5 class="card-title">Tons of Case Studies and Examples</h5>
-                <p class="card-text">Explore real-world scenarios to solidify your learning.</p>
+                <p class="card-text">
+                  Explore real-world scenarios to solidify your learning.
+                </p>
               </div>
             </div>
           </div>
-          
+
           <!-- Card 3 -->
           <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
+            <div class="card h-100 shadow-sm rounded">
               <div class="card-body text-center">
                 <div class="card-icon mb-3">
                   <i class="bi bi-tools"></i>
                 </div>
                 <h5 class="card-title">Hands-On Exercises</h5>
-                <p class="card-text">Apply your knowledge with practical exercises.</p>
+                <p class="card-text">
+                  Apply your knowledge with practical exercises.
+                </p>
               </div>
             </div>
           </div>
-          
+
           <!-- Card 4 -->
           <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
+            <div class="card h-100 shadow-sm rounded">
               <div class="card-body text-center">
                 <div class="card-icon mb-3">
                   <i class="bi bi-people"></i>
                 </div>
                 <h5 class="card-title">Lifetime Access to Community</h5>
-                <p class="card-text">Engage with peers and instructors long after the course ends.</p>
+                <p class="card-text">
+                  Engage with peers and instructors long after the course ends.
+                </p>
               </div>
             </div>
           </div>
-          
+
           <!-- Card 5 -->
           <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
+            <div class="card h-100 shadow-sm rounded">
               <div class="card-body text-center">
                 <div class="card-icon mb-3">
                   <i class="bi bi-award"></i>
                 </div>
                 <h5 class="card-title">Course Certificate</h5>
-                <p class="card-text">Receive a certificate upon successful completion of the course.</p>
+                <p class="card-text">
+                  Receive a certificate upon successful completion of the
+                  course.
+                </p>
               </div>
             </div>
           </div>
-          
+
           <!-- Card 6 -->
           <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
+            <div class="card h-100 shadow-sm rounded">
               <div class="card-body text-center">
                 <div class="card-icon mb-3">
                   <i class="bi bi-mic-fill"></i>
                 </div>
                 <h5 class="card-title">Guest Lecture by Top AI PMs</h5>
-                <p class="card-text">Gain insights from product managers leading AI innovations worldwide.</p>
+                <p class="card-text">
+                  Gain insights from product managers leading AI innovations
+                  worldwide.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+
     <style>
       /* Section box styling */
       .section-box {
-        border: 1px solid #e6e6e6;
+        border: 2px solid #99b4ca;
         border-radius: 10px;
-        background-color: #f8f9fa;
+        background-color: #ffffff;
       }
-    
-      /* Card icon styling */
-      .card-icon {
-        width: 60px;
-        height: 60px;
-        
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        font-size: 1.5rem;
-        margin: 0 auto 15px;
-        transition: transform 0.3s ease-in-out;
+
+      /* Section title styling */
+      .section-title {
+        font-weight: 700;
+        color: #003366;
+        font-size: 1.75rem;
       }
-    
-      .card-icon:hover {
-        transform: scale(1.2);
-      }
-    
+
       /* Card styling */
       .card {
-        border: none;
-        border-radius: 8px;
+        border: 2px solid #1c7ddf;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
-    
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Card title and text */
       .card-title {
         font-size: 1.2rem;
         font-weight: 600;
         color: #343a40;
       }
-    
+
       .card-text {
         font-size: 1rem;
         color: #6c757d;
         margin-bottom: 0;
       }
-    
+
       /* Responsive adjustments */
       @media (max-width: 768px) {
         .card-icon {
@@ -1355,1186 +1205,1665 @@
         }
       }
     </style>
-    
 
+    <div class="container my-5 section-box">
+      <h2 class="text-center mb-5 section-title">Outcome and Key Takeaways</h2>
 
-<div class="container my-5">
-  <h2 class="text-center mb-5">Outcome and Key Takeaways</h2>
-
-  <!-- Carousel for Small Screens -->
-  <div id="outcomeCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <!-- Card 1 -->
-      <div class="carousel-item active">
-        <div class="card h-100">
-          <div class="card-body text-center">
-            <div class="card-icon mb-3">
-              <i class="bi bi-lightbulb"></i>
+      <!-- Carousel for Small Screens -->
+      <div
+        id="outcomeCarousel"
+        class="carousel slide d-md-none"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <!-- Card 1 -->
+          <div class="carousel-item active">
+            <div class="card h-100 rounded shadow-sm">
+              <div class="card-body text-center">
+                <div class="card-icon mb-3">
+                  <i class="bi bi-lightbulb"></i>
+                </div>
+                <h5 class="card-title">Deep AI Understanding</h5>
+                <p class="card-text">
+                  Will help you to lead AI transformative projects with
+                  confidence and clarity.
+                </p>
+              </div>
             </div>
-            <h5 class="card-title">Deep AI Understanding</h5>
-            <p class="card-text">
-              Will help you to lead AI transformative projects with confidence and clarity.
-            </p>
           </div>
-        </div>
-      </div>
-      <!-- Card 2 -->
-      <div class="carousel-item">
-        <div class="card h-100">
-          <div class="card-body text-center">
-            <div class="card-icon mb-3">
-              <i class="bi bi-gear"></i>
+          <!-- Card 2 -->
+          <div class="carousel-item">
+            <div class="card h-100 rounded shadow-sm">
+              <div class="card-body text-center">
+                <div class="card-icon mb-3">
+                  <i class="bi bi-gear"></i>
+                </div>
+                <h5 class="card-title">Practical AI Application</h5>
+                <p class="card-text">
+                  Real-world case studies and hands-on exercises will help in
+                  developing relevant and effective AI products.
+                </p>
+              </div>
             </div>
-            <h5 class="card-title">Practical AI Application</h5>
-            <p class="card-text">
-              Real-world case studies and hands-on exercises will help in developing relevant and effective AI products.
-            </p>
           </div>
-        </div>
-      </div>
-      <!-- Card 3 -->
-      <div class="carousel-item">
-        <div class="card h-100">
-          <div class="card-body text-center">
-            <div class="card-icon mb-3">
-              <i class="bi bi-award"></i>
+          <!-- Card 3 -->
+          <div class="carousel-item">
+            <div class="card h-100 rounded shadow-sm">
+              <div class="card-body text-center">
+                <div class="card-icon mb-3">
+                  <i class="bi bi-award"></i>
+                </div>
+                <h5 class="card-title">Career Advancement</h5>
+                <p class="card-text">
+                  Specialized aspects of developing AI-powered products will
+                  help in career advancement, influencing AI strategy and
+                  innovation.
+                </p>
+              </div>
             </div>
-            <h5 class="card-title">Career Advancement</h5>
-            <p class="card-text">
-              Specialized aspects of developing AI-powered products will help in career advancement, influencing AI strategy and innovation.
-            </p>
           </div>
-        </div>
-      </div>
-      <!-- Card 4 -->
-      <div class="carousel-item">
-        <div class="card h-100">
-          <div class="card-body text-center">
-            <div class="card-icon mb-3">
-              <i class="bi bi-people"></i>
+          <!-- Card 4 -->
+          <div class="carousel-item">
+            <div class="card h-100 rounded shadow-sm">
+              <div class="card-body text-center">
+                <div class="card-icon mb-3">
+                  <i class="bi bi-people"></i>
+                </div>
+                <h5 class="card-title">Team Collaboration</h5>
+                <p class="card-text">
+                  Understand the role and responsibilities of each team in a
+                  product organization to build an AI product effectively.
+                </p>
+              </div>
             </div>
-            <h5 class="card-title">Team Collaboration</h5>
-            <p class="card-text">
-              Understand the role and responsibilities of each team in a product organization to build an AI product effectively.
-            </p>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#outcomeCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#outcomeCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Grid Layout for Larger Screens -->
+      <div class="row d-none d-md-flex">
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 rounded shadow-sm">
+            <div class="card-body text-center">
+              <div class="card-icon mb-3">
+                <i class="bi bi-lightbulb"></i>
+              </div>
+              <h5 class="card-title">Deep AI Understanding</h5>
+              <p class="card-text">
+                Will help you to lead AI transformative projects with confidence
+                and clarity.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 rounded shadow-sm">
+            <div class="card-body text-center">
+              <div class="card-icon mb-3">
+                <i class="bi bi-gear"></i>
+              </div>
+              <h5 class="card-title">Practical AI Application</h5>
+              <p class="card-text">
+                Real-world case studies and hands-on exercises will help in
+                developing relevant and effective AI products.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 rounded shadow-sm">
+            <div class="card-body text-center">
+              <div class="card-icon mb-3">
+                <i class="bi bi-award"></i>
+              </div>
+              <h5 class="card-title">Career Advancement</h5>
+              <p class="card-text">
+                Specialized aspects of developing AI-powered products will help
+                in career advancement, influencing AI strategy and innovation.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 rounded shadow-sm">
+            <div class="card-body text-center">
+              <div class="card-icon mb-3">
+                <i class="bi bi-people"></i>
+              </div>
+              <h5 class="card-title">Team Collaboration</h5>
+              <p class="card-text">
+                Understand the role and responsibilities of each team in a
+                product organization to build an AI product effectively.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#outcomeCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#outcomeCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
 
-  <!-- Grid Layout for Larger Screens -->
-  <div class="row d-none d-md-flex">
-    <div class="col-md-6 mb-4">
-      <div class="card h-100">
-        <div class="card-body text-center">
-          <div class="card-icon mb-3">
-            <i class="bi bi-lightbulb"></i>
+    <style>
+      /* Section styling */
+      .section-title {
+        font-weight: 700;
+        color: #003366;
+        font-size: 1.75rem;
+      }
+
+      /* Card icon styling */
+      .card-icon {
+        font-size: 2rem;
+        color: #007bff;
+      }
+
+      /* Card title styling */
+      .card-title {
+        font-weight: 600;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        color: #343a40;
+      }
+
+      /* Card text styling */
+      .card-text {
+        font-size: 1rem;
+        color: #6c757d;
+      }
+
+      /* Card base styling */
+      .card {
+        border: 2px solid rgb(72, 120, 175);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+
+    <div class="container my-5">
+      <h2 class="text-center mb-5 section-title">Course Details</h2>
+
+      <div class="row gy-5 position-relative">
+        <!-- Pricing Card -->
+        <div class="col-lg-3 col-md-6">
+          <div
+            class="card pricing-card shadow-lg border-0 rounded-4 position-relative"
+          >
+            <div
+              class="card-body text-center d-flex flex-column justify-content-between"
+            >
+              <div>
+                <h3
+                  class="text-white bg-gradient-primary rounded-pill py-2 px-4 d-inline-block"
+                >
+                  Course Price
+                </h3>
+                <h2 class="text-success mt-4">
+                  Rs 19,999 <small class="text-muted">(Incl. taxes)</small>
+                </h2>
+                <p class="text-muted mt-3">
+                  Unlock the full potential of AI with our comprehensive course.
+                </p>
+              </div>
+              <a
+                href="https://rzp.io/rzp/xWUPsIe1"
+                class="btn btn-outline-gradient mt-4"
+                >Enroll Now</a
+              >
+            </div>
           </div>
-          <h5 class="card-title">Deep AI Understanding</h5>
-          <p class="card-text">
-            Will help you to lead AI transformative projects with confidence and clarity.
-          </p>
         </div>
-      </div>
-    </div>
-    <div class="col-md-6 mb-4">
-      <div class="card h-100">
-        <div class="card-body text-center">
-          <div class="card-icon mb-3">
-            <i class="bi bi-gear"></i>
+
+        <!-- Group Discounts -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-lg border-0 rounded-4 position-relative">
+            <div
+              class="card-body text-center d-flex flex-column justify-content-between"
+            >
+              <div>
+                <div class="icon-circle bg-gradient-secondary mx-auto mb-3">
+                  <i class="bi bi-people text-white"></i>
+                </div>
+                <h5 class="card-title text-primary">Group Discounts</h5>
+                <p class="text-muted">
+                  For group discounts, contact us at
+                  <a
+                    href="mailto:support@gradient-advisors.ai"
+                    class="text-primary"
+                    ><strong>support@gradient-advisors.ai</strong></a
+                  >
+                </p>
+              </div>
+              <a
+                href="mailto:support@gradient-advisors.ai"
+                class="btn btn-outline-gradient mt-4"
+                >Inquire Now</a
+              >
+            </div>
           </div>
-          <h5 class="card-title">Practical AI Application</h5>
-          <p class="card-text">
-            Real-world case studies and hands-on exercises will help in developing relevant and effective AI products.
-          </p>
         </div>
-      </div>
-    </div>
-    <div class="col-md-6 mb-4">
-      <div class="card h-100">
-        <div class="card-body text-center">
-          <div class="card-icon mb-3">
-            <i class="bi bi-award"></i>
+
+        <!-- Referral Offers -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-lg border-0 rounded-4 position-relative">
+            <div
+              class="card-body text-center d-flex flex-column justify-content-between"
+            >
+              <div>
+                <div class="icon-circle bg-gradient-primary mx-auto mb-3">
+                  <i class="bi bi-gift text-white"></i>
+                </div>
+                <h5 class="card-title text-primary">Referral Offers</h5>
+                <p class="text-muted">
+                  Share with friends and take advantage of our attractive
+                  referral offers.
+                </p>
+              </div>
+              <a href="contact.html" class="btn btn-outline-gradient mt-4"
+                >Learn More</a
+              >
+            </div>
           </div>
-          <h5 class="card-title">Career Advancement</h5>
-          <p class="card-text">
-            Specialized aspects of developing AI-powered products will help in career advancement, influencing AI strategy and innovation.
-          </p>
         </div>
-      </div>
-    </div>
-    <div class="col-md-6 mb-4">
-      <div class="card h-100">
-        <div class="card-body text-center">
-          <div class="card-icon mb-3">
-            <i class="bi bi-people"></i>
+
+        <!-- Batch Size -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-lg border-0 rounded-4 position-relative">
+            <div
+              class="card-body text-center d-flex flex-column justify-content-between"
+            >
+              <div>
+                <div class="icon-circle bg-gradient-secondary mx-auto mb-3">
+                  <i class="bi bi-people-fill text-white"></i>
+                </div>
+                <h5 class="card-title text-primary">Batch Size</h5>
+                <p class="text-muted">
+                  <strong>25+ Participants</strong>
+                </p>
+              </div>
+              <div></div>
+            </div>
           </div>
-          <h5 class="card-title">Team Collaboration</h5>
-          <p class="card-text">
-            Understand the role and responsibilities of each team in a product organization to build an AI product effectively.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-  .card-icon {
-    font-size: 2rem;
-    color: #007bff;
-  }
-
-  .card-title {
-    font-weight: 600;
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: #343a40;
-  }
-
-  .card-text {
-    font-size: 1rem;
-    color: #6c757d;
-  }
-
-  .card {
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-</style>
-
-<div class="container my-5">
-  <h2 class="text-center mb-5">Course Details</h2>
-
-  <div class="row mb-4">
-    <div class="col-md-6 mb-4">
-      <div class="pricing-card shadow bg-light border border-primary rounded p-4 justify-content-between d-flex flex-column">
-        <h3 class="mb-3 text-primary">Course Price</h3>
-        <h2 class="mb-3 text-success">Rs 19,999 <small class="text-muted">(Including taxes)</small></h2>
-        <p class="mb-4">Unlock the full potential of AI with our comprehensive course.</p>
-        <a href="https://rzp.io/rzp/xWUPsIe1" class="btn btn-gradient" id="enroll-button">Enroll Now</a>
-        <div class="text-center mt-4" id="razorpay-payment" style="display: none;">
-          <form>
-            <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_P3JoQkRJWerSP4" async></script>
-          </form>
         </div>
       </div>
     </div>
 
-    <div class="col-md-3 mb-4">
-      <div class="card shadow bg-light border border-primary rounded p-4 d-flex flex-column justify-content-between">
-        <div class="card-body text-center">
-          <div class="card-icon mb-3">
-            <i class="bi bi-people display-4 text-primary"></i>
+    <style>
+      /* General Styles */
+      .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #003366;
+      }
+
+      .card {
+        padding: 1.5rem;
+        background: linear-gradient(145deg, #fdfdfd, #e6e6e6);
+        height: 100%;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Icon Styles */
+      .icon-circle {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .bg-gradient-primary {
+        background: linear-gradient(90deg, #007bff, #0056b3);
+      }
+
+      .bg-gradient-secondary {
+        background: linear-gradient(90deg, #ff8a00, #e05220);
+      }
+
+      /* Button Styles */
+      .btn-outline-gradient {
+        border: 2px solid transparent;
+        background: linear-gradient(90deg, #007bff, #0056b3);
+        color: white;
+        transition: all 0.3s ease;
+      }
+
+      .btn-outline-gradient:hover {
+        background: white;
+        color: #0056b3;
+        border-color: #0056b3;
+      }
+
+      /* Responsive Layout */
+      @media (max-width: 768px) {
+        .card {
+          margin-bottom: 1rem;
+        }
+      }
+    </style>
+
+    <div class="container my-5">
+      <h2 class="text-center mb-5 section-title">About the Instructor</h2>
+
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-6 col-lg-5 text-center mb-4 mb-md-0">
+          <div class="instructor-image-wrapper">
+            <img
+              src="images/Anuj_sir.png"
+              class="rounded-circle instructor-image"
+              alt="Instructor - Anuj Gupta"
+            />
           </div>
-          <h5 class="card-title">Group Discounts</h5>
-          <p class="card-text">For group discounts, contact us at <a href="mailto:support@gradient-advisors.ai" class="text-primary"><strong>support@gradient-advisors.ai</strong></a></p>
         </div>
-        <a href="mailto:support@gradient-advisors.ai" class="btn btn-gradient mt-4">Inquire Now</a>
-      </div>
-    </div>
-
-    <div class="col-md-3 mb-4">
-      <div class="card shadow bg-light border border-primary rounded p-4 d-flex flex-column justify-content-between">
-        <div class="card-body text-center">
-          <div class="card-icon mb-3">
-            <i class="bi bi-gift display-4 text-primary"></i>
-          </div>
-          <h5 class="card-title">Referral Offers</h5>
-          <p class="card-text">Take advantage of our attractive referral offers. Share with friends and save more!</p>
-        </div>
-        <a href="contact.html" class="btn btn-gradient mt-4">Learn More</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- New Section for Batch Size -->
-  <div class="batch-size-section my-5">
-    <h2 class="text-center mb-4">Batch Size</h2>
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <div class="batch-size-card bg-light border border-primary rounded p-4">
-          <h4 class="mb-3">Batch Size</h4>
-          <p class="mb-0"><strong>25+ Participants</strong></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-  
-
-  .pricing-card, .batch-size-card, .card {
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border-radius: 12px;
-    height: 100%; /* Ensure cards take full height of the column */
-  }
-
-  .pricing-card:hover, .card:hover, .batch-size-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-  }
-
-  .btn-gradient {
-    background: linear-gradient(90deg, #007bff, #0056b3);
-    border: none;
-    color: white;
-    transition: background-color 0.3s;
-  }
-
-  .btn-gradient:hover {
-    background: linear-gradient(90deg, #0056b3, #003d80);
-  }
-
-  .card-icon {
-    font-size: 2.5rem;
-    color: #007bff;
-  }
-
-  .card-title {
-    font-weight: 600;
-    font-size: 1.4rem;
-    color: #343a40;
-  }
-
-  .card-text {
-    font-size: 1rem;
-    color: #6c757d;
-  }
-
-  .batch-size-section {
-    background-color: #e9f5ff; /* Light blue background for the new section */
-    padding: 2rem 0;
-    border-radius: 12px;
-  }
-
-  .batch-size-card {
-    background-color: #f0f9ff; /* Lighter blue for emphasis */
-  }
-
-  .batch-size-card h4 {
-    font-size: 1.5rem;
-    color: #007bff;
-  }
-
-  .batch-size-card p {
-    font-size: 1.2rem;
-    color: #343a40;
-  }
-
-  /* Ensuring all cards have the same height and are uniformly sized */
-  .card-body {
-    flex: 1;
-  }
-
-  /* Adjust card layout for mobile */
-  @media (max-width: 768px) {
-    .card, .batch-size-card, .pricing-card {
-      margin-bottom: 1rem;
-    }
-  }
-</style>
-
-
-<div class="container my-5">
-  <h2 class="text-center mb-5">About the Instructor</h2>
-
-  <div class="row justify-content-center">
-    <div class="col-md-8 mb-4">
-      <div class="card bg-light border-0 shadow-lg rounded-3 p-4">
-        <div class="row align-items-center">
-          <div class="col-md-4 text-center">
-            <img src="images/Anuj_sir.png" class="rounded-circle instructor-image border border-primary" alt="Instructor - Anuj Gupta">
-          </div>
-          <div class="col-md-8">
-            <h5 class="card-title text-primary">Anuj Gupta</h5>
+        <div class="col-md-6 col-lg-7">
+          <div class="card bg-light shadow-lg border-0 rounded-4 p-4">
+            <h5 class="card-title text-gradient-primary">Anuj Gupta</h5>
             <h6 class="card-subtitle mb-3 text-muted">AI Leader & Advisor</h6>
-            <ul class="card-text mb-4 list-unstyled">
-              <li>🚀 Fractional Head/AI Advisor of Gen AI</li>
-              <li>🚀 Coaching Boards & Execs on Gen AI</li>
-              <li>🚀 Built AI systems leading to funding, acquisition & IPO</li>
-              <li>🚀 Author of landmark AI book (O'Reilly, US)</li>
-              <li>🚀 Board Member</li>
-              <li>🚀 Speaker at global AI events</li>
-              <li>🚀 15+ years in AI innovation and leadership</li>
-            </ul>
-            <div class="d-flex align-items-center justify-content-between">
+            <p class="card-text">
+              🚀 Fractional Head of Gen AI & AI Advisor <br />
+              🚀 Coaching Boards & Executives on Gen AI<br />
+              🚀 Built AI systems leading to funding, acquisition & IPO<br />
+              🚀 Author of a landmark AI book (O'Reilly, US)<br />
+              🚀 20+ years in AI innovation and leadership<br />
+            </p>
+            <div class="d-flex align-items-center justify-content-between mt-4">
               <div class="social-icons">
-                <a href="https://www.linkedin.com/in/anujgupta-82/" target="_blank" class="btn btn-outline-primary btn-sm rounded-circle me-2"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://x.com/anujgupta82" target="_blank" class="btn btn-outline-primary btn-sm rounded-circle me-2"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.youtube.com/@gradient_advisors" target="_blank" class="btn btn-outline-primary btn-sm rounded-circle"><i class="fab fa-youtube"></i></a>
+                <a
+                  href="https://www.linkedin.com/in/anujgupta-82/"
+                  target="_blank"
+                  class="btn btn-outline-gradient btn-sm me-2"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a
+                  href="https://x.com/anujgupta82"
+                  target="_blank"
+                  class="btn btn-outline-gradient btn-sm me-2"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  href="https://www.youtube.com/@gradient_advisors"
+                  target="_blank"
+                  class="btn btn-outline-gradient btn-sm"
+                  ><i class="fab fa-youtube"></i
+                ></a>
               </div>
-              <a href="https://gradient-advisors.ai/anujgupta.html" class="btn btn-primary btn-sm ms-auto">Learn More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-  .instructor-image {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 60%;
-    border: 3px solid #000000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .card {
-    background: linear-gradient(135deg, #ffffff, #f8f9fa);
-    padding: 30px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    border-radius: 15px;
-  }
-
-  .card-title {
-    font-weight: 700;
-    font-size: 1.8rem;
-    color: #003366;
-  }
-
-  .card-subtitle {
-    font-size: 1.2rem;
-    color: #6c757d;
-  }
-
-  .card-text {
-    font-size: 1rem;
-    color: #555;
-  }
-
-  .social-icons a {
-    font-size: 1.5rem;
-    text-decoration: none;
-    padding: 10px;
-    border: none;
-    border-radius: 50%;
-    transition: transform 0.2s, background-color 0.2s;
-  }
-
-  .social-icons a:hover {
-    transform: scale(1.2);
-    background-color: #e9ecef;
-  }
-
-  .btn-primary {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-    border-radius: 20px;
-  }
-
-  /* Ensure 'Learn More' is at the rightmost position */
-  .ms-auto {
-    margin-left: auto;
-  }
-
-  @media (max-width: 768px) {
-    .card {
-      padding: 20px;
-    }
-
-    .card-title {
-      font-size: 1.6rem;
-    }
-
-    .card-subtitle {
-      font-size: 1rem;
-    }
-
-    .social-icons a {
-      font-size: 1.3rem;
-    }
-
-    .d-flex {
-      flex-direction: column; /* Stack icons and button on smaller screens */
-      align-items: center;
-    }
-
-    .ms-auto {
-      margin-left: 0;
-      margin-top: 1rem;
-    }
-  }
-</style>
-
-
-<div class="container py-4">
-  <h2 class="text-center mb-4">Our Attendees Work At</h2>
-  <div class="text-center">
-    <img src="images/comp_logo.jpg" alt="Our Attendees Work At" class="company-logos">
-  </div>
-</div>
-
-<style>
-  .company-logos {
-    max-width: 100%; /* Ensure the image scales responsively */
-    height: auto;    /* Maintain aspect ratio */
-  }
-
-  .container {
-    padding-top: 1rem;  /* Reduced top padding */
-    padding-bottom: 1rem; /* Reduced bottom padding */
-  }
-
-  .mb-4 {
-    margin-bottom: 1.5rem; /* Slightly reduced bottom margin for the heading */
-  }
-</style>
-
-
-
-
-
-<div class="container my-5">
-  <h2 class="text-center mb-5">Testimonials From Previous Cohort Participants</h2>
-  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <div class="row">
-          <!-- Review 1 -->
-          <div class="col-md-4">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <div class="reviewer-image mb-4">
-                    <img src="images/sucheta.jpeg" alt="Sucheta Sinha" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
-                  </div>
-                  <p class="review-author fw-bold text-primary mb-2">
-                    Sucheta Sinha
-                    <br>
-                    <span class="text-muted">Product Mgmt.Leader, <br>ex-Oracle, ex-HP</span>
-                  </p>
-                </div>
-                <div class="flip-card-back">
-                  <div class="testimonial-content">
-                    <p class="review-content text-secondary fst-italic">"AI for Product Managers is a boutique course and a great starting point for PMs interested in venturing into AI products."</p>
-                    <div class="rating">
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review 2 -->
-          <div class="col-md-4">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <div class="reviewer-image mb-4">
-                    <img src="images/pawank.jpeg" alt="Pavan Kumar Bayana" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
-                  </div>
-                  <p class="review-author fw-bold text-primary mb-2">
-                    Pavan Kumar Bayana
-                    <br>
-                    <span class="text-muted">Product Coach</span>
-                  </p>
-                </div>
-                <div class="flip-card-back">
-                  <div class="testimonial-content">
-                    <p class="review-content text-secondary fst-italic">"I had really enjoyed the learnings from the AI Product Management sessions. Would highly recommend it to all aspiring classic as well as AI Product Managers."</p>
-                    <div class="rating">
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review 3 -->
-          <div class="col-md-4">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <div class="reviewer-image mb-4">
-                    <img src="images/anuradha.jpeg" alt="Anuradha Mohan" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
-                  </div>
-                  <p class="review-author fw-bold text-primary mb-2">
-                    Anuradha Mohan
-                    <br>
-                    <span class="text-muted">Product Manager</span>
-                  </p>
-                </div>
-                <div class="flip-card-back">
-                  <div class="testimonial-content">
-                    <p class="review-content text-secondary fst-italic">"Excellent session. Would highly recommend this for all product team."</p>
-                    <div class="rating">
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="row">
-          <!-- Review 4 -->
-          <div class="col-md-4">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <div class="reviewer-image mb-4">
-                    <img src="images/vinayr.jpeg" alt="Vinay R Nagavara" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
-                  </div>
-                  <p class="review-author fw-bold text-primary mb-2">
-                    Vinay R Nagavara
-                    <br>
-                    <span class="text-muted">Senior Product Manager</span>
-                  </p>
-                </div>
-                <div class="flip-card-back">
-                  <div class="testimonial-content">
-                    <p class="review-content text-secondary fst-italic">"The course is packed with a plethora of information. The insights from real-life project experiences were a great value addition."</p>
-                    <div class="rating">
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review 5 -->
-          <div class="col-md-4">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <div class="reviewer-image mb-4">
-                    <img src="images/mukula.jpeg" alt="Mukula Joglekar" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
-                  </div>
-                  <p class="review-author fw-bold text-primary mb-2">
-                    Mukula Joglekar
-                    <br>
-                    <span class="text-muted">Independent Product Consultant</span>
-                  </p>
-                </div>
-                <div class="flip-card-back">
-                  <div class="testimonial-content">
-                    <p class="review-content text-secondary fst-italic">"AI first product training by Anuj is exceptional. Content offered consists of examples with real-world cases."</p>
-                    <div class="rating">
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review 6 -->
-          <div class="col-md-4">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <div class="reviewer-image mb-4">
-                    <img src="images/rakesh.jpeg" alt="Rakesh Kapoor" class="rounded-circle border border-primary" style="width: 120px; height: 120px;">
-                  </div>
-                  <p class="review-author fw-bold text-primary mb-2">
-                    Rakesh Kapoor
-                    <br>
-                    <span class="text-muted">Co-Founder, CTO</span>
-                  </p>
-                </div>
-                <div class="flip-card-back">
-                  <div class="testimonial-content">
-                    <p class="review-content text-secondary fst-italic">"Initiative on AI Product Management timely serves an important need."</p>
-                    <div class="rating">
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                      <i class="fas fa-star text-warning"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <a href="anujgupta.html" class="btn btn-gradient btn-sm ms-auto"
+                >Learn More</a
+              >
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Carousel Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</div>
+    <style>
+      /* General Section Styles */
+      .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #003366;
+        margin-bottom: 2rem;
+      }
 
-<style>
-  .flip-card {
-    width: 100%;
-    height: 380px; /* Set a fixed height for the card */
-    perspective: 1000px;
-  }
+      /* Image Wrapper */
+      .instructor-image-wrapper {
+        position: relative;
+        display: inline-block;
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        border-radius: 50%;
+        padding: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
 
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-  }
+      .instructor-image {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid white;
+      }
 
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
+      /* Card Styles */
+      .card {
+        background: linear-gradient(135deg, #ffffff, #f9f9f9);
+        border: none;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        padding: 2rem;
+      }
 
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-  }
+      .card-title {
+        font-weight: 700;
+        font-size: 1.8rem;
+        background: linear-gradient(90deg, #007bff, #0056b3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
-  .flip-card-front {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f5f5;
-    padding: 15px;
-  }
+      .card-subtitle {
+        font-size: 1.1rem;
+        color: #6c757d;
+      }
 
-  .flip-card-back {
-    background-color: #ffffff;
-    transform: rotateY(180deg);
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+      .card-text {
+        font-size: 1rem;
+        color: #495057;
+        line-height: 1.6;
+      }
 
-  .testimonial-content {
-    text-align: center;
-    padding: 15px;
-  }
+      /* Button Styles */
+      .btn-gradient {
+        background: linear-gradient(90deg, #007bff, #0056b3);
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        transition: background-color 0.3s;
+      }
 
-  .reviewer-image img {
-    object-fit: cover;
-  }
+      .btn-gradient:hover {
+        background: linear-gradient(90deg, #0056b3, #003d80);
+        color: white;
+      }
 
-  .review-author {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
+      .btn-outline-gradient {
+        background: white;
+        border: 2px solid #0056b3;
+        color: #0056b3;
+        transition: all 0.3s ease-in-out;
+      }
 
-  .review-content {
-    font-size: 1rem;
-  }
+      .btn-outline-gradient:hover {
+        background: #0056b3;
+        color: white;
+        border-color: #0056b3;
+      }
 
-  .rating i {
-    font-size: 1.2rem;
-  }
-</style>
+      /* Social Icons */
+      .social-icons a {
+        font-size: 1rem; /* Reduced size */
+        text-decoration: none;
+        padding: 6px; /* Smaller padding */
+        display: inline-block;
+        transition: transform 0.3s ease-in-out;
+      }
 
+      .social-icons a:hover {
+        transform: scale(1.2);
+      }
 
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .instructor-image {
+          width: 180px;
+          height: 180px;
+        }
 
+        .card-title {
+          font-size: 1.6rem;
+        }
 
+        .card-text {
+          font-size: 0.95rem;
+        }
 
+        .d-flex {
+          flex-direction: column;
+        }
 
-<div class="container my-5">
-  <h2 class="text-center mb-4">Exclusive Free Download</h2>
-  <p class="text-center">Access our premium AI Framework Guide for free!</p>
-  <div class="row justify-content-center">
-      <div class="col-md-4">
-          <div class="card download-card text-center">
-              <div class="card-body">
-                  <h5 class="card-title">AI Framework Guide</h5>
-                  <p class="card-text">Download our comprehensive guide to AI frameworks and applications.</p>
-                  
-                  <!-- Form within the card -->
-                  <form id="downloadForm" onsubmit="handleFormSubmit(event)">
-                      <input type="hidden" name="access_key" value="71b29bd8-4b6b-481e-8c66-f9468188d265">
-                      <input type="hidden" name="subject" value="New Download Request">
-                      <input type="checkbox" name="botcheck" style="display:none;">
-                      
-                      <label for="email">Email:</label>
-                      <input type="email" id="email" name="email" required placeholder="Enter your email">
-                      
-                      <label for="linkedinId">LinkedIn ID:</label>
-                      <input type="text" id="linkedinId" name="linkedinId" required placeholder="Enter your LinkedIn ID">
-                      
-                      <button type="submit" class="btn btn-gradient" id="downloadBtn" disabled>Submit & Download</button>
-                  </form>
-              </div>
-          </div>
+        .ms-auto {
+          margin-left: 0;
+          margin-top: 1rem;
+        }
+      }
+    </style>
+
+    <div class="container py-5 bg-light rounded-4 shadow-sm">
+      <h2 class="text-center mb-5 section-title">Our Attendees Work At</h2>
+      <div class="text-center">
+        <img
+          src="images/comp_logo.jpg"
+          alt="Our Attendees Work At"
+          class="company-logos"
+        />
       </div>
-  </div>
-</div>
+    </div>
 
+    <style>
+      /* Section Title */
+      .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #003366;
+        margin-bottom: 2rem;
+      }
 
+      /* Company Logos Image */
+      .company-logos {
+        max-width: 100%;
+        height: auto;
+        border: 2px solid #007bff;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
 
-<style>
-  .download-card {
-    border: 1px solid #007bff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    background-color: #f7fbff;
-    padding: 20px;
-}
+      .company-logos:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+      }
 
-.download-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .section-title {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
 
-.download-card .btn-gradient {
-    background: linear-gradient(90deg, #007bff, #0056b3);
-    color: #fff;
-    padding: 0.75rem 1.25rem;
-    border-radius: 4px;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: not-allowed;
-}
+    <div class="container my-5 py-4">
+      <h2 class="text-center mb-5">
+        Testimonials From Previous Cohort Participants
+      </h2>
+      <div
+        id="testimonialCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row g-4">
+              <!-- Testimonial Card 1 -->
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg">
+                  <div class="card-body text-center p-4">
+                    <img
+                      src="images/sucheta.jpeg"
+                      alt="Sucheta Sinha"
+                      class="rounded-circle mb-3 border border-primary"
+                      style="width: 100px; height: 100px"
+                    />
+                    <h5 class="card-title text-primary mb-1">Sucheta Sinha</h5>
+                    <p class="card-subtitle text-muted">
+                      Product Mgmt. Leader, <br />ex-Oracle, ex-HP
+                    </p>
+                    <p
+                      class="card-text mt-3 fst-italic text-secondary truncated-text"
+                      id="text1"
+                    >
+                      "Al for Product Managers' is a boutique course and a great
+                      starting point for PMs interested in venturing into Al
+                      products. The course is interactive and includes hands-on
+                      exercises to help participants gain practical experience.
+                      The instructor is a high achiever in the industry and are
+                      ready to assist you with real-life scenarios"
+                    </p>
+                    <button
+                      class="btn btn-link text-primary mt-2"
+                      onclick="toggleText('text1')"
+                    >
+                      Read More
+                    </button>
+                    <!-- <div class="rating mb-3">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </div> -->
+                    <a
+                      href="https://www.linkedin.com/in/sucheta-sinha-a76a59/"
+                      target="_blank"
+                      class="btn btn-outline-primary btn-sm rounded-pill"
+                    >
+                      <i class="fab fa-linkedin"></i> Connect
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-.download-card .btn-gradient:enabled {
-    cursor: pointer;
-}
+              <!-- Testimonial Card 2 -->
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg">
+                  <div class="card-body text-center p-4">
+                    <img
+                      src="images/pawank.jpeg"
+                      alt="Pavan Kumar Bayana"
+                      class="rounded-circle mb-3 border border-primary"
+                      style="width: 100px; height: 100px"
+                    />
+                    <h5 class="card-title text-primary mb-1">
+                      Pavan Kumar Bayana
+                    </h5>
+                    <p class="card-subtitle text-muted">
+                      Product Coach | Transformation Consultant. IIM B Alumini
+                    </p>
+                    <p
+                      class="card-text mt-3 fst-italic text-secondary truncated-text"
+                      id="text2"
+                    >
+                      "I had really enjoyed the learnings.from the Al Product
+                      Management sessions. Would highly recommend it to all the
+                      aspiring classic as well as Al Product Managers. Thank
+                      You! "
+                    </p>
+                    <button
+                      class="btn btn-link text-primary mt-2"
+                      onclick="toggleText('text2')"
+                    >
+                      Read More
+                    </button>
+                    <!-- <div class="rating mb-3">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </div> -->
+                    <a
+                      href="https://www.linkedin.com/in/pavanbayana/"
+                      target="_blank"
+                      class="btn btn-outline-primary btn-sm rounded-pill"
+                    >
+                      <i class="fab fa-linkedin"></i> Connect
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-.download-card .btn-gradient:hover:enabled {
-    background: linear-gradient(90deg, #0056b3, #003d80);
-}
+              <!-- Testimonial Card 3 -->
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg">
+                  <div class="card-body text-center p-4">
+                    <img
+                      src="images/anuradha.jpeg"
+                      alt="Anuradha Mohan"
+                      class="rounded-circle mb-3 border border-primary"
+                      style="width: 100px; height: 100px"
+                    />
+                    <h5 class="card-title text-primary mb-1">Anuradha Mohan</h5>
+                    <p class="card-subtitle text-muted">Product Manager</p>
+                    <p
+                      class="card-text mt-3 fst-italic text-secondary truncated-text"
+                      id="text3"
+                    >
+                      "Excellent session. Would highly recommend this for all
+                      product teams"
+                    </p>
+                    <button
+                      class="btn btn-link text-primary mt-2"
+                      onclick="toggleText('text3')"
+                    >
+                      Read More
+                    </button>
+                    <!-- <div class="rating mb-3">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </div> -->
+                    <a
+                      href="https://www.linkedin.com/in/anuradha-mohan/"
+                      target="_blank"
+                      class="btn btn-outline-primary btn-sm rounded-pill"
+                    >
+                      <i class="fab fa-linkedin"></i> Connect
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-#downloadForm {
-    margin-top: 15px;
-}
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row g-4">
+              <!-- Testimonial Card 4 -->
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg">
+                  <div class="card-body text-center p-4">
+                    <img
+                      src="images/vinayr.jpeg"
+                      alt="Vinay R Nagavara"
+                      class="rounded-circle mb-3 border border-primary"
+                      style="width: 100px; height: 100px"
+                    />
+                    <h5 class="card-title text-primary mb-1">
+                      Vinay R Nagavara
+                    </h5>
+                    <p class="card-subtitle text-muted">
+                      Senior Product Manager
+                    </p>
+                    <p
+                      class="card-text mt-3 fst-italic text-secondary truncated-text"
+                      id="text4"
+                    >
+                      "The course is packed with plethora of information. The
+                      insights from the real life project experiences was great
+                      value addition. Overall, the session was great."
+                    </p>
+                    <button
+                      class="btn btn-link text-primary mt-2"
+                      onclick="toggleText('text4')"
+                    >
+                      Read More
+                    </button>
+                    <!-- <div class="rating mb-3">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </div> -->
+                    <a
+                      href="https://www.linkedin.com/in/vinayrn/"
+                      target="_blank"
+                      class="btn btn-outline-primary btn-sm rounded-pill"
+                    >
+                      <i class="fab fa-linkedin"></i> Connect
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-#downloadForm label {
-    display: block;
-    font-weight: bold;
-    margin-top: 10px;
-    color: #333;
-}
+              <!-- Testimonial Card 5 -->
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg">
+                  <div class="card-body text-center p-4">
+                    <img
+                      src="images/mukula.jpeg"
+                      alt="Mukula Joglekar"
+                      class="rounded-circle mb-3 border border-primary"
+                      style="width: 100px; height: 100px"
+                    />
+                    <h5 class="card-title text-primary mb-1">
+                      Mukula Joglekar
+                    </h5>
+                    <p class="card-subtitle text-muted">
+                      Independent Product Consultant
+                    </p>
+                    <p
+                      class="card-text mt-3 fst-italic text-secondary truncated-text"
+                      id="text5"
+                    >
+                      "Al first product training by Anuj is exceptional. Content
+                      offered consists of examples with real world examples.
+                      Complex concepts were covered in a simple way, easy to
+                      consume. The course has truly enhanced my job search and
+                      interview preparation and preparedness. I'm all set to
+                      dive deeper into the subject by reading all the material
+                      provided "
+                    </p>
+                    <button
+                      class="btn btn-link text-primary mt-2"
+                      onclick="toggleText('text5')"
+                    >
+                      Read More
+                    </button>
+                    <!-- <div class="rating mb-3">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </div> -->
+                    <a
+                      href="https://www.linkedin.com/in/mukula-joglekar-b21a871/"
+                      target="_blank"
+                      class="btn btn-outline-primary btn-sm rounded-pill"
+                    >
+                      <i class="fab fa-linkedin"></i> Connect
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-#downloadForm input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-}
+              <!-- Testimonial Card 6 -->
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg">
+                  <div class="card-body text-center p-4">
+                    <img
+                      src="images/rakesh.jpeg"
+                      alt="Rakesh Kapoor"
+                      class="rounded-circle mb-3 border border-primary"
+                      style="width: 100px; height: 100px"
+                    />
+                    <h5 class="card-title text-primary mb-1">Rakesh Kapoor</h5>
+                    <p class="card-subtitle text-muted">Co-Founder, CTO</p>
+                    <p
+                      class="card-text mt-3 fst-italic text-secondary truncated-text"
+                      id="text6"
+                    >
+                      "Initiative on Al Product Management timely serves an
+                      important need"
+                    </p>
 
-</style>
-<script>
-  // Enable the download button when both fields are filled
-const emailInput = document.getElementById("email");
-const linkedinInput = document.getElementById("linkedinId");
-const downloadBtn = document.getElementById("downloadBtn");
+                    <!-- <div class="rating mb-3">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </div> -->
+                    <a
+                      href="https://www.linkedin.com/in/rakesh-kapoor-73279a16/"
+                      target="_blank"
+                      class="btn btn-outline-primary btn-sm rounded-pill"
+                    >
+                      <i class="fab fa-linkedin"></i> Connect
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-function checkForm() {
-    if (emailInput.value && linkedinInput.value) {
-        downloadBtn.disabled = false;
-    } else {
-        downloadBtn.disabled = true;
-    }
-}
+          <div class="carousel-item">
+            <div class="row g-4">
+              <!-- Testimonial Card 7 -->
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg">
+                  <div class="card-body text-center p-4">
+                    <img
+                      src="images/Ramya_George.jpeg"
+                      alt="Ramya George"
+                      class="rounded-circle mb-3 border border-primary"
+                      style="width: 100px; height: 100px"
+                    />
+                    <h5 class="card-title text-primary mb-1">Ramya George</h5>
+                    <p class="card-subtitle text-muted">
+                      Paypal, Ex HCL, Siemens IIM B
+                    </p>
+                    <p
+                      class="card-text mt-3 fst-italic text-secondary truncated-text"
+                      id="text7"
+                    >
+                      "I had the privilege of attending a training session on
+                      product management for AI-first products, led by Anuj at
+                      our PayPal India office. Anuj has a unique talent for
+                      bringing real-world scenarios to life. Throughout the
+                      training, he challenged us with complex, seemingly
+                      insurmountable problems that left even seasoned product
+                      managers scratching their heads. Just as we felt stuck,
+                      Anuj would unveil an innovative AI-driven solution,
+                      inspiring us to think beyond conventional boundaries. He
+                      then guided us on how to design and build these solutions,
+                      blending creativity with practicality. His approach not
+                      only deepened our understanding of AI’s transformative
+                      potential but also empowered us to approach complex
+                      challenges with renewed confidence and a fresh
+                      perspective."
+                    </p>
+                    <button
+                      class="btn btn-link text-primary mt-2"
+                      onclick="toggleText('text7')"
+                    >
+                      Read More
+                    </button>
+                    <!-- <div class="rating mb-3">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </div> -->
+                    <a
+                      href="https://www.linkedin.com/in/ramya-george-a9a1b024/"
+                      target="_blank"
+                      class="btn btn-outline-primary btn-sm rounded-pill"
+                    >
+                      <i class="fab fa-linkedin"></i> Connect
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-// Add event listeners to check form completion
-emailInput.addEventListener("input", checkForm);
-linkedinInput.addEventListener("input", checkForm);
+        <!-- Carousel Controls -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
 
-// Handle form submission with AJAX to Web3Forms
-async function handleFormSubmit(event) {
-    event.preventDefault();
+    <style>
+      /* Card Styling */
+      .card {
+        background: linear-gradient(135deg, #ffffff, #f8f9fa);
+        border-radius: 15px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
 
-    const formData = new FormData(document.getElementById("downloadForm"));
-    
-    try {
-        const response = await fetch("https://api.web3forms.com/submit", {
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-title {
+        font-weight: bold;
+        font-size: 1.25rem;
+      }
+
+      .card-subtitle {
+        font-size: 0.9rem;
+        color: #6c757d;
+      }
+
+      .card-text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      /* Rating Stars */
+      .rating i {
+        font-size: 1rem;
+      }
+
+      /* Carousel */
+      .carousel-inner {
+        margin-top: 20px;
+      }
+
+      /* LinkedIn Button */
+      .btn-outline-primary {
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      /* Truncated Text */
+      .truncated-text {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 4; /* Limit to 4 lines */
+        height: 5.6em; /* Adjust for 4 lines */
+        line-height: 1.4em;
+      }
+
+      .expanded-text {
+        -webkit-line-clamp: unset; /* Remove line-clamp when expanded */
+        height: auto;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .card {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+
+    <script>
+      function toggleText(id) {
+        const textElement = document.getElementById(id);
+        const isExpanded = textElement.classList.contains("expanded-text");
+
+        if (isExpanded) {
+          textElement.classList.remove("expanded-text");
+          textElement.classList.add("truncated-text");
+        } else {
+          textElement.classList.remove("truncated-text");
+          textElement.classList.add("expanded-text");
+        }
+      }
+    </script>
+
+    <div class="container my-5 py-4">
+      <h2 class="text-center mb-4">Exclusive Free Download</h2>
+      <p class="text-center">
+        Get instant access to our premium AI Framework Guide for free!
+      </p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card download-card shadow-lg border-0">
+            <div class="row g-0">
+              <!-- Left Side (Text) -->
+              <div
+                class="col-md-6 p-4 d-flex flex-column justify-content-center"
+              >
+                <h5 class="card-title text-primary">AI Framework Guide</h5>
+                <p class="card-text text-muted">
+                  Download our comprehensive guide to AI frameworks and
+                  applications. Get the knowledge to drive AI innovation.
+                </p>
+              </div>
+
+              <!-- Right Side (Form) -->
+              <div class="col-md-6 p-4">
+                <form id="downloadForm" onsubmit="handleFormSubmit(event)">
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="71b29bd8-4b6b-481e-8c66-f9468188d265"
+                  />
+                  <input
+                    type="hidden"
+                    name="subject"
+                    value="New Download Request"
+                  />
+                  <input
+                    type="checkbox"
+                    name="botcheck"
+                    style="display: none"
+                  />
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      required
+                      placeholder="Enter your email"
+                      oninput="checkForm()"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="linkedinId" class="form-label"
+                      >LinkedIn ID</label
+                    >
+                    <input
+                      type="text"
+                      id="linkedinId"
+                      name="linkedinId"
+                      class="form-control"
+                      required
+                      placeholder="Enter your LinkedIn ID"
+                      oninput="checkForm()"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-block mt-3"
+                    id="downloadBtn"
+                    disabled
+                  >
+                    Submit & Download
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      /* Card Styling */
+      .download-card {
+        background-color: #f9f9f9;
+        border-radius: 0; /* Makes the card rectangular */
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .download-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Form and Input Fields */
+      .form-control {
+        border-radius: 0; /* Makes input fields rectangular */
+        border: 1px solid #dcdcdc;
+        padding: 10px;
+      }
+
+      .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+      }
+
+      /* Submit Button */
+      .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        padding: 12px 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 0; /* Makes button rectangular */
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .btn-primary:disabled {
+        background-color: #c5c5c5;
+        border-color: #c5c5c5;
+      }
+
+      .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #004085;
+        transform: translateY(-2px);
+      }
+
+      /* Card Heading */
+      .card-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #007bff;
+      }
+
+      /* Card Text */
+      .card-text {
+        font-size: 1rem;
+        color: #6c757d;
+        line-height: 1.5;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 767px) {
+        .col-md-8 {
+          max-width: 90%;
+        }
+
+        .btn-primary {
+          font-size: 1rem;
+          padding: 10px 15px;
+        }
+
+        .download-card {
+          flex-direction: column;
+        }
+
+        .col-md-6 {
+          width: 100%;
+          padding: 15px;
+        }
+      }
+    </style>
+
+    <script>
+      // Enable the download button when both fields are filled
+      const emailInput = document.getElementById("email");
+      const linkedinInput = document.getElementById("linkedinId");
+      const downloadBtn = document.getElementById("downloadBtn");
+
+      function checkForm() {
+        if (emailInput.value && linkedinInput.value) {
+          downloadBtn.disabled = false;
+        } else {
+          downloadBtn.disabled = true;
+        }
+      }
+
+      // Handle form submission with AJAX to Web3Forms
+      async function handleFormSubmit(event) {
+        event.preventDefault();
+
+        const formData = new FormData(document.getElementById("downloadForm"));
+
+        try {
+          const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
-            body: formData
-        });
+            body: formData,
+          });
 
-        const result = await response.json();
-        if (result.success) {
+          const result = await response.json();
+          if (result.success) {
             alert("Thank you! Your download will start shortly.");
             // Trigger download after successful form submission
-            window.location.href = "https://gradient-advisors.ai/resources/GA__AI_PM.pdf"; // Replace with actual download link
-        } else {
+            window.location.href =
+              "https://gradient-advisors.ai/resources/GA__AI_PM.pdf"; // Replace with actual download link
+          } else {
             alert("There was an issue with your submission. Please try again.");
+          }
+        } catch (error) {
+          alert("Error submitting form. Please try again later.");
         }
-    } catch (error) {
-        alert("Error submitting form. Please try again later.");
-    }
-}
+      }
+    </script>
 
-</script>
-
-<!-- Call to Action (CTA) Form -->
-<div class="container my-5">
-  <h2 class="text-center mb-4">Stay Updated!</h2>
-  <p class="text-center">Subscribe to receive updates about our latest news and courses.</p>
-
-  <form method="POST" id="cta-form" action="https://api.web3forms.com/submit">
-      <input type="hidden" name="access_key" value="71b29bd8-4b6b-481e-8c66-f9468188d265">
-      <input type="hidden" name="subject" value="New Subscription Request">
-      <input type="checkbox" name="botcheck" id="" style="display: none;">
-
-      <!-- Name Input -->
-      <label for="name">Your Name</label>
-      <input type="text" name="name" id="name" placeholder="Enter your name" required>
-
-      <!-- Message (Optional) -->
-      <label for="message">LinkedIn</label>
-      <input type="text" name="linkedin" id="name" placeholder="Enter your LinkedIn Id" required>
-
-      <!-- Submit Button -->
-      <button type="submit">Subscribe</button>
-      
-      <div id="result"></div>
-  </form>
-</div>
-
-
-<style>
-  form {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-
-input, textarea, button {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#result {
-    text-align: center;
-    margin-top: 1rem;
-    font-weight: bold;
-}
-  
-</style>
-<!-- <iframe src="https://divyanshharsh.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe> -->
-
-
-<div class="container faq-section">
-  <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-  <div class="accordion" id="faqAccordion">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          What is the duration of the course?
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Classes run for 3 consecutive weekends (saturdays).
+    <div class="container faq-section">
+      <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              What is the duration of the course?
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Classes run for 3 consecutive weekends (Saturdays).
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Is there any certification provided?
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Yes, upon successful completion of the course, you will receive a course certificate.
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Is there any certification provided?
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Yes, upon successful completion of the course, you will receive a
+              course certificate.
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          What is the mode of the course?
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          The course is delivered online with live interactions, recorded sessions, and a community forum for discussions.
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              What is the mode of the course?
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              The course is delivered online with live interactions, recorded
+              sessions, and a community forum for discussions.
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingFour">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-          Are there any prerequisites for the course?
-        </button>
-      </h2>
-      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Basic knowledge of Product Management and a keen interest in AI are recommended. No prior experience in AI is required
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
+              Are there any prerequisites for the course?
+            </button>
+          </h2>
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFour"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Basic knowledge of Product Management and a keen interest in AI
+              are recommended. No prior experience in AI is required.
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingFive">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-          How can I contact support if I have more questions?
-        </button>
-      </h2>
-      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          You can reach out to our support team via email at <a href="mailto:support@gradient-advisors.ai">support@gradient-advisors.ai</a> or through our contact form on the website.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-  <style>
-    .faq-section {
-      margin-top: 50px;
-    }
-
-    .accordion-button {
-      border: none;
-      background-color: #f8f9fa;
-      border-radius: 10px;
-      font-weight: bold;
-      color: #333;
-      transition: background-color 0.3s ease;
-    }
-
-    .accordion-button:not(.collapsed) {
-      background-color: #007bff;
-      color: #fff;
-    }
-
-    .accordion-button::after {
-      content: '\f078'; /* Font Awesome down icon */
-      font-family: "Oswald", sans-serif;
-      font-weight: 900;
-      margin-left: auto;
-      transition: transform 0.3s ease;
-    }
-
-    .accordion-button:not(.collapsed)::after {
-      content: '\f077'; /* Font Awesome up icon */
-      transform: rotate(180deg);
-    }
-
-    .accordion-body {
-      font-size: 0.95rem;
-      color: #555;
-      background-color: #f1f1f1;
-      border-radius: 8px;
-      padding: 20px;
-    }
-
-    .accordion-item {
-      margin-bottom: 10px;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .container {
-      padding-left: 0; /* Remove default padding */
-      padding-right: 0; /* Remove default padding */
-    }
-  </style>
-  <!-- Enroll Now Pop-Up (Left Side) -->
-<div class="popup-widget left-widget">
-  <a href="#cta-form" class="widget-button">Stay Updated</a>
-</div>
-
-<!-- Stay Updated Pop-Up (Right Side) -->
-<div class="popup-widget right-widget">
-  <a href="https://rzp.io/rzp/xWUPsIe1" class="widget-button">Enroll Now</a>
-</div>
-
-<style>
-  /* Pop-up Widget Styling */
-.popup-widget {
-  position: fixed;
-  z-index: 1000;
-  background: none;
-  padding: 0;
-}
-
-/* Position adjustments for left and right widgets */
-.left-widget {
-  bottom: 20px;
-  left: 20px;
-}
-
-.right-widget {
-  bottom: 20px;
-  right: 20px;
-}
-
-/* Stylish Button Styling */
-.widget-button {
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 12px 30px;
-  background: linear-gradient(135deg, #0056b3, #007bff); /* Blue gradient */
-  border: none;
-  border-radius: 50px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  font-size: 16px;
-}
-
-/* Hover Effect for Buttons */
-.widget-button:hover {
-  background: linear-gradient(135deg, #003d80, #0056b3); /* Darker gradient on hover */
-  transform: translateY(-3px); /* Slight lift effect */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-}
-
-</style>
-
-
-  <footer class="footer"></footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 text-center text-md-start">
-          <p class="footer-text mb-0">&copy; Gradient Advisors 2024. All rights reserved.</p>
-        </div>
-        <div class="col-md-6 text-center text-md-end">
-          <div class="footer-icons">
-            <a href="https://www.linkedin.com/company/gradient-advisors/" target="_blank" aria-label="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.youtube.com/@ai-for-leaders" target="_blank" aria-label="YouTube">
-              <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://www.instagram.com/gradient_advisors/" target="_blank" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://twitter.com/gradientadvisor" target="_blank" aria-label="Twitter">
-              <i class="fab fa-x"></i>
-            </a>
-            <a href="https://www.facebook.com/gradient.advisor" target="_blank" aria-label="Facebook">
-              <i class="fab fa-facebook"></i>
-            </a>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive"
+            >
+              How can I contact support if I have more questions?
+            </button>
+          </h2>
+          <div
+            id="collapseFive"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFive"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              You can reach out to our support team via email at
+              <a href="mailto:support@gradient-advisors.ai"
+                >support@gradient-advisors.ai</a
+              >.
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </footer>
 
+    <style>
+      .faq-section {
+        margin-top: 40px;
+        padding: 30px 20px;
+        background-color: #f7f9fc; /* Clean background */
+        border-radius: 10px; /* Rounded corners for a sleek look */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+      }
 
-  <style>
-    .footer {
-      background-color: #f8f9fa;
-      padding: 20px 0;
-      border-top: 1px solid #e9ecef;
-    }
+      .faq-section h2 {
+        font-size: 1.8rem;
+        color: #1e2a3a; /* Dark text for readability */
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
 
-    .footer-text {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      color: #6c757d;
-    }
+      .accordion-button {
+        border: none;
+        background-color: #f8f9fa;
+        border-radius: 6px;
+        font-weight: 500;
+        color: #333;
+        padding: 12px 20px;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+      }
 
-    .footer-icons {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+      .accordion-button:not(.collapsed) {
+        background-color: #007bff;
+        color: white;
+      }
 
-    .footer-icons a {
-      color: #000000;
-      font-size: 1.5rem;
-      margin: 0 10px;
-      transition: color 0.3s;
-    }
+      .accordion-button::after {
+        content: "\f078"; /* Font Awesome down icon */
+        font-family: "FontAwesome";
+        font-weight: 900;
+        margin-left: auto;
+        transition: transform 0.3s ease;
+      }
 
-    .footer-icons a:hover {
-      color: #007afc;
-    }
-  </style>
+      .accordion-button:not(.collapsed)::after {
+        content: "\f077"; /* Font Awesome up icon */
+        transform: rotate(180deg);
+      }
 
+      .accordion-body {
+        font-size: 1rem;
+        color: #555;
+        background-color: #f1f1f1;
+        border-radius: 6px;
+        padding: 15px;
+      }
 
+      .accordion-item {
+        margin-bottom: 8px;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+      }
 
+      .container {
+        padding-left: 0;
+        padding-right: 0;
+      }
 
+      .accordion-button:focus {
+        outline: none; /* Remove focus ring */
+      }
 
+      .accordion-button:hover {
+        background-color: #0056b3;
+        cursor: pointer;
+      }
 
+      /* Mobile adjustments */
+      @media (max-width: 767px) {
+        .faq-section {
+          padding: 20px 15px;
+        }
 
+        .faq-section h2 {
+          font-size: 1.6rem;
+        }
 
+        .accordion-button {
+          padding: 10px 15px;
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+    <!-- Enroll Now Pop-Up (Left Side) -->
+    <div class="popup-widget left-widget">
+      <a href="#cta-form" class="widget-button">Stay Updated</a>
+    </div>
 
-    
-<script src="region.js"></script>
+    <!-- Stay Updated Pop-Up (Right Side) -->
+    <div class="popup-widget right-widget">
+      <a href="https://rzp.io/rzp/xWUPsIe1" class="widget-button">Enroll Now</a>
+    </div>
 
+    <style>
+      /* Pop-up Widget Styling */
+      .popup-widget {
+        position: fixed;
+        z-index: 1000;
+        background: none;
+        padding: 0;
+      }
+
+      /* Position adjustments for left and right widgets */
+      .left-widget {
+        bottom: 20px;
+        left: 20px;
+      }
+
+      .right-widget {
+        bottom: 20px;
+        right: 20px;
+      }
+
+      /* Stylish Button Styling */
+      .widget-button {
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 14px 35px;
+        background: linear-gradient(
+          135deg,
+          #0066cc,
+          #3399ff
+        ); /* Lighter blue gradient */
+        border: none;
+        border-radius: 30px; /* More rounded for a sleek look */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Softer, lighter shadow */
+        transition: background 0.3s ease, transform 0.3s ease,
+          box-shadow 0.3s ease;
+        font-size: 17px;
+        text-transform: uppercase; /* Make the text look more professional */
+      }
+
+      /* Hover Effect for Buttons */
+      .widget-button:hover {
+        background: linear-gradient(
+          135deg,
+          #005bb5,
+          #3388cc
+        ); /* Darker gradient on hover */
+        transform: translateY(-4px); /* More pronounced lift effect */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+      }
+
+      /* Focus state for better accessibility */
+      .widget-button:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.6); /* Focus ring on button */
+      }
+
+      /* Accessibility: Provide additional spacing and legibility */
+      @media (max-width: 768px) {
+        .widget-button {
+          font-size: 15px;
+          padding: 12px 25px;
+        }
+      }
+    </style>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="footer-text mb-0">
+              &copy; Gradient Advisors 2024. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="footer-icons">
+              <a
+                href="https://www.linkedin.com/company/gradient-advisors/"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@ai-for-leaders"
+                target="_blank"
+                aria-label="YouTube"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/gradient_advisors/"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://twitter.com/gradientadvisor"
+                target="_blank"
+                aria-label="Twitter"
+              >
+                <i class="fab fa-x"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      /* Footer Styling */
+      .footer {
+        background-color: #1c1c1c;
+        padding: 30px 0;
+        border-top: 1px solid #444;
+      }
+
+      /* Footer text styling */
+      .footer-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        color: #ccc;
+        font-weight: 500;
+      }
+
+      /* Social media icons container */
+      .footer-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Social media icons style */
+      .footer-icons a {
+        color: #fff;
+        font-size: 1.8rem;
+        margin: 0 15px;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      /* Hover effect for social media icons */
+      .footer-icons a:hover {
+        color: #00aaff;
+        transform: scale(1.1);
+      }
+
+      /* Responsive design adjustments */
+      @media (max-width: 768px) {
+        .footer-text {
+          font-size: 0.9rem;
+        }
+        .footer-icons a {
+          font-size: 1.5rem;
+          margin: 0 10px;
+        }
+      }
+    </style>
+
+    <script src="region.js"></script>
     <!-- Bootstrap 5 JavaScript (No jQuery required) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
-
-
